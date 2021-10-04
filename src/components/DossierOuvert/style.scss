@@ -7,120 +7,12 @@
 	left: 100px;
 	box-shadow: rgb(0 0 0 / 50%) 10px 19px 38px, rgb(0 0 0 / 30%) 10px 25px 20px;
 	z-index: 2;
-
+	cursor: grab;
 }
 
-.dossierOuvertHeader {
-	border-bottom: 5px solid transparent;
-	background: transparent;
-	width: 100%;
-	height: 25px;
-	display: flex;
-	justify-content: space-between;
-	border-image: linear-gradient(225deg, #2d5c01, #0400ff) 10;
 
-	&-titre {
-		font-size: 0.8rem;
-		font-weight: 600;
-		font-family: "Ubuntu", sans-serif;
-		margin: 0;
-		padding-left: 0.8rem;
-		padding-top: 0.2rem;
-	}
-	&-minus {
-		width: 15px;
-		height: 2px;
-		background: black;
-		margin-right: 0.8rem;
-		cursor: pointer;
-	}
 
-	&-big {
-		width: 10px;
-		height: 10px;
-		background: transparent;
-		border: 2px solid black;
-		margin-right: 0.8rem;
-		cursor: pointer;
-	}
-	&-close {
-		margin-right: 0.8rem;
-    width: 10px;
-    height: 10px;
-    display: block;
-    text-align: center;
-		cursor: pointer;
-		&--1 {
-			display: block;
-			width: 15px;
-			height: 1px;
-			background: black;
-			transform: rotate3d(0, 0, 3, 45deg);
-    	margin-top: 0.2rem;
-		}
-		&--2 {
-			display: block;
-			width: 15px;
-			height: 1px;
-			background: black;
-			transform: rotate3d(0, 0, 3, -45deg);
-		}
-	}
-}
-.dossierOuvertHeader-groupAction {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
 
-.menuGauche {
-	width: 20%;
-	height: 88%;
-	background: red;
-}
-
-.DossierOuvertSearchBar {
-	border-bottom: 5px solid transparent;
-	background: transparent;
-	width: 100%;
-	height: 25px;
-	display: flex;
-	justify-content: space-between;
-/* 	border-image: linear-gradient(225deg, #2d5c01, #0400ff) 10; */
-}
-
-.lienDossier {
-	display: flex;
-	border: 1px solid #c3959594;
-	margin: 1px;
-	align-items: center;
-	width: 35%;
-	justify-content: flex-start;
-
-	&--1 {
-		margin: 1rem;
-    display: block;
-		cursor: pointer;
-		padding: 1px 5px;
-
-		&:hover {
-			background: #affff4;
-		}
-	}
-	&--2 {
-		margin: 1rem;
-    display: block;
-		cursor: pointer;
-		padding: 1px 5px;
-		&:hover {
-			background: #affff4;
-		}
-	}
-	&--crochet {
-		margin: 1rem;
-    display: block;
-	}
-}
 .searchDossier {
 	display: flex;
 	border: 1px solid #c3959594;
@@ -182,6 +74,7 @@
     display: flex;
     flex-direction: column;
 		cursor: pointer;
+		position: relative;
 		&:hover {
 			background: #affff4;
 		}
@@ -259,4 +152,35 @@
 			margin: 1px;
 		}
 	}
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  z-index: 99;
+}
+
+.mode-liste:hover > .tooltip {
+  visibility: visible;
+}
+
+span.tooltip:after {
+	content: "";
+	border-bottom: 20px solid black;
+	border-left: 20px solid transparent;
+	position: absolute;
+	top: -10px;
+	left: 0px;
+}
+
+.mode-icone:hover > .tooltip {
+  visibility: visible;
 }

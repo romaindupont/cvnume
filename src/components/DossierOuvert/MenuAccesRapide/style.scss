@@ -1,0 +1,28 @@
+.menuGauche {
+	width: 20%;
+	height: 88%;
+	background: red;
+}
+
+.lienMenu--1 {
+	display: flex;
+}
+.lienMenu--1-titre {
+	margin: 0;
+}
+
+.image {
+	width: 25px;
+	height: 15px;
+	background: linear-gradient(225deg, #2d5c01, #0069a7, #0400ff);
+	display: block;
+	border: 2px solid black;
+	position: relative;
+	&::after {
+		content: '';
+		width: 15px;
+		height: 5px;
+		position: absolute;
+		bottom: 0;
+	}
+}

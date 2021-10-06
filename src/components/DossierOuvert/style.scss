@@ -9,9 +9,16 @@
 	z-index: 2;
 	cursor: grab;
 }
+.big {
+	width: 100vw;
+	height: 100vh;
+	top: 0 !important;
+	left: 0 !important;
+}
 
-
-
+.close {
+	display: none;
+}
 
 .searchDossier {
 	display: flex;
@@ -76,7 +83,7 @@
 		cursor: pointer;
 		position: relative;
 		&:hover {
-			background: #affff4;
+			background: #e2f8ff;
 		}
 
 		&-trait--1 {
@@ -111,21 +118,21 @@
 	cursor: pointer;
 	
 		&:hover {
-			background: #affff4;
+			background: #e2f8ff;
 		}
 
 	&-carre {
 		&--1 {
-			width: 6px;
-			height: 6px;
+			width: 30%;
+    	height: 30%;
 			border: 1px solid black;
 			background: transparent;
 			position: absolute;
 			margin: 1px;
 		}
 		&--2 {
-			width: 6px;
-			height: 6px;
+			width: 30%;
+    	height: 30%;
 			border: 1px solid black;
 			background: transparent;
 			position: absolute;
@@ -133,8 +140,8 @@
 			margin: 1px;
 		}
 		&--3 {
-			width: 6px;
-			height: 6px;
+			width: 30%;
+    	height: 30%;
 			border: 1px solid black;
 			background: transparent;
 			position: absolute;
@@ -142,8 +149,8 @@
 			margin: 1px;
 		}
 		&--4 {
-			width: 6px;
-			height: 6px;
+			width: 30%;
+    	height: 30%;
 			border: 1px solid black;
 			background: transparent;
 			position: absolute;
@@ -183,4 +190,8 @@ span.tooltip:after {
 
 .mode-icone:hover > .tooltip {
   visibility: visible;
+}
+.centreDossier {
+	display: flex;
+	height: 80%;
 }

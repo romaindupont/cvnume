@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.scss';
 
-function MenuLine() {
+const MenuLine = ({ setMode }) => {
   return (
 		<div className="DossierOuvertSearchBar">
 			<div className="lienDossier">
@@ -10,12 +10,12 @@ function MenuLine() {
 				<span className="lienDossier--2">a_propos</span>
 			</div>
 			<div className="mode">
-				<div className="mode-liste"><span className="tooltip">Mode liste</span>
+				<div className="mode-liste" onClick={() => setMode(false)}><span className="tooltip">Mode liste</span>
 					<span className="mode-liste-trait--1"></span>
 					<span className="mode-liste-trait--2"></span>
 					<span className="mode-liste-trait--3"></span>
 				</div>
-				<div className="mode-icone"><span className="tooltip">Mode image</span>
+				<div className="mode-icone" onClick={() => setMode(true)}><span className="tooltip">Mode image</span>
 					<span className="mode-icone-carre--1"></span>
 					<span className="mode-icone-carre--2"></span>
 					<span className="mode-icone-carre--3"></span>

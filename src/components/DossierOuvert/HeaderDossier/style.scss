@@ -21,15 +21,32 @@
 		background: black;
 		margin-right: 0.8rem;
 		cursor: pointer;
+
 	}
 
 	&-big {
 		width: 10px;
 		height: 10px;
-		background: transparent;
+		background: white;
 		border: 2px solid black;
 		margin-right: 0.8rem;
 		cursor: pointer;
+
+	}
+	&-bigSmall {
+		display: none;
+
+		&--big {
+			display: block;
+			position: absolute;
+			width: 10px;
+			right: 30px;
+			height: 10px;
+			background: transparent;
+			border: 2px solid black;
+			top: 2px;
+			z-index: -1;
+		}
 	}
 	&-close {
 		margin-right: 0.8rem;
@@ -38,6 +55,7 @@
     display: block;
     text-align: center;
 		cursor: pointer;
+
 		&--1 {
 			display: block;
 			width: 15px;
@@ -70,7 +88,7 @@
     height: 20px;
     margin: 2px auto;
     border-radius: 5% 15% 5% 5%;
-    border: 1px solid #e5e5dd;
+    /* border: 1px solid #7e7e6d; */
 
 		&::before {
 			content: '';

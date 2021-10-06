@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.scss';
 import HeaderDossier from './HeaderDossier';
 import MenuLine from './MenuLine';
 import MenuAccesRapide from './MenuAccesRapide';
+import Contenu from './Contenu';
 
-function DossierOuvert() {
+const DossierOuvert = ({ actionDossier, setActionDossier }) => {
+	const [ mode, setMode ] = useState(false);
 	let pos1 = 0;
   let pos2 = 0;
   let pos3 = 0;
@@ -43,10 +45,14 @@ function DossierOuvert() {
     document.onmousemove = null;
   }
   return (
-    <div className="dossierOuvert" draggable="true" id="drag" onDragStart={dragElement}>
-			<HeaderDossier />
-			<MenuLine />
-			<MenuAccesRapide />
+    <div className={`dossierOuvert ${actionDossier}`} draggable="true" id="drag" onDragStart={dragElement}>
+			<HeaderDossier setActionDossier={setActionDossier} actionDossier={actionDossier}/>
+			<MenuLine setMode={setMode}/>
+			<div className="centreDossier">
+				<MenuAccesRapide />
+				<Contenu mode={mode}/>
+			</div>
+			
 			
 
     </div>

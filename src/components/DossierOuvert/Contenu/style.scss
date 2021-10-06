@@ -1,0 +1,151 @@
+.contenu {
+	width: 100%;
+	/* height: 90vh; */
+	/* background: red; */
+	margin-right: 0.3rem;
+	border-top: 1px solid #c3959594;
+}
+
+.headerContenu {
+	display: flex;
+	width: 100%;
+	color:#312d2d94;
+	font-size: 0.9rem;
+	&--image {
+		display: none;
+	}
+	&-nom {
+		margin-left: 0.4rem;
+		width: 20%;
+		border-right: 1px solid #c3959594;
+		padding: 0.3rem 0;
+	}
+	&-modif {
+		margin-left: 0.4rem;
+		width: 15%;
+		border-right: 1px solid #c3959594;
+	}
+	&-type {
+		margin-left: 0.4rem;
+		width: 15%;
+		border-right: 1px solid #c3959594;
+	}
+	&-taille {
+		margin-left: 0.4rem;
+		width: 5%;
+		border-right: 1px solid #c3959594;
+	}
+}
+
+.contenuFile {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+	&--image {
+		display: flex;
+		flex-direction: row;
+    width: 15%;
+    height: 40%;
+	}
+
+	&-line {
+		display: flex;
+		height: 10%;
+		width: 100%;
+		&--image {
+			height: 20%;
+    	margin-top: 1rem;
+		}
+	}
+
+	&-nom {
+		display: flex;
+		margin: auto 0.4rem;
+		width: 20%;
+		&--image {
+			margin: auto;
+			width: 100%;
+    	flex-direction: column;
+			& > p {
+				text-align: center;
+				padding-top: 0.5rem;
+			}
+		}
+		& > p {
+			margin: auto 0.5rem;
+			font-size: 0.8rem;
+		}
+	}
+	&-modif {
+		width: 15%;
+		margin-left: 0.4rem;
+		&--image {
+			display: none;
+		}
+	}
+	&-type {
+		width: 15%;
+		margin-left: 0.4rem;
+		&--image {
+			display: none;
+		}
+	}
+	&-taille {
+		width: 5%;
+		margin-left: 0.4rem;
+		&--image {
+			display: none;
+		}
+	}
+	&-titre {
+		font-size: 0.8rem;
+		color:#312d2d94;
+	}
+}
+
+.feuille {
+	background: aliceblue;
+	width: 14px;
+	height: 20px;
+	border-radius: 5% 15% 5% 5%;
+	border: 1px solid #e5e5dd;
+	position: relative;
+	&--image {
+		width: 60px;
+    height: 80px;
+    margin: auto;
+		&::before {
+			content: "";
+			height: 2px;
+			margin: 6px !important;
+			position: absolute;
+			top: 3px;
+			width: 44px !important;
+			left: 0px;
+			background: #e2f8ff;
+		}
+	}
+	
+	&::before {
+		content: "";
+    height: 2px;
+    margin: 2px;
+    position: absolute;
+    top: 3px;
+    width: 10px;
+    left: 0px;
+    background: #e2f8ff;
+
+	}
+}
+
+.contenuFile-line:hover {
+	background: #e2f8ff;
+}
+
+.contenuFile-line--image:hover {
+	background: #e2f8ff;
+	height: 100%;
+	margin-top: 0;
+}

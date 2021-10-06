@@ -3,7 +3,7 @@ import './style.scss';
 
 
 
-function MenuAccesRapide() {
+const MenuAccesRapide = () => {
   return (
 		<div className="menuGauche">
 			<div className="lienMenu--1">

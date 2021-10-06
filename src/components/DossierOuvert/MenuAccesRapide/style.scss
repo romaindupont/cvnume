@@ -1,13 +1,19 @@
 .menuGauche {
 	width: 20%;
-	height: 88%;
-	background: red;
+	/* height: 90vh; */
+	/* background: red; */
+	border-right: 1px solid #c3959594;
+	border-top: 1px solid #c3959594;
+	margin-left: 0.3rem;
 }
 
 .lienMenu--1 {
 	display: flex;
 	justify-content: space-evenly;
 	padding-top: 1rem;
+	&:hover {
+		background: #e2f8ff;
+	}
 }
 .lienMenu--1-titre {
 	margin: 0;
@@ -48,5 +54,22 @@
 			left: -3px;
 			background: #f7f72a;
 			border: 1px solid #e5e5dd;
+		}
+		&--image {
+			width: 60px;
+			height: 80px;
+			margin: auto;
+			&::before {
+				content: '';
+				height: 80px;
+				margin: 2px auto;
+				border-radius: 5% 15% 5% 5%;
+				position: absolute;
+				top: -3px;
+				width: 60px;
+				left: -3px;
+				background: #f7f72a;
+				border: 1px solid #e5e5dd;
+			}
 		}
 }

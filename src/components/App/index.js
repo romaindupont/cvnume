@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.scss';
 import Dossier from '../Dossier';
 import DossierOuvert from '../DossierOuvert';
+import Menu from '../Menu';
 
-function App() {
+const App = () => {
+	const [ actionDossier, setActionDossier ] = useState('normal')
   return (
 		<div className="bureauBg">
+			<Menu />
 			<div className="mesDossiers">
-				<Dossier />
+				<Dossier setActionDossier={setActionDossier}/>
 			</div>
-			<DossierOuvert />
+			<DossierOuvert setActionDossier={setActionDossier} actionDossier={actionDossier}/>
 		</div>
   );
 }

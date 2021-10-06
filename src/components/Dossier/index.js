@@ -1,9 +1,12 @@
 import React from 'react';
 import './style.scss';
 
-function Dossier() {
+const Dossier = ({setActionDossier}) => {
+	const openFile = () => {
+		setActionDossier('normal')
+	}
   return (
-    <div className="dossier">
+    <div className="dossier" onClick={openFile}>
       <div className="dossierDevant">
 				<span className="dossierLanguette"></span>
 			</div>

@@ -1,0 +1,25 @@
+.cvPdf {
+	width: 65px;
+	height: 100px;
+	background: aliceblue;
+	position: absolute;
+	top: 200px;
+	left: 200px;
+	border-radius: 5% 25% 5% 5%;
+}
+
+.cvPdf::before {
+	border-bottom: 30px solid #b3bbc3;
+	border-left: 25px solid transparent;
+	position: absolute;
+	border-radius: 0% 0% 70% 0%;
+	content: "";
+	position: absolute;
+	top: -2px;
+	right: 1px;
+	/* border: 1px solid; */
+	transform: rotate(
+271deg);
+	box-shadow: 0 1px 0 #ccc, 0 2px 0 #acacac, 0 3px 0 #a0a0a0, 0 4px 0 #9b9a9a, 0 5px 0 #888787, 0 6px 1px rgb(0 0 0 / 10%), 0 0 5px rgb(0 0 0 / 10%), 0 1px 3px rgb(0 0 0 / 30%), 0 3px 5px rgb(0 0 0 / 30%), 0 5px 10px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 20%), 0 20px 20px rgb(0 0 0 / 15%);
+}
+

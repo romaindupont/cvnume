@@ -5,21 +5,77 @@
 	position: absolute;
 	top: 200px;
 	left: 200px;
-	border-radius: 5% 25% 5% 5%;
+	border: 1px solid #a19e9e;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow:
+		0 0px 0 #a19e9e,
+		0 0px 0 #a19e9e,
+		0 3px 0 #a19e9e,
+		0 0px 0 #a19e9e,
+		0 -1px 0 #a19e9e,
+		0 7px 1px rgb(0 0 0 / 10%),
+		0 0 5px rgb(0 0 0 / 10%),
+		0 1px 3px rgb(0 0 0 / 30%),
+		0 3px 5px rgb(0 0 0 / 30%),
+		0 5px 10px rgb(0 0 0 / 25%),
+		0 1px 0px rgb(0 0 0 / 20%),
+		0 12px 0px rgb(0 0 0 / 15%);
 }
 
 .cvPdf::before {
-	border-bottom: 30px solid #b3bbc3;
-	border-left: 25px solid transparent;
-	position: absolute;
-	border-radius: 0% 0% 70% 0%;
 	content: "";
 	position: absolute;
-	top: -2px;
+	background: aliceblue;
+	top: 1px;
 	right: 1px;
-	/* border: 1px solid; */
-	transform: rotate(
-271deg);
-	box-shadow: 0 1px 0 #ccc, 0 2px 0 #acacac, 0 3px 0 #a0a0a0, 0 4px 0 #9b9a9a, 0 5px 0 #888787, 0 6px 1px rgb(0 0 0 / 10%), 0 0 5px rgb(0 0 0 / 10%), 0 1px 3px rgb(0 0 0 / 30%), 0 3px 5px rgb(0 0 0 / 30%), 0 5px 10px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 20%), 0 20px 20px rgb(0 0 0 / 15%);
+	border-radius: 5px 5px 5px 5px;
+	width: 65px;
+	height: 100px;
+	border: 1px solid #a19e9e;
 }
 
+.cvPdf::after {
+	content: "";
+	position: absolute;
+	background: aliceblue;
+	top: 3px;
+	right: 3px;
+	border-radius: 5px 5px 5px 5px;
+	width: 65px;
+	height: 100px;
+	border: 1px solid #a19e9e;
+}
+
+.cvPdf-span {
+	width: 65px;
+	background: #df5a5a;
+	height: 25px;
+	position: absolute;
+	top: 36px;
+	z-index: 2;
+	right: 4px;
+	text-align: center;
+	text-shadow: 0 0 black;
+	text-transform: uppercase;
+	text-shadow:
+		0 1px 1px rgb(0 0 0 / 10%),
+		0 0 5px rgb(0 0 0 / 10%),
+		0 2px 1px rgb(0 0 0 / 30%),
+		0 3px 5px rgb(0 0 0 / 30%),
+		0 5px 10px rgb(0 0 0 / 25%),
+		0 1px 0px rgb(0 0 0 / 20%),
+		0 2px 0px rgb(0 0 0 / 15%);
+	box-shadow:
+		0 0px 0 #df5a5a,
+		0 0px 0 #df5a5a,
+		0 3px 0 #df5a5a,
+		0 0px 0 #df5a5a,
+		0 -1px 0 #df5a5a,
+		0 6px 1px rgb(0 0 0 / 10%),
+		0 0 3px rgb(0 0 0 / 10%),
+		0 1px 3px rgb(0 0 0 / 30%),
+		0 3px 5px rgb(0 0 0 / 30%),
+		0 5px 10px rgb(0 0 0 / 25%),
+		0 1px 0px rgb(0 0 0 / 20%),
+		0 7px 0px rgb(0 0 0 / 15%)
+}

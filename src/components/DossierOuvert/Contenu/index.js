@@ -29,7 +29,9 @@ const Contenu = ({ mode }) => {
 				</div>
 				<div className={classNames("contenuFile-line", {"contenuFile-line--image":mode})}>
 					<div className={classNames("contenuFile-nom", {"contenuFile-nom--image":mode})}>
-						<span className={classNames("feuille", {"feuille--image":mode})}></span>
+						<span className={classNames("feuille", {"feuille--image":mode})}>
+							<span className={classNames("feuille-nom", {"feuille-nom--image":mode})}>pdf</span>
+						</span>
 						<p className="lienMenu--1-titre">monCv</p>
 					</div>
 					<div className={classNames("contenuFile-modif", {"contenuFile-modif--image":mode})}>

@@ -1,0 +1,91 @@
+.internetLogo {
+	width: 50px;
+	height: 50px;
+	background: #107459;
+	border-radius: 50%;
+	border: 10px solid white;
+	position: relative;
+	top: 100px;
+	left: 200px;
+	cursor: pointer;
+	box-shadow:
+	0 0px 0 #a19e9e,
+	0 0px 0 #a19e9e,
+	0 3px 0 #a19e9e,
+	0 0px 0 #a19e9e,
+	0 -1px 0 #a19e9e,
+	0 7px 1px rgb(0 0 0 / 10%),
+	0 0 5px rgb(0 0 0 / 10%),
+	0 1px 3px rgb(0 0 0 / 30%),
+	0 0px 18px rgb(0 0 0 / 30%),
+	0 22px 22px rgb(0 0 0 / 25%),
+	0 1px 0px rgb(0 0 0 / 20%),
+	0 -4px 0px rgb(0 0 0 / 15%);
+}
+
+.internetLogo:hover {
+	background: #ff0000;
+	&::before {
+		background: #ff0000;
+	}
+}
+.internetLogo:hover > .w {
+	background: #0400ff;
+
+	&::after {
+		background: #107459;
+	}
+	&::before {
+		background: #dadd18;
+	}
+
+}
+
+.internetLogo::before {
+	width: 10px;
+	height: 10px;
+	background: #1f6034;
+	border-radius: 50%;
+	border: 5px solid white;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	content: '';
+	margin: auto;
+	z-index: 3;
+
+}
+
+.w {
+	position: absolute;
+	top: 5px;
+	left: 0px;
+	width: 25px;
+	height: 40px;
+	border-radius: 50% 5% 5% 50%;
+	background: #dadd18;
+}
+
+span.w::before {
+	position: absolute;
+	top: -13px;
+	left: 14px;
+	content: "";
+	width: 25px;
+	height: 40px;
+	border-radius: 50% 5% 5% 50%;
+	background: #0400ff;
+	transform: rotate(90deg);
+}
+
+span.w::after {
+	position: absolute;
+	top: 12px;
+	left: 14px;
+	content: "";
+	width: 25px;
+	height: 40px;
+	border-radius: 50% 5% 5% 50%;
+	background: #ff0000;
+	transform: rotate(-90deg);
+}

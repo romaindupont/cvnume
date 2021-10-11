@@ -5,9 +5,22 @@
 	position: absolute;
 	top: 100px;
 	left: 100px;
-	box-shadow: rgb(0 0 0 / 50%) 10px 19px 38px, rgb(0 0 0 / 30%) 10px 25px 20px;
+	/* box-shadow: rgb(0 0 0 / 50%) 10px 19px 38px, rgb(0 0 0 / 30%) 10px 25px 20px; */
 	z-index: 2;
 	cursor: grab;
+	box-shadow:
+		0 0px 0 #a19e9e,
+		0 0px 0 #a19e9e,
+		0 3px 0 #a19e9e,
+		0 0px 0 #a19e9e,
+		0 -1px 0 #a19e9e,
+		0 7px 1px rgb(0 0 0 / 10%),
+		0 0 5px rgb(0 0 0 / 10%),
+		0 1px 3px rgb(0 0 0 / 30%),
+		0 3px 5px rgb(0 0 0 / 30%),
+		0 5px 10px rgb(0 0 0 / 25%),
+		0 1px 0px rgb(0 0 0 / 20%),
+		0 12px 0px rgb(0 0 0 / 15%);
 }
 .big {
 	width: 100vw;

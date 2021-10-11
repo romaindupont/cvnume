@@ -115,28 +115,45 @@
 		width: 60px;
     height: 80px;
     margin: auto;
+		border: 1px solid #a19e9e;
+		border-radius: 5px 5px 5px 5px;
+		box-shadow:
+			0 0px 0 #a19e9e,
+			0 0px 0 #a19e9e,
+			0 3px 0 #a19e9e,
+			0 0px 0 #a19e9e,
+			0 -1px 0 #a19e9e,
+			0 7px 1px rgb(0 0 0 / 10%),
+			0 0 5px rgb(0 0 0 / 10%),
+			0 1px 3px rgb(0 0 0 / 30%),
+			0 3px 5px rgb(0 0 0 / 30%),
+			0 5px 10px rgb(0 0 0 / 25%),
+			0 1px 0px rgb(0 0 0 / 20%),
+			0 12px 0px rgb(0 0 0 / 15%);
 		&::before {
 			content: "";
-			height: 2px;
+			height: 80px;
 			margin: 6px !important;
 			position: absolute;
-			top: 3px;
-			width: 44px !important;
-			left: 0px;
-			background: #e2f8ff;
+			top: -6px;
+			width: 60px !important;
+			right: -5px;
+			/* background: #e2f8ff; */
+			background: aliceblue;
+			border-radius: 5px 5px 5px 5px;
+			border: 1px solid #a19e9e;
 		}
-	}
-	
-	&::before {
-		content: "";
-    height: 2px;
-    margin: 2px;
-    position: absolute;
-    top: 3px;
-    width: 10px;
-    left: 0px;
-    background: #e2f8ff;
-
+		&::after {
+			content: "";
+			position: absolute;
+			background: aliceblue;
+			top: 2px;
+			right: 3px;
+			border-radius: 5px 5px 5px 5px;
+			width: 60px;
+			height: 80px;
+			border: 1px solid #a19e9e;
+		}
 	}
 }
 
@@ -148,4 +165,51 @@
 	background: #e2f8ff;
 	height: 100%;
 	margin-top: 0;
+}
+.feuille-nom {
+	width: 14px;
+	background: #df5a5a;
+	height: 8px;
+	position: absolute;
+	top: 8px;
+	z-index: 2;
+	font-size: 0.2rem;
+	right: 0px;
+	text-align: center;
+	text-shadow: 0 0 black;
+	text-transform: uppercase;
+}
+.feuille-nom--image {
+	width: 60px;
+	background: #df5a5a;
+	height: 25px;
+	position: absolute;
+	top: 35px;
+	z-index: 2;
+	right: 4px;
+	font-size: 1rem;
+	text-align: center;
+	text-shadow: 0 0 black;
+	text-transform: uppercase;
+	text-shadow:
+		0 1px 1px rgb(0 0 0 / 10%),
+		0 0 5px rgb(0 0 0 / 10%),
+		0 2px 1px rgb(0 0 0 / 30%),
+		0 3px 5px rgb(0 0 0 / 30%),
+		0 5px 10px rgb(0 0 0 / 25%),
+		0 1px 0px rgb(0 0 0 / 20%),
+		0 2px 0px rgb(0 0 0 / 15%);
+	box-shadow:
+		0 0px 0 #df5a5a,
+		0 0px 0 #df5a5a,
+		0 3px 0 #df5a5a,
+		0 0px 0 #df5a5a,
+		0 -1px 0 #df5a5a,
+		0 6px 1px rgb(0 0 0 / 10%),
+		0 0 3px rgb(0 0 0 / 10%),
+		0 1px 3px rgb(0 0 0 / 30%),
+		0 3px 5px rgb(0 0 0 / 30%),
+		0 5px 10px rgb(0 0 0 / 25%),
+		0 1px 0px rgb(0 0 0 / 20%),
+		0 7px 0px rgb(0 0 0 / 15%)
 }

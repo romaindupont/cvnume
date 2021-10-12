@@ -23,7 +23,6 @@ const Menu = () => {
 		itemsScrolled = Math.ceil((e.target.scrollTop + listOpts.itemHeight / 2) / listOpts.itemHeight)
 		if (itemsScrolled < listOpts.items.length) {
 			listOpts.items[itemsScrolled].classList.add("active");
-			console.log(listOpts.items[itemsScrolled])
 			const yourListItem = document.querySelector("li.active + li");
 			yourListItem.classList.add("derriere");
 		}

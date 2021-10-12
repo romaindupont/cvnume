@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.scss';
 import PageAPropos from '../PageAPropos';
+import classNames from 'classnames';
 
-const InternetPage = ({setInternetPageOpen}) => {
+const InternetPage = ({setInternetPageOpen, openBig, setOpenBig}) => {
+	const sizeScreen = () => {
+		if (openBig === 'normal') {
+			setOpenBig('big');
+		}
+		if (openBig === 'big') {
+			setOpenBig('normal');
+		}
+	}
   return (
-		<div className="internetPage">
+		<div className={`internetPage ${openBig}`}>
 			<div className="internetPage-onglet">
 				<div className="internetPage-onglet--logo">
 					<div className="internetLogo--logo">
@@ -16,8 +25,8 @@ const InternetPage = ({setInternetPageOpen}) => {
 			</div>
 			<div className="dossierOuvertHeader-groupAction internetPage-onglet-group">
 				<span className="dossierOuvertHeader-minus internetPage-onglet-group-minus" onClick={()=>setInternetPageOpen(false)}></span>
-				<span className="dossierOuvertHeader-big internetPage-onglet-group-big" ></span>
-				<span className="dossierOuvertHeader-bigSmall"></span>
+				<span className="dossierOuvertHeader-big internetPage-onglet-group-big" onClick={sizeScreen} ></span>
+				<span className={classNames("dossierOuvertHeader-bigSmall", {"dossierOuvertHeader-bigSmall--big internetPage-onglet-group-big":openBig==='big'})}></span>
 				<span className="dossierOuvertHeader-close" onClick={()=>setInternetPageOpen(false)}>
 					<span className="dossierOuvertHeader-close--1 internetPage-onglet-group-close"></span>
 					<span className="dossierOuvertHeader-close--2 internetPage-onglet-group-close"></span>

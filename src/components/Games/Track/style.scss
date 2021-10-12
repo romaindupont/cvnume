@@ -1,0 +1,192 @@
+$color: #00B4FF;
+$speed: 5;
+.str0 {stroke:#fff;stroke-width:100}
+.fil0 {
+	fill:none;
+	animation: remplir 2s forwards 2s ease-in;
+}
+.fil1 {
+	fill:none;
+	animation: remplir 5s forwards 2s ease-in;
+}
+.fil2 {
+	fill:none;
+	animation: remplir 7s forwards 2s ease-in;
+}
+.fil3 {
+	fill:none;
+	animation: remplir 9s forwards 2s ease-in;
+
+}
+@keyframes remplir {
+	from {
+		fill: none;
+	}
+	to {
+		fill: white;
+	}
+}
+svg {
+	margin: 20rem auto;
+	width: 100%;
+	animation: effacer 1s forwards 10s ease-in;
+}
+
+@keyframes effacer {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+.menuGame {
+	position: absolute;
+    margin: 20rem auto;
+    width: 98vw;
+    height: 98vh;
+    top: 0;
+}
+.menuGame-ul {
+
+
+}
+.menuGame-li {
+	font-family: 'Press Start 2P', cursive;
+	color: white;
+	margin-top: 1rem;
+}
+
+.selectionJeu {
+/* 	position: absolute;
+	left: 50%;
+	top: 35%; */
+	/* transform: translate(-50px , -35px); */
+	
+/* 	&:after {
+		content: '';
+		position: absolute;
+/* 		left: 140px;
+		top: 150px; */
+/* 		width: 0;
+		height: 0;
+		border-left: 15px solid transparent;
+		border-right: 15px solid transparent;
+		border-bottom: 30px solid #ccc;
+		transform-origin: 50% 0%;
+		animation: spin $speed+s infinite linear;
+
+
+	}
+	&::before {
+		animation-delay: -($speed/2) + s;
+	} */ 
+}
+
+.pyramid {
+	transform-style: preserve-3d;
+	/* transform: rotate(-90deg) translate(-20px, 100px); */
+	/* animation: spin $speed+s infinite linear; */
+	animation: rotate 5s ease;
+	/*Unlimited execution*/
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.pyramid::before, .pyramid::after {
+		content: '';
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border: 15px solid;
+		position: absolute;
+}
+
+.pyramid::before {
+		border-color: transparent transparent #7700ff transparent;
+		transform: scaleY(2) skewY(-40deg) rotate(45deg);
+		/* animation-delay: -($speed/2) + s; */
+}
+
+.pyramid::after {
+		border-color: transparent transparent #5500b6 transparent;
+		transform: scaleY(2) skewY(40deg) rotate(-45deg);
+		/* animation-delay: -($speed/4) + s; */
+}
+
+@keyframes rotate {
+	from {
+			/* transform: rotateX(-20deg) rotateY(0deg); */
+			transform: rotate(-90deg) translate(-20px, 100px);
+	}
+	to {
+		/* 	transform: rotateX(-20deg) rotateY(360deg); */
+			transform: rotate(-90deg) translate(-20px, 100px);
+	}
+}
+/* .container {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+  perspective: 300px;
+  perspective-origin: 50% 40%;
+}
+
+.side {
+  position: absolute;
+  left: 140px;
+  top: 150px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid #ccc;
+  transform-origin: 50% 0%;
+  animation: spin $speed+s infinite linear;
+}
+
+.back {
+  animation-delay: -($speed/2) + s;
+}
+
+.right {
+  animation-delay: -($speed/4) + s;
+}
+
+.left {
+  animation-delay: -($speed * 0.75) + s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg) rotateX(30deg);
+    border-bottom-color: lighten($color, 5%);
+  }
+  25% {
+    transform: rotateY(90deg) rotateX(30deg);
+    border-bottom-color: darken($color, 5%);
+    opacity: 1;
+  }
+  26% {
+    opacity: 0;
+  }
+  50% {
+    transform: rotateY(180deg) rotateX(30deg);
+    border-bottom-color: darken($color, 12%);
+  }
+  74% {
+    opacity: 0;
+  }
+  75% {
+    transform: rotateY(270deg) rotateX(30deg);
+    border-bottom-color: darken($color, 15%);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(30deg);
+    border-bottom-color: lighten($color, 5%);
+  }
+}
+
+ */

@@ -3,17 +3,19 @@ import './style.scss';
 
 
 
-const MenuAccesRapide = () => {
+const MenuAccesRapide = ({ list, clicFile }) => {
   return (
 		<div className="menuGauche">
 			<div className="lienMenu--1">
 				<span className="screen"></span>
 				<p className="lienMenu--1-titre">Bureau</p>
 			</div>
-			<div className="lienMenu--1">
+			{list.map((dossier)=> 
+			<div className="lienMenu--1" onClick={()=>clicFile(dossier.name, dossier.id)}>
 				<span className="dossierMenu"></span>
-				<p className="lienMenu--1-titre">A propos</p>
+				<p className="lienMenu--1-titre">{dossier.name}</p>
 			</div>
+		 )}
 		</div>
   );
 }

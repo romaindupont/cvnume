@@ -4,7 +4,7 @@
 	background: #107459;
 	border-radius: 50%;
 	border: 10px solid white;
-	position: relative;
+	position: absolute;
 	top: 100px;
 	left: 200px;
 	cursor: pointer;
@@ -52,7 +52,7 @@
 	left: 15px;
 	content: '';
 	margin: auto;
-	z-index: 3;
+	z-index: 2;
 
 }
 

@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 import './style.scss';
 import HeaderDossier from './HeaderDossier';
 import MenuLine from './MenuLine';
-import MenuAccesRapide from './MenuAccesRapide';
+import MenuAccesRapide from '../../containers/DossierOuvert/MenuAccesRapide';
 import Contenu from './Contenu';
 
-const DossierOuvert = ({ actionDossier, setActionDossier }) => {
+const DossierOuvert = ({ actionDossier, setActionDossier, listDossier, id, setOpenBig }) => {
+	const list = listDossier.find((dossier)=> dossier.id === id)
 	const [ mode, setMode ] = useState(false);
 	let pos1 = 0;
   let pos2 = 0;
   let pos3 = 0;
   let pos4 = 0;
 
-	
   const dragElement = (e) => {
     e.preventDefault();
     const elemnt = document.getElementById('drag');
@@ -46,11 +46,11 @@ const DossierOuvert = ({ actionDossier, setActionDossier }) => {
   }
   return (
     <div className={`dossierOuvert ${actionDossier}`} draggable="true" id="drag" onDragStart={dragElement}>
-			<HeaderDossier setActionDossier={setActionDossier} actionDossier={actionDossier}/>
-			<MenuLine setMode={setMode}/>
+			<HeaderDossier setActionDossier={setActionDossier} actionDossier={actionDossier} name={list.name}/>
+			<MenuLine setMode={setMode} slug={list.slug}/>
 			<div className="centreDossier">
-				<MenuAccesRapide />
-				<Contenu mode={mode}/>
+				<MenuAccesRapide list={listDossier} />
+				<Contenu mode={mode} contenu={list.contenu} setOpenBig={setOpenBig}/>
 			</div>
 			
 			

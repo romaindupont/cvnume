@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './style.scss';
 
-const MenuLine = ({ setMode }) => {
+const MenuLine = ({ setMode, slug }) => {
   return (
 		<div className="DossierOuvertSearchBar">
 			<div className="lienDossier">
 				<span className="lienDossier--1">Bureau</span>
 				<span className="lienDossier--crochet">&#62;</span>
-				<span className="lienDossier--2">a_propos</span>
+				<span className="lienDossier--2">{slug}</span>
 			</div>
 			<div className="mode">
 				<div className="mode-liste" onClick={() => setMode(false)}><span className="tooltip">Mode liste</span>
@@ -28,7 +28,7 @@ const MenuLine = ({ setMode }) => {
 						<span className="trait"></span>
 					</div>
 					<form className="formulaireRecherche">
-						<input type="text" className="searchDossier-searchBar" placeholder="Rechercher dans Apropos"/>
+						<input type="text" className="searchDossier-searchBar" placeholder={`Rechercher dans ${slug}`}/>
 					</form>
 				</div>
 		</div>

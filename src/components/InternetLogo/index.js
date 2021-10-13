@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import './style.scss';
-import InternetPage from '../InternetPage';
+import InternetPage from '../../containers/InternetPage';
 
 
 const InternetLogo = ({ openBig, setOpenBig }) => {
-	const [ internetPageOpen, setInternetPageOpen ] = useState(false)
 	const OpenInternet = () => {
-		setInternetPageOpen(!internetPageOpen);
 		setOpenBig('normal');
 	}
   return (
@@ -14,8 +12,8 @@ const InternetLogo = ({ openBig, setOpenBig }) => {
 		<div className="internetLogo" onClick={OpenInternet}>
 				<span className="w"></span>
 		</div>
-		{internetPageOpen && (
-			<InternetPage setInternetPageOpen={setInternetPageOpen} openBig={openBig} setOpenBig={setOpenBig}/>
+		{openBig === 'normal' && (
+			<InternetPage openBig={openBig} setOpenBig={setOpenBig}/>
 
 		)}
 		</>

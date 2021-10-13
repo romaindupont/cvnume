@@ -1,5 +1,6 @@
-/* export const FETCH_QUESTION = 'FETCH_QUESTION';
-export const fetchQuestion = (id_category) => ({
-  type: FETCH_QUESTION,
-  id_category,
-}); */
+export const CLIC_FILE = 'CLIC_FILE';
+export const clicFile = (fileName, fileId) => ({
+  type: CLIC_FILE,
+  fileName,
+	fileId,
+});

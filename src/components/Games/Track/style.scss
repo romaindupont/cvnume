@@ -40,12 +40,23 @@ svg {
 		opacity: 0;
 	}
 }
+
+
 .menuGame {
 	position: absolute;
-    margin: 20rem auto;
-    width: 98vw;
-    height: 98vh;
-    top: 0;
+	margin: 20rem auto;
+	width: 98vw;
+	height: 98vh;
+	top: 0;
+	animation: afficher 1s forwards 11s ease-in;
+	opacity: 0;
+}
+@keyframes afficher {
+	from {
+	}
+	to {
+		opacity: 1;
+	}
 }
 .menuGame-ul {
 
@@ -85,12 +96,12 @@ svg {
 
 .pyramid {
 	transform-style: preserve-3d;
-	/* transform: rotate(-90deg) translate(-20px, 100px); */
+	transform: rotate(-90deg) translate(-7px, 100px);
 	/* animation: spin $speed+s infinite linear; */
-	animation: rotate 5s ease;
+	/* animation: rotate 5s ease; */
 	/*Unlimited execution*/
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
+/* 	animation-iteration-count: infinite;
+	animation-timing-function: linear; */
 }
 
 .pyramid::before, .pyramid::after {
@@ -114,16 +125,16 @@ svg {
 		/* animation-delay: -($speed/4) + s; */
 }
 
-@keyframes rotate {
+/* @keyframes rotate {
 	from {
 			/* transform: rotateX(-20deg) rotateY(0deg); */
-			transform: rotate(-90deg) translate(-20px, 100px);
+/* 			transform: rotate(-90deg) translate(-20px, 100px);
 	}
 	to {
 		/* 	transform: rotateX(-20deg) rotateY(360deg); */
-			transform: rotate(-90deg) translate(-20px, 100px);
+/* 			transform: rotate(-90deg) translate(-20px, 100px);
 	}
-}
+} */
 /* .container {
   width: 400px;
   height: 400px;

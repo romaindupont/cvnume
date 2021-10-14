@@ -11,4 +11,160 @@
 	background: red;
 	margin: 2rem auto;
 	border-radius: 75px 75px 75px 75px;
+	position: relative;
+
+	&:hover > span {
+		opacity: 1;
+	}	
+	& > span {
+		font-family: 'Gochi Hand', cursive;
+		opacity: 0;
+		position: absolute;
+    bottom: -25px;
+    left: 20px;
+		transition: all 1s ease-in-out;
+	}
+	&-title {
+		text-align: center;
+		font-family: 'Bangers', cursive;
+		overflow: hidden;
+		border-right: .25em solid #107459;
+		white-space: nowrap;
+		margin: 0 auto;
+		letter-spacing: .25em;
+		width: 200px; 
+		animation: 
+    typing 3.5s steps(40, start),
+    blink-caret .75s step-end infinite;
+		padding-bottom: 2rem;
+	}
+	&-paragraph {
+		font-family: 'Bangers', cursive;
+		font-weight: lighter;
+		font-size: 2rem;
+		margin-left: 2rem;
+		margin-right: 2rem;
+		&::selection {
+			background-color: red;
+
+			
+		}
+	}
+}
+.suite {
+	margin-left: 5rem;
+	margin-right: 2rem;
+}
+.firstLetter {
+	float: left;
+	font-size: 4rem;
+	padding-right: 2rem;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 15% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #107459; }
+}
+.passivieux {
+	color: #dbe1c2;
+	margin-left: 4rem;
+	margin-right: 2rem;
+	display: block;
+	&::selection {
+		background: red;
+	}
+}
+
+.matete-paragraph::selection > .passivieux {
+	display: block;
+}
+.firstP {
+	position: relative;
+
+	&::selection {
+	/* 	background: #dbe1c2; */
+		color: black;
+	
+
+		& > .passivieux {
+			color: black;
+		}
+	}
+}
+
+.firstP::selection::after {
+	color: red;
+}
+
+#confetti {
+	display: none;
+	/* display: flex; */
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+/* 	top: 0; */
+}
+$duration: 1000;
+.confetti-piece {
+  position: absolute;
+  width: 8px;
+  height: 16px;
+  background:red;
+  top: 0;
+  opacity: 0;
+	@for $i from 1 through 13 {
+    &:nth-child(#{$i}) {
+      left: $i * 7%;
+      transform: rotate(#{randomNum(-80, 80)}deg);
+      animation: makeItRain $duration * 1ms infinite ease-out;
+      animation-delay: #{randomNum(0, $duration * .5)}ms;
+      animation-duration: #{randomNum($duration * .7, $duration * 1.2)}ms
+    }
+		&:nth-child(odd) {
+			background: #17d3ff;
+		}
+		
+		&:nth-child(even) {
+			z-index: 1;
+		}
+		
+		&:nth-child(4n) {
+			width: 5px;
+			height: 12px;
+			animation-duration: $duration * 2ms;
+		}
+		
+		&:nth-child(3n) {
+			width: 3px;
+			height: 10px;
+			animation-duration: $duration * 2.5ms;
+			animation-delay: $duration * 1ms;
+		}
+		
+		&:nth-child(4n-7) {
+			background: #ffd300;
+		} 
+  }
+}
+
+@keyframes makeItRain {
+  from {
+    opacity: 0;
+  }
+  
+  50% {
+    opacity: 1;
+  }
+  
+  to {
+    transform: translateY(200px);
+  }
 }

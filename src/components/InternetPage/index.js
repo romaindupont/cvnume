@@ -1,20 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './style.scss';
 import PageAPropos from '../PageAPropos';
 import classNames from 'classnames';
 
-const InternetPage = ({ openBig, setOpenBig, listDossier, id}) => {
+const InternetPage = ({ listDossier, id, openPageInternet, closePage, smallPage, largePage}) => {
 	const list = listDossier.find((dossier) => dossier.id === id)
 	const sizeScreen = () => {
-		if (openBig === 'normal') {
-			setOpenBig('big');
+		console.log(openPageInternet)
+		if (openPageInternet === 'normal') {
+			largePage()
 		}
-		if (openBig === 'big') {
-			setOpenBig('normal');
+		if (openPageInternet === 'big') {
+			smallPage()
 		}
 	}
+
   return (
-		<div className={`internetPage ${openBig}`}>
+		<div className={`internetPage ${openPageInternet}`}>
 			<div className="internetPage-onglet">
 				<div className="internetPage-onglet--logo">
 					<div className="internetLogo--logo">
@@ -25,10 +27,10 @@ const InternetPage = ({ openBig, setOpenBig, listDossier, id}) => {
 				<span className="closeOnglet">&#xD7;</span>
 			</div>
 			<div className="dossierOuvertHeader-groupAction internetPage-onglet-group">
-				<span className="dossierOuvertHeader-minus internetPage-onglet-group-minus" onClick={()=>setOpenBig('close')}></span>
+				<span className="dossierOuvertHeader-minus internetPage-onglet-group-minus" onClick={()=>closePage('close')}></span>
 				<span className="dossierOuvertHeader-big internetPage-onglet-group-big" onClick={sizeScreen} ></span>
-				<span className={classNames("dossierOuvertHeader-bigSmall", {"dossierOuvertHeader-bigSmall--big internetPage-onglet-group-big":openBig==='big'})}></span>
-				<span className="dossierOuvertHeader-close" onClick={()=>setOpenBig('close')}>
+				<span className={classNames("dossierOuvertHeader-bigSmall", {"dossierOuvertHeader-bigSmall--big internetPage-onglet-group-big":openPageInternet==='big'})}></span>
+				<span className="dossierOuvertHeader-close" onClick={()=>closePage('close')}>
 					<span className="dossierOuvertHeader-close--1 internetPage-onglet-group-close"></span>
 					<span className="dossierOuvertHeader-close--2 internetPage-onglet-group-close"></span>
 				</span>

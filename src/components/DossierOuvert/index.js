@@ -3,9 +3,9 @@ import './style.scss';
 import HeaderDossier from './HeaderDossier';
 import MenuLine from './MenuLine';
 import MenuAccesRapide from '../../containers/DossierOuvert/MenuAccesRapide';
-import Contenu from './Contenu';
+import Contenu from '../../containers/DossierOuvert/Contenu';
 
-const DossierOuvert = ({ actionDossier, setActionDossier, listDossier, id, setOpenBig }) => {
+const DossierOuvert = ({ actionDossier, setActionDossier, listDossier, id }) => {
 	const list = listDossier.find((dossier)=> dossier.id === id)
 	const [ mode, setMode ] = useState(false);
 	let pos1 = 0;
@@ -50,7 +50,7 @@ const DossierOuvert = ({ actionDossier, setActionDossier, listDossier, id, setOp
 			<MenuLine setMode={setMode} slug={list.slug}/>
 			<div className="centreDossier">
 				<MenuAccesRapide list={listDossier} />
-				<Contenu mode={mode} contenu={list.contenu} setOpenBig={setOpenBig}/>
+				<Contenu mode={mode} contenu={list.contenu}/>
 			</div>
 			
 			

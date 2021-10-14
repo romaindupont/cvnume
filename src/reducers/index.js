@@ -3,11 +3,13 @@ import { combineReducers } from 'redux';
 
 // == Import : local
 /* import mondeReducer from './monde'; */
-import DossierReducer from './Dossier'
+import DossierReducer from './Dossier';
+import InternetReducer from './Internet';
 
 const rootReducer = combineReducers({
   /* monde: mondeReducer, */
 	Dossier: DossierReducer,
+	Internet: InternetReducer,
 });
 
 export default rootReducer;

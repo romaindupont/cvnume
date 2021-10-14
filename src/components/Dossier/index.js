@@ -1,11 +1,10 @@
 import React from 'react';
 import './style.scss';
 
-const Dossier = ({ setActionDossier, name, clicFile, id, setOpenBig }) => {
+const Dossier = ({ setActionDossier, name, clicFile, id }) => {
 	const openFile = () => {
 		clicFile(name,id)
 		setActionDossier('normal')
-		setOpenBig('close')
 	}
   return (
     <div className="dossier" onClick={openFile}>

@@ -1,23 +1,27 @@
 import { connect } from 'react-redux';
 // == Import : local
 import InternetPage from '../../components/InternetPage';
-
+import { closePage, largePage, smallPage } from '../../actions/internet';
 
 const mapStateToProps = (state) => ({
   listDossier: state.Dossier.listDossier,
-	id: state.Dossier.idName
+	id: state.Dossier.idName,
+	openPageInternet: state.Internet.openPageInternet,
 
 });
-const mapDispatchToProps = {};
-/* const mapDispatchToProps = (dispatch)=> ({
-  changeArticlesField: (newValue, name) => {
-    dispatch(changeArticlesField(newValue, name));
+
+const mapDispatchToProps = (dispatch)=> ({
+  closePage: () => {
+    dispatch(closePage());
   },
-  sendArticleToBasket: (article_id, quantity) => {
-    dispatch(sendArticleToBasket(article_id, quantity));
+  largePage: () => {
+    dispatch(largePage());
+  },
+	smallPage: () => {
+    dispatch(smallPage());
   }
   
 
-}); */
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(InternetPage);

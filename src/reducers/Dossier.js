@@ -1,5 +1,11 @@
 import { CLIC_FILE } from '../actions';
-
+/* id: 1,
+nomcontenu: 'A propos',
+class: 'dossierMenu',
+dateModif: '06/10/2021 10:10',
+type: 'Dossier de fichiers',
+taille: '',
+nomSheet: '' */
 const initialState = {
   listDossier: [
 		{
@@ -10,10 +16,10 @@ const initialState = {
 				{
 					id: 1,
 					nomcontenu: 'A propos',
-					class: 'dossierMenu',
+					class: 'html',
 					dateModif: '06/10/2021 10:10',
-					type: 'Dossier de fichiers',
-					taille: '',
+					type: 'Feuille HTML',
+					taille: '150 Ko',
 					nomSheet: ''
 				},
 				{

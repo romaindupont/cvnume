@@ -6,8 +6,6 @@ const PageAPropos = () => {
 	const frame = () => {
 		const confetti = document.getElementById('confetti');
 		confetti.style.display = 'flex';
-
-		console.log('lancer l\'action')
 	}
 	const confettiLeave = () => {
 		const confetti = document.getElementById('confetti');

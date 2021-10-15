@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.scss';
 import PageAPropos from '../PageAPropos';
+import PageConnaissances from '../PageConnaissances';
 import classNames from 'classnames';
 
 const InternetPage = ({ listDossier, id, openPageInternet, closePage, smallPage, largePage}) => {
@@ -44,6 +45,10 @@ const InternetPage = ({ listDossier, id, openPageInternet, closePage, smallPage,
 			<div className="pageWeb">
 				{/* <iframe src="https://www.romaindupont.me" frameborder="0"></iframe> */}
 				{list.slug === "a_propos" ? <PageAPropos /> : (
+					<div className="venir">A venir</div>
+				)
+				}
+				{list.slug === "connaissances" ? <PageConnaissances /> : (
 					<div className="venir">A venir</div>
 				)
 				}

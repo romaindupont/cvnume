@@ -44,14 +44,11 @@ const InternetPage = ({ listDossier, id, openPageInternet, closePage, smallPage,
 			</div>
 			<div className="pageWeb">
 				{/* <iframe src="https://www.romaindupont.me" frameborder="0"></iframe> */}
-				{list.slug === "a_propos" ? <PageAPropos /> : (
-					<div className="venir">A venir</div>
+				{list.slug === "a_propos" ? <PageAPropos /> : list.slug === "connaissances" ? <PageConnaissances /> : (
+					<div className="venir"></div>
 				)
 				}
-				{list.slug === "connaissances" ? <PageConnaissances /> : (
-					<div className="venir">A venir</div>
-				)
-				}
+
 				
 			</div>
 		</div>

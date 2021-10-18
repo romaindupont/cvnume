@@ -2,6 +2,17 @@
 	width: 100%;
 	height: 90%;
 	/* background: red; */
-	background: #c5c7bf;
+	background: #004963;
 	overflow-y: scroll;
+}
+.content {
+  padding-top: 10px;
+  transform: translate3d(50%, 0, 0);
+  text-align: left;
+  background: #004963;
+  color: white;
+	font-size: 5rem;
+  padding: 25px 35px;
+  border-radius: 50%;
+	border: 5px solid white;
 }

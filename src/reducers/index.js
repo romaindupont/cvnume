@@ -5,11 +5,13 @@ import { combineReducers } from 'redux';
 /* import mondeReducer from './monde'; */
 import DossierReducer from './Dossier';
 import InternetReducer from './Internet';
+import MailReducer from './Mail';
 
 const rootReducer = combineReducers({
   /* monde: mondeReducer, */
 	Dossier: DossierReducer,
 	Internet: InternetReducer,
+	Mail: MailReducer,
 });
 
 export default rootReducer;

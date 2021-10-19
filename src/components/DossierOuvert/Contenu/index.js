@@ -2,10 +2,13 @@ import React from 'react';
 import './style.scss';
 import classNames from 'classnames';
 
-const Contenu = ({ mode, contenu, smallPage }) => {
+const Contenu = ({ mode, contenu, smallPage, smallMailPage }) => {
 	const openThePage = (e) => {
 		if (e.target.getAttribute("data-styleclass") === "html") {
 			smallPage()
+		}
+		if (e.target.getAttribute("data-styleclass") === "mail") {
+			smallMailPage()
 		}
 	}
   return (

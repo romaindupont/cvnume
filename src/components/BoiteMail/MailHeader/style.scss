@@ -1,0 +1,44 @@
+.mailHeader {
+	background: transparent;
+	width: 91%;
+	height: 9%;
+	position: absolute;
+	left: 84px;
+	border-radius: 10px 10px 0px 0px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.mailHeader-close {
+	margin: 1.5rem 1rem;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	&--1 {
+		display: block;
+		width: 15px;
+		height: 1px;
+		background: black;
+		transform: rotate3d(0, 0, 3, 45deg);
+		margin-top: 0.2rem;
+	}
+	&--2 {
+		display: block;
+		width: 15px;
+		height: 1px;
+		background: black;
+		transform: rotate3d(0, 0, 3, -45deg);
+	}
+}
+
+.mailHeader-close::before {
+	width: 30px;
+	height: 30px;
+	content: '';
+	background: #e79090;
+	border-radius: 50%;
+	position: absolute;
+	top: 10px;
+	border: 3px solid white;
+	right: 40px;
+}

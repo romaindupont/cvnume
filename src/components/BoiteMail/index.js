@@ -1,10 +1,10 @@
 import React from 'react';
 import './style.scss';
 import LeftMenu from './LeftMenu';
-import MailHeader from './MailHeader';
+import MailHeader from '../../containers/BoiteMail/MailHeader';
 import Message from './Message';
-import ViewSmallMessage from './ViewSmallMessage';
-import ActionMessage from './ActionMessage';
+import ViewSmallMessage from '../../containers/BoiteMail/ViewSmallMessage';
+import ActionMessage from '../../containers/BoiteMail/ActionMessage';
 
 const BoiteMail = ({openPageMail}) => {
   return (

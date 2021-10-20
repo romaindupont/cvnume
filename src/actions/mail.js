@@ -12,3 +12,9 @@ export const CLOSE_MAIL_PAGE = 'CLOSE_MAIL_PAGE';
 export const closeMailPage = () => ({
   type: CLOSE_MAIL_PAGE,
 });
+
+export const CHANGE_CATEGORY = 'CHANGE_CATEGORY';
+export const changeCategory = (category) => ({
+  type: CHANGE_CATEGORY,
+	category,
+});

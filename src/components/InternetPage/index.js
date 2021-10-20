@@ -7,7 +7,6 @@ import classNames from 'classnames';
 const InternetPage = ({ listDossier, id, openPageInternet, closePage, smallPage, largePage}) => {
 	const list = listDossier.find((dossier) => dossier.id === id)
 	const sizeScreen = () => {
-		console.log(openPageInternet)
 		if (openPageInternet === 'normal') {
 			largePage()
 		}

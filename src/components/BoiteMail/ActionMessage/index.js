@@ -5,7 +5,7 @@ import PaperPlane from '../../../assets/img/paper-plane-regular.svg';
 import Trash from '../../../assets/img/trash-alt-regular.svg';
 import classNames from 'classnames';
 
-const ActionMessage = ({changeCategory}) => {
+const ActionMessage = ({changeCategory, setNewMessage, setOpenMessage}) => {
 	const [ openBox, setOpenBox ] = useState(false);
 	const clicAction = (e) => {
 		const actualSpan = document.querySelector('.selectionAction');
@@ -45,7 +45,7 @@ const ActionMessage = ({changeCategory}) => {
 				<p className="actionMessage-moncompte-email" onClick={()=>setOpenBox(!openBox)}>rdt.romaindupont@gmail.com</p>
 				<span className={classNames("actionMessage-moncompte--change", {"actionMessage-moncompte--open":openBox})} onClick={()=>setOpenBox(false)}>Connecter un autre compte ...</span>
 			</div>
-			<div className="actionMessage-new">Nouveau Message</div>
+			<div className="actionMessage-new" onClick={()=>setOpenMessage(false) && setNewMessage(true)}>Nouveau Message</div>
 			<div className="actionMessage-inbox" onClick={clicAction}>
 				<img src={Inbox} alt="inbox" className="actionMessage-image"/>Inbox<span className="selectionAction"></span>
 			</div>

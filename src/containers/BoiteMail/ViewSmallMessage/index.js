@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 // == Import : local
 import ViewSmallMessage from '../../../components/BoiteMail/ViewSmallMessage';
-
+import { chooseMessage } from '../../../actions/mail';
 
 const mapStateToProps = (state) => ({
 	mail: state.Mail.mail,
@@ -9,19 +9,11 @@ const mapStateToProps = (state) => ({
 
 });
 
-const mapDispatchToProps = null;
-/* const mapDispatchToProps = (dispatch)=> ({
-  closeMailPage: () => {
-    dispatch(closeMailPage());
+/* const mapDispatchToProps = null; */
+const mapDispatchToProps = (dispatch)=> ({
+  chooseMessage: (id) => {
+    dispatch(chooseMessage(id));
   },
-  largeMailPage: () => {
-    dispatch(largeMailPage());
-  },
-	smallMailPage: () => {
-    dispatch(smallMailPage());
-  }
-  
-
-}); */
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(ViewSmallMessage);

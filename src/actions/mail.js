@@ -18,3 +18,9 @@ export const changeCategory = (category) => ({
   type: CHANGE_CATEGORY,
 	category,
 });
+
+export const CHOOSE_MESSAGE = 'CHOOSE_MESSAGE';
+export const chooseMessage = (id) => ({
+  type: CHOOSE_MESSAGE,
+	id,
+});

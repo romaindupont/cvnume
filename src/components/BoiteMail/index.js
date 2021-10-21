@@ -1,12 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './style.scss';
 import LeftMenu from './LeftMenu';
 import MailHeader from '../../containers/BoiteMail/MailHeader';
-import Message from './Message';
+import Message from '../../containers/BoiteMail/Message';
 import ViewSmallMessage from '../../containers/BoiteMail/ViewSmallMessage';
 import ActionMessage from '../../containers/BoiteMail/ActionMessage';
+import NouveauMessage from './NouveauMessage';
 
 const BoiteMail = ({openPageMail}) => {
+	const [ openMessage, setOpenMessage ] = useState(false);
+	const [ newMessage, setNewMessage ] = useState(false);
+	console.log(newMessage)
   return (
 		<>
 		<div className={`mail_intro ${openPageMail}`}>
@@ -21,9 +25,10 @@ const BoiteMail = ({openPageMail}) => {
 			<MailHeader />
 			<div className="mailBox">
 				<LeftMenu />
-				<ActionMessage />
-				<ViewSmallMessage />
-				<Message />
+				<ActionMessage setOpenMessage={setOpenMessage} setNewMessage={setNewMessage}/>
+				<ViewSmallMessage setOpenMessage={setOpenMessage} setNewMessage={setNewMessage} />
+				{openMessage && (<Message />)}
+				{newMessage && (<NouveauMessage />)}
 			</div>
 		</div>
 		</>

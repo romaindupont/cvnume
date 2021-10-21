@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
 
-const SmallMessage = ({id, prenom, nom, category, title, date, text}) => {
+const SmallMessage = ({id, prenom, nom, category, title, date, text, chooseMessage, setOpenMessage, setNewMessage}) => {
 	const messageClic = (e) => {
 		const actualSpan = document.querySelector('.colorSelect');
 		if (actualSpan === null) {
@@ -9,7 +9,9 @@ const SmallMessage = ({id, prenom, nom, category, title, date, text}) => {
 			const newSpan = document.createElement('span');
 			newSpan.classList.add('colorSelect');
 			selection.appendChild(newSpan);
-			/* const box =  document.querySelector('.viewSmallMessage-smallMessage'); */
+			chooseMessage(parseInt(e.target.getAttribute('data-id')))
+			setNewMessage(false)
+			setOpenMessage(true)
 		}
 		else {
 			actualSpan.remove();
@@ -17,6 +19,9 @@ const SmallMessage = ({id, prenom, nom, category, title, date, text}) => {
 			const newSpan = document.createElement('span');
 			newSpan.classList.add('colorSelect');
 			selection.appendChild(newSpan);
+			chooseMessage(parseInt(e.target.getAttribute('data-id')))
+			setNewMessage(false)
+			setOpenMessage(true)
 
 		}
 	}

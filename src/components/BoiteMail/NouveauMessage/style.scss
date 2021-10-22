@@ -1,4 +1,4 @@
-.Nouveaumessage {
+.NouveauMessage {
 	width: 47%;
 	background: #fbf9f9;
 	height: 100%;
@@ -9,4 +9,209 @@
 	overflow-y: auto;
 	font-family: 'Ubuntu', sans-serif;
 	position: relative;
+	font-size: 0.8rem;
+
+	&-header {
+		font-family: 'Ubuntu', sans-serif;
+		font-size: 0.8rem;
+		height: 30vh;
+    width: 100%;
+    position: relative;
+    background: whitesmoke;
+    box-shadow: 0px 2px 7px -2px #a19f9f;
+		border-radius: 0px 10px 0px 0px;
+	}
+}
+input {
+	margin-left: 1.5rem;
+	width: 250px;
+	border: 1px solid #cfcece;
+	box-shadow: 0px 2px 7px -2px #a19f9f;
+}
+.Nouveaumessage-thumbmail {
+	width: 50px;
+	height: 50px;
+	background: #a19f9f;
+	border-radius: 50%;
+	border: 4px solid #d5cece;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.Nouveaumessage-input-adresseMail {
+	position: absolute;
+	top: 25px;
+	left: 75px;
+}
+
+.Nouveaumessage-input-a {
+	position: absolute;
+	top: 75px;
+	left: 85px;
+}
+.Nouveaumessage-input-nom {
+	position: absolute;
+	top: 50px;
+	left: 62px;
+	& > input {
+		width: 100px;
+	}
+
+}
+.Nouveaumessage-input-prenom {
+	position: absolute;
+	top: 50px;
+	left: 230px;
+	& > input {
+		width: 100px;
+	}
+}
+.Nouveaumessage-input-cc {
+	position: absolute;
+	top: 110px;
+	left: 74px;
+	& > input {
+		background: #d1d1d1;
+	}
+}
+
+.Nouveaumessage-objet {
+	position: absolute;
+	top: 150px;
+	left: 20px;
+
+	& > input {
+    width: 315px;
+	}
+}
+
+.Nouveaumessage-message {
+	height: 40vh;
+}
+
+textarea {
+	border: 0;
+	outline: none;
+}
+
+select#thumb option[value="1"] > .Nouveaumessage-thumbmail {
+	background: red;
+}
+
+select#thumb option[value="2"] {
+	background: blue;
+}
+select#thumb option[value="3"] {
+	background: green;
+}
+select#thumb option[value="4"] {
+	background: yellow;
+}
+
+.sendButton {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	border: 0;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.triangleSend1 {
+	border-bottom: 15px solid #6eaf6e;
+	border-left: 25px solid transparent;
+	position: absolute;
+	top: 25px;
+	left: 17px;
+	transform: rotate(165deg);
+	transition: left 4s ease-in;
+	&--open {
+		left: 1000px;
+	}
+	&::after {
+		content: '';
+    width: 25px;
+    height: 1px;
+    background: white;
+    position: absolute;
+    top: 11px;
+    left: -25px;
+    transform: rotate(-20deg);
+	}
+}
+
+.triangleSend2 {
+	border-bottom: 15px solid #6eaf6e;
+	border-right: 25px solid transparent;
+	position: absolute;
+	top: 9px;
+	left: 12px;
+	transform: rotate(-15deg);
+	transition: left 4s ease-in;
+	&--open {
+		left: 1000px;
+	}
+	&::after {
+		content: '';
+    width: 25px;
+    height: 1px;
+    background: white;
+    position: absolute;
+    top: 12px;
+    left: -1px;
+    transform: rotate(20deg);
+	}
+}
+
+
+.ok {
+	visibility: hidden;
+	background: #6eaf6e;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 10px;
+	transition: visible	3s ease-out 2s;
+	&--open {
+		left: 10px;
+		visibility: visible;
+		animation: opaque 4s forwards ease-in;
+	}
+
+	&::before {
+    content: '';
+    width: 20px;
+    height: 4px;
+    position: absolute;
+    top: 14px;
+    left: 10px;
+    border-radius: 30%;
+    background: white;
+    transform: rotate(126deg);
+	}
+	&::after {
+    content: '';
+    width: 15px;
+    height: 4px;
+    position: absolute;
+    top: 16px;
+    left: 2px;
+    background: white;
+    transform: rotate(45deg);
+    border-radius: 30%;
+	}
+}
+@keyframes opaque {
+	0% {
+		opacity:0;
+	}
+	50% {
+		opacity:0.5;
+	}
+	100% {
+		opacity:1;
+	}
 }

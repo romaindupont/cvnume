@@ -1,5 +1,4 @@
-import { radToDeg } from "three/src/math/MathUtils";
-import { LARGE_MAIL_PAGE, CLOSE_MAIL_PAGE, SMALL_MAIL_PAGE, CHANGE_CATEGORY, CHOOSE_MESSAGE } from "../actions/mail";
+import { LARGE_MAIL_PAGE, CLOSE_MAIL_PAGE, SMALL_MAIL_PAGE, CHANGE_CATEGORY, CHOOSE_MESSAGE, SEND_MESSAGE } from "../actions/mail";
 
 const initialState = {
 	openPageMail: 'close',
@@ -96,6 +95,23 @@ const reducer = (state = initialState, action = {}) => {
 			return {
 				...state,
 				id: action.id,
+			}
+		case SEND_MESSAGE:
+			return {
+				...state,
+				mail: [
+					...state.mail,
+					{
+						id: action.id,
+						prenom: action.prenom,
+						nom: action.nom,
+						category: action.category,
+						title: action.title,
+						date: action.date,
+						text: action.text,
+						mail: action.mail
+					}
+				]
 			}
     default:
       return state;

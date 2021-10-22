@@ -1,4 +1,4 @@
-import { CLIC_FILE } from '../actions';
+import { CLIC_FILE, CHANGE_VALUE } from '../actions';
 /* id: 1,
 nomcontenu: 'A propos',
 class: 'dossierMenu',
@@ -128,11 +128,11 @@ const reducer = (state = initialState, action = {}) => {
 				idName: action.fileId,
 				fileName: action.fileName,
 			}
-/*     case IS_CONNECTED:
-      return {
-        ...state,
-        isConnected: !state.isConnected,
-      }; */
+		case CHANGE_VALUE:
+			return {
+				...state,
+				[action.key]: action.newValue
+			}
     default:
       return state;
   }

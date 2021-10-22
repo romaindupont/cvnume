@@ -5,12 +5,15 @@ import MailHeader from '../../containers/BoiteMail/MailHeader';
 import Message from '../../containers/BoiteMail/Message';
 import ViewSmallMessage from '../../containers/BoiteMail/ViewSmallMessage';
 import ActionMessage from '../../containers/BoiteMail/ActionMessage';
-import NouveauMessage from './NouveauMessage';
+import NouveauMessage from '../../containers/BoiteMail/NouveauMessage';
+import Calendrier from './Calendrier';
+import Contact from './Contact';
+
 
 const BoiteMail = ({openPageMail}) => {
 	const [ openMessage, setOpenMessage ] = useState(false);
 	const [ newMessage, setNewMessage ] = useState(false);
-	console.log(newMessage)
+	const [ page, setPage ] = useState('email');
   return (
 		<>
 		<div className={`mail_intro ${openPageMail}`}>
@@ -24,11 +27,20 @@ const BoiteMail = ({openPageMail}) => {
 			</div>
 			<MailHeader />
 			<div className="mailBox">
-				<LeftMenu />
+				<LeftMenu setPage={setPage} />
+				{page==='email' && (<>
 				<ActionMessage setOpenMessage={setOpenMessage} setNewMessage={setNewMessage}/>
 				<ViewSmallMessage setOpenMessage={setOpenMessage} setNewMessage={setNewMessage} />
 				{openMessage && (<Message />)}
-				{newMessage && (<NouveauMessage />)}
+				{newMessage && (<NouveauMessage />)}</>)}
+				{page === 'calendrier' && (<Calendrier /> 
+				)}
+				{page === 'me' && (<>
+				</>)}
+				{page === 'contact' && (<Contact />
+				)}
+				{page === 'settings' && (<>
+				</>)}
 			</div>
 		</div>
 		</>

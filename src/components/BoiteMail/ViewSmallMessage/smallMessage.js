@@ -10,8 +10,8 @@ const SmallMessage = ({id, prenom, nom, category, title, date, text, chooseMessa
 			newSpan.classList.add('colorSelect');
 			selection.appendChild(newSpan);
 			chooseMessage(parseInt(e.target.getAttribute('data-id')))
-			setNewMessage(false)
 			setOpenMessage(true)
+			setNewMessage(false)
 		}
 		else {
 			actualSpan.remove();
@@ -20,8 +20,8 @@ const SmallMessage = ({id, prenom, nom, category, title, date, text, chooseMessa
 			newSpan.classList.add('colorSelect');
 			selection.appendChild(newSpan);
 			chooseMessage(parseInt(e.target.getAttribute('data-id')))
-			setNewMessage(false)
 			setOpenMessage(true)
+			setNewMessage(false)
 
 		}
 	}

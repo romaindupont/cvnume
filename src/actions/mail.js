@@ -24,3 +24,16 @@ export const chooseMessage = (id) => ({
   type: CHOOSE_MESSAGE,
 	id,
 });
+
+export const SEND_MESSAGE = 'SEND_MESSAGE';
+export const sendMessage = (id,prenom,nom,category,title,date,text,mail) => ({
+  type: SEND_MESSAGE,
+	id,
+	prenom,
+	nom,
+	category,
+	title,
+	date,
+	text,
+	mail
+});

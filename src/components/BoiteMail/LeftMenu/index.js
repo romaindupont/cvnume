@@ -6,14 +6,15 @@ import Contact from '../../../assets/img/address-book-regular.svg';
 import Email from '../../../assets/img/envelope-regular.svg';
 import Settings from '../../../assets/img/cog-solid.svg';
 
-const LeftMenu = () => {
+const LeftMenu = ({setPage}) => {
+	
   return (
 		<div className="mailBox-leftMenu">
-			<div className="mailBox-leftMenu--calendar"><img src={Calendrier} alt="calendrier" /></div>
-			<div className="mailBox-leftMenu--me"><img src={Me} alt="calendrier" /></div>
-			<div className="mailBox-leftMenu--contact"><img src={Contact} alt="calendrier" /></div>
-			<div className="mailBox-leftMenu--email"><img src={Email} alt="calendrier" /></div>
-			<div className="mailBox-leftMenu--settings"><img src={Settings} alt="calendrier" /></div>
+			<div className="mailBox-leftMenu--calendar" onClick={()=>setPage('calendrier')}><img src={Calendrier} alt="calendrier" /></div>
+			<div className="mailBox-leftMenu--me" onClick={()=>setPage('me')}><img src={Me} alt="moi" /></div>
+			<div className="mailBox-leftMenu--contact" onClick={()=>setPage('contact')}><img src={Contact} alt="contact" /></div>
+			<div className="mailBox-leftMenu--email" onClick={()=>setPage('email')}><img src={Email} alt="boiteMail" /></div>
+			<div className="mailBox-leftMenu--settings" onClick={()=>setPage('settings')}><img src={Settings} alt="settings" /></div>
 		</div>
   );
 }

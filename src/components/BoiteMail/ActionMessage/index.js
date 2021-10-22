@@ -45,7 +45,7 @@ const ActionMessage = ({changeCategory, setNewMessage, setOpenMessage}) => {
 				<p className="actionMessage-moncompte-email" onClick={()=>setOpenBox(!openBox)}>rdt.romaindupont@gmail.com</p>
 				<span className={classNames("actionMessage-moncompte--change", {"actionMessage-moncompte--open":openBox})} onClick={()=>setOpenBox(false)}>Connecter un autre compte ...</span>
 			</div>
-			<div className="actionMessage-new" onClick={()=>setOpenMessage(false) && setNewMessage(true)}>Nouveau Message</div>
+			<div className="actionMessage-new" onClick={()=>setOpenMessage(false) & setNewMessage(true)}>Nouveau Message</div>
 			<div className="actionMessage-inbox" onClick={clicAction}>
 				<img src={Inbox} alt="inbox" className="actionMessage-image"/>Inbox<span className="selectionAction"></span>
 			</div>

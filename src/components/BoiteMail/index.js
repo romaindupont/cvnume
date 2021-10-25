@@ -8,13 +8,14 @@ import ActionMessage from '../../containers/BoiteMail/ActionMessage';
 import NouveauMessage from '../../containers/BoiteMail/NouveauMessage';
 import Calendrier from './Calendrier';
 import Contact from './Contact';
+import MyAccount from './MyAccount';
 
 
 const BoiteMail = ({openPageMail}) => {
 	const [ openMessage, setOpenMessage ] = useState(false);
 	const [ newMessage, setNewMessage ] = useState(false);
 	const [ page, setPage ] = useState('email');
-  return (
+	  return (
 		<>
 		<div className={`mail_intro ${openPageMail}`}>
 			<div className="cube">			
@@ -35,8 +36,8 @@ const BoiteMail = ({openPageMail}) => {
 				{newMessage && (<NouveauMessage />)}</>)}
 				{page === 'calendrier' && (<Calendrier /> 
 				)}
-				{page === 'me' && (<>
-				</>)}
+				{page === 'me' && (<MyAccount />
+				)}
 				{page === 'contact' && (<Contact />
 				)}
 				{page === 'settings' && (<>

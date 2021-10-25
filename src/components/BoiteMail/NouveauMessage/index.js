@@ -6,16 +6,16 @@ const NouveauMessage = ({changeValue, sendMessage}) => {
 	const [ clicSendMessage, setClicSendMessage ] = useState(false);
 	const thumbmailChoose = (e) => {
 		const select = document.getElementById('thumb');
-		if(e.target.value==1){
+		if(e.target.value === 1){
 			select.style.background = 'red'
 		}
-		if(e.target.value==2){
+		if(e.target.value === 2){
 			select.style.background = 'blue'
 		}
-		if(e.target.value==3){
+		if(e.target.value === 3){
 			select.style.background = 'green'
 		}
-		if(e.target.value==4){
+		if(e.target.value === 4){
 			select.style.background = 'yellow'
 		}
 	}

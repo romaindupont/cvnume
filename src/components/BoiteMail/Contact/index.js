@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './style.scss';
 import contactData from '../../../data/contact';
 
@@ -33,7 +33,7 @@ const Contact = () => {
 					<div className="contact-form-tel">Tel: <a href={`tel:${user.tel}`}>{user.tel}</a></div>
 					<div className="contact-form-mail">Mail: <a href={`mailto:${user.mail}`}>{user.mail}</a></div>
 					<div className="contact-form-entreprise">Entreprise: <span>{user.entreprise}</span></div>
-					<div className="contact-form-site">Site web: <a href={`https://${user.site}`} target="_blank" >{user.site}</a></div>
+					<div className="contact-form-site">Site web: <a href={`https://${user.site}`} target="_blank" rel="noreferrer">{user.site}</a></div>
 				</div>
 			</div>
 			))}

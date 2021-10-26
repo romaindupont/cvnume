@@ -37,7 +37,7 @@
   transform-style: preserve-3d;
 	margin: 4rem auto;
 	transform: translateZ(-1000px);
-	animation: turn 10s 200ms forwards, changeLogo 2s 11s forwards;
+	animation: turn 10s 200ms forwards/* , changeLogo 2s 11s forwards */;
 }
 
 .cube__face {
@@ -121,7 +121,7 @@
 }
 
 .mailBox {
-	background: white;
+	background: var(--theme-page-background);
 	width: 98%;
 	height: 90%;
 	position: absolute;

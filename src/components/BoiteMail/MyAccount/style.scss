@@ -1,12 +1,113 @@
 .myAccount {
-	width: 47%;
-	background: #fbf9f9;
+	width: 92%;
+	background: var(--theme-page-background);
 	height: 100%;
 	border-radius: 0px 10px 10px 0px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	overflow-y: auto;
-	font-family: 'Ubuntu', sans-serif;
+	/* overflow-y: auto; */
+	font-family: 'Lobster', cursive;
 	position: relative;
+}
+
+#monSvg {
+	background: transparent;
+	height: 70vh;
+	width: 100%;
+	margin: 0;
+	animation: none;
+}
+
+.contour {
+	stroke: white;
+	fill: #0329dd;
+	stroke-width: 20px;
+}
+
+.myAccount-contenu {
+	position: absolute;
+	width: 100%;
+	/* height: 100vh; */
+}
+
+.myAccount-image {
+	width: 100%;
+	height: 150px;
+	display: flex;
+	position: absolute;
+	top: 167px;
+	justify-content: center;
+}
+
+.myAccount-image1 {
+	background: red;
+	width: 100px;
+	height: 150px;
+	display: flex;
+	/* position: fixed; */
+	position: absolute;
+	border: 7px solid white;
+	justify-content: center;
+}
+
+.myAccount-lien {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	/* position: fixed; */
+	position: absolute;
+	top: 350px;
+
+	&--link {
+		width: 30px;
+    height: 30px;
+    margin: 1rem;
+		border-radius: 10%;
+		& > img {
+			width: 100%;
+		}
+	}
+}
+
+.myAccount-lien--link:hover {
+	background: var(--theme-page-text);
+}
+
+.myAccount-email {
+	font-size: 2rem;
+	text-align: center;
+	position: relative;
+	top: 420px;
+	& > a {
+		margin-left: 4rem;
+	}
+}
+
+.myAccount-tel {
+	font-size: 2rem;
+	text-align: center;
+	position: relative;
+	top: 435px;
+	& > a {
+		margin-left: 4rem;
+	}
+}
+
+.myAccount-email::before {
+	content: '';
+	border-bottom: 20px solid var(--theme-page-text);
+	border-left: 20px solid transparent;
+	position: absolute;
+	top: 12px;
+	transform: rotate(-45deg);
+}
+
+.myAccount-tel::before {
+	content: '';
+	border-bottom: 20px solid var(--theme-page-text);
+	border-left: 20px solid transparent;
+	position: absolute;
+	top: 12px;
+	transform: rotate(-45deg);
 }

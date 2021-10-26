@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './style.scss';
+import '../../styles/theme.scss';
 import LeftMenu from './LeftMenu';
 import MailHeader from '../../containers/BoiteMail/MailHeader';
 import Message from '../../containers/BoiteMail/Message';
@@ -9,15 +10,17 @@ import NouveauMessage from '../../containers/BoiteMail/NouveauMessage';
 import Calendrier from './Calendrier';
 import Contact from './Contact';
 import MyAccount from './MyAccount';
+import Settings from './Settings';
 
 
 const BoiteMail = ({openPageMail}) => {
 	const [ openMessage, setOpenMessage ] = useState(false);
 	const [ newMessage, setNewMessage ] = useState(false);
+	const [ theme, setTheme ] = useState('light');
 	const [ page, setPage ] = useState('email');
 	  return (
 		<>
-		<div className={`mail_intro ${openPageMail}`}>
+		<div className={`mail_intro ${openPageMail} ${theme}`}>
 			<div className="cube">			
 				<div className="cube__face cube__face--front"><span>@</span></div>
 				<div className="cube__face cube__face--right"></div>
@@ -40,8 +43,8 @@ const BoiteMail = ({openPageMail}) => {
 				)}
 				{page === 'contact' && (<Contact />
 				)}
-				{page === 'settings' && (<>
-				</>)}
+				{page === 'settings' && (<Settings setTheme={setTheme}/>
+				)}
 			</div>
 		</div>
 		</>

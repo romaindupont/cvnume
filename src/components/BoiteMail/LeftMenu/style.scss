@@ -1,12 +1,12 @@
 .mailBox-leftMenu {
-	background: #fbf9f9;
+	background: var(--theme-page-background)/* #fbf9f9 */;
 	width: 8%;
 	height: 100%;
 	border-radius: 10px 0px 0px 10px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	box-shadow: inset 1px 1px 8px 2px #a19f9f;
+	box-shadow: inset 1px 1px 8px 2px var(--theme-inset);
 	
 
 }

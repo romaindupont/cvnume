@@ -4,6 +4,7 @@
 	font-family: 'Lobster', cursive;
 	overflow-y: scroll;
 	overflow-x: hidden;
+	color: var(--theme-page-text);
 	&-form {
     width: 98%;
     display: flex;
@@ -42,7 +43,7 @@
 		&-thumbmail {
 			width: 50px;
 			height: 50px;
-			background: grey;
+			background: var(--theme-inset);
 			border-radius: 50%;
 			border: 5px solid #a5a2a2;
 			position: absolute;
@@ -53,16 +54,19 @@
 			position: absolute;
 			top: 40px;
 			left: 200px;
+			color: var(--theme-page-text);
 		}
 		&-nom {
 			position: absolute;
 			top: 40px;
 			left: 290px;
+			color: var(--theme-page-text);
 		}
 		&-profession {
 			position: absolute;
 			top: 40px;
 			right: 60px;
+			color: var(--theme-page-text);
 		}
 		&-contact {
 			display: none;
@@ -71,6 +75,7 @@
 				position: absolute;
 				bottom: 25px;
 				left: 200px;
+				color: var(--theme-page-text);
 			}
 		}
 	}

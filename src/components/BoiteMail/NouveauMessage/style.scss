@@ -1,6 +1,6 @@
 .NouveauMessage {
 	width: 47%;
-	background: #fbf9f9;
+	background: var(--theme-page-background);
 	height: 100%;
 	border-radius: 0px 10px 10px 0px;
 	display: flex;
@@ -10,23 +10,30 @@
 	font-family: 'Ubuntu', sans-serif;
 	position: relative;
 	font-size: 0.8rem;
-
+	color: var(--theme-page-text);
 	&-header {
 		font-family: 'Ubuntu', sans-serif;
 		font-size: 0.8rem;
 		height: 30vh;
     width: 100%;
     position: relative;
-    background: whitesmoke;
-    box-shadow: 0px 2px 7px -2px #a19f9f;
+    background: var(--theme-page-background);
+    box-shadow: 0px 2px 7px -2px var(--theme-inset);
 		border-radius: 0px 10px 0px 0px;
+		color: var(--theme-page-text);
 	}
+}
+.Nouveaumessage{
+	width: 47%;
 }
 input {
 	margin-left: 1.5rem;
-	width: 250px;
+/* 	width: 250px; */
 	border: 1px solid #cfcece;
-	box-shadow: 0px 2px 7px -2px #a19f9f;
+	box-shadow: 0px 2px 7px -2px var(--theme-inset);
+	width: 75%;
+	background-color: var(--theme-page-background);
+	color: var(--theme-page-text);
 }
 .Nouveaumessage-thumbmail {
 	width: 50px;
@@ -43,34 +50,41 @@ input {
 	position: absolute;
 	top: 25px;
 	left: 75px;
+	width: 85%;
 }
 
 .Nouveaumessage-input-a {
 	position: absolute;
 	top: 75px;
 	left: 85px;
+	width: 85%;
 }
 .Nouveaumessage-input-nom {
 	position: absolute;
 	top: 50px;
 	left: 62px;
+	width: 50%;
 	& > input {
-		width: 100px;
+/* 		width: 100px; */
+		width: 40%;
 	}
 
 }
 .Nouveaumessage-input-prenom {
 	position: absolute;
 	top: 50px;
-	left: 230px;
+	left: 255px;
+	width: 50%;
 	& > input {
-		width: 100px;
+		/* width: 100px; */
+		width: 40%;
 	}
 }
 .Nouveaumessage-input-cc {
 	position: absolute;
 	top: 110px;
 	left: 74px;
+	width: 85%;
 	& > input {
 		background: #d1d1d1;
 	}
@@ -80,19 +94,22 @@ input {
 	position: absolute;
 	top: 150px;
 	left: 20px;
-
+	width: 100%;
 	& > input {
-    width: 315px;
+		width: 70%;
 	}
 }
 
 .Nouveaumessage-message {
 	height: 40vh;
+
 }
 
 textarea {
 	border: 0;
 	outline: none;
+	background-color: var(--theme-page-background);
+	color: var(--theme-page-text);
 }
 
 select#thumb option[value="1"] > .Nouveaumessage-thumbmail {

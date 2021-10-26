@@ -1,18 +1,19 @@
 .mailBox-viewSmallMessage {
-	background: #fbf9f9;
+	background: var(--theme-page-background);
 	width: 30%;
 	height: 100%;
-	box-shadow: inset -10px 1px 16px -5px #a19f9f;
+	box-shadow: inset -10px 1px 16px -5px var(--theme-inset);
 	display: flex;
 	flex-direction: column;
 	font-family: 'Ubuntu', sans-serif;
+	color: var(--theme-page-text);
 }
 
 .viewSmallMessage-searchBar {
 	height: 5%;
 	width: 99%;
 	position: relative;
-	box-shadow: 0px 3px 0px 0px #a19f9f;
+	box-shadow: 0px 3px 0px 0px var(--theme-inset);
 	& > img  {
 		width: 5%;
 		position: absolute;
@@ -28,6 +29,7 @@
     height: 95%;
     background: transparent;
 		caret-color:#6eaf6e;
+		color: var(--theme-page-text);
 
 		&:focus {
 			box-shadow: 0px 3px 2px 0px #6eaf6e;
@@ -40,7 +42,7 @@
 	height: 25%;
 	font-size: 0.8rem;
 	margin-top: 0.5rem;
-	box-shadow: 1px 3px 6px 0px #a19f9f;
+	box-shadow: 1px 3px 6px 0px var(--theme-inset);
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -51,7 +53,7 @@
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
-	background: #a19f9f;
+	background: var(--theme-inset);
 	border: 4px solid #d5cece;
 	margin: 0.4rem;
 }

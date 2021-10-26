@@ -1,6 +1,6 @@
 .mailBox-message {
 	width: 47%;
-	background: #fbf9f9;
+	background: var(--theme-page-background);
 	height: 100%;
 	border-radius: 0px 10px 10px 0px;
 	display: flex;
@@ -9,6 +9,7 @@
 	overflow-y: auto;
 	font-family: 'Ubuntu', sans-serif;
 	position: relative;
+	color: var(--theme-page-text);
 
 	&-thumbmail {
 		width: 50px;

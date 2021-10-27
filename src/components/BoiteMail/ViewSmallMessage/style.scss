@@ -13,7 +13,7 @@
 	height: 5%;
 	width: 99%;
 	position: relative;
-	box-shadow: 0px 3px 0px 0px var(--theme-inset);
+	/* box-shadow: 0px 0px 0px 0px var(--theme-inset); */
 	& > img  {
 		width: 5%;
 		position: absolute;
@@ -30,6 +30,7 @@
     background: transparent;
 		caret-color:#6eaf6e;
 		color: var(--theme-page-text);
+		box-shadow: none;
 
 		&:focus {
 			box-shadow: 0px 3px 2px 0px #6eaf6e;

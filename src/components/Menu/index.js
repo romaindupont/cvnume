@@ -71,8 +71,8 @@ const Menu = () => {
 		<div className={classNames("menuNavigation", {"menuNavigation--clic":closeMenu})} id="scroll-container">
 			<div className="wrap-container" id="wrap-scroll" onScroll={scrollWrap}>
 			<ul className="ul-scroll">
-			<li ></li>
-				<li ><span className="item">A propos</span></li>
+			<li></li>
+				<li><span className="item">A propos</span></li>
 				<li><span className="item">Connaissances</span></li>
 				<li><span className="item">Hobbies</span></li>
 				<li><span className="item">Diplômes</span></li>

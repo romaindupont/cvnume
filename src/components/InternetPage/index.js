@@ -2,16 +2,17 @@ import React from 'react';
 import './style.scss';
 import PageAPropos from '../PageAPropos';
 import PageConnaissances from '../PageConnaissances';
+import Diplomes from '../../containers/Diplomes';
 import classNames from 'classnames';
 
 const InternetPage = ({ listDossier, id, openPageInternet, closePage, smallPage, largePage}) => {
-	const list = listDossier.find((dossier) => dossier.id === id)
+	const list = listDossier.find((dossier) => dossier.id === id);
 	const sizeScreen = () => {
 		if (openPageInternet === 'normal') {
-			largePage()
+			largePage();
 		}
 		if (openPageInternet === 'big') {
-			smallPage()
+			smallPage();
 		}
 	}
 
@@ -43,7 +44,7 @@ const InternetPage = ({ listDossier, id, openPageInternet, closePage, smallPage,
 			</div>
 			<div className="pageWeb">
 				{/* <iframe src="https://www.romaindupont.me" frameborder="0"></iframe> */}
-				{list.slug === "a_propos" ? <PageAPropos /> : list.slug === "connaissances" ? <PageConnaissances /> : (
+				{list.slug === "a_propos" ? <PageAPropos /> : list.slug === "connaissances" ? <PageConnaissances /> : list.slug === "diplomes" ? <Diplomes /> :(
 					<div className="venir"></div>
 				)
 				}

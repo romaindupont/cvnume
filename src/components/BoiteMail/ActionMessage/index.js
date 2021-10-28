@@ -9,31 +9,29 @@ const ActionMessage = ({changeCategory, setNewMessage, setOpenMessage}) => {
 	const [ openBox, setOpenBox ] = useState(false);
 	const clicAction = (e) => {
 		const actualSpan = document.querySelector('.selectionAction');
-		if (actualSpan === null) {
-			
-		}
+		if (actualSpan === null) {}
 		else {
 			actualSpan.remove();
 			if (e.target.className === "actionMessage-inbox") {		
-				const inbox = document.querySelector('.actionMessage-inbox')
+				const inbox = document.querySelector('.actionMessage-inbox');
 				const newSpan = document.createElement('span');
 				newSpan.classList.add('selectionAction');
 				inbox.appendChild(newSpan);
-				changeCategory('inbox')
+				changeCategory('inbox');
 			}
 		if (e.target.className === "actionMessage-sent") {
-			const inbox = document.querySelector('.actionMessage-sent')
+			const inbox = document.querySelector('.actionMessage-sent');
 			const newSpan = document.createElement('span');
 			newSpan.classList.add('selectionAction');
 			inbox.appendChild(newSpan);
-			changeCategory('send')
+			changeCategory('send');
 		}
 		if (e.target.className === "actionMessage-trash") {
-			const inbox = document.querySelector('.actionMessage-trash')
+			const inbox = document.querySelector('.actionMessage-trash');
 			const newSpan = document.createElement('span');
 			newSpan.classList.add('selectionAction');
 			inbox.appendChild(newSpan);
-			changeCategory('trash')
+			changeCategory('trash');
 	
 		}
 

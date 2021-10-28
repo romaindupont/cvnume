@@ -1,0 +1,15 @@
+.ecoleOclock {
+	display: none;
+}
+
+.activation .ecoleOclock {
+	display: block;
+	&-image {
+		width: 20%;
+    margin-top: 1rem;
+	}
+	&-infos {
+    font-size: 0.8rem;
+    line-height: 2rem;
+	}
+}

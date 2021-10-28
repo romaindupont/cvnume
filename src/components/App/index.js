@@ -15,7 +15,6 @@ const App = ({ listDossier }) => {
 			<Menu />
 			<div className="mesDossiers">
 				{listDossier.map((dossier,i)=><Dossier key={i} setActionDossier={setActionDossier} name={dossier.name} id={dossier.id} /> )}
-				
 				<CvPdf />
 				<InternetLogo />
 				<Games />

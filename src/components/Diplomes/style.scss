@@ -2,8 +2,6 @@
 	background: transparent;
 	width: 100%;
 	height: 88%;
-
-
 }
 .diplomes-carrousel {
 	height: 100%;
@@ -171,5 +169,134 @@ li:nth-child(4), li:nth-child(8) {
     left: -8px;
     transform: rotateZ(45deg);
     transform: skew(25deg, 3deg) matrix(1, -1, 0, 1, -3, 1);
+	}
+
+	&-plus {
+		width: 50px;
+    height: 3px;
+    background: red;
+    display: block;
+    position: absolute;
+    top: -3px;
+    left: -15px;
+    transform: rotate(90deg);
+
+		&::before {
+			content: '';
+    background: red;
+    width: 20px;
+    height: 2px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    transform: rotate(90deg);
+		}
+		&::after {
+			content: '';
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background: red;
+			position: absolute;
+			top: 11px;
+			left: 46px;
+		}
+	}
+}
+
+.activation > span.item--formation {
+	display: none;
+}
+.activation > span.item--job {
+	display: none;
+}
+.activation > .item--job-plus {
+	display: none;
+}
+.item--job {
+	width: 80px;
+	height: 40px;
+	background: black;
+	display: block;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	position: relative;
+	top: 75px;
+	margin: auto;
+	display: block;
+	&::before {
+		content: '';
+    width: 40px;
+    height: 40px;
+    background: black;
+    position: absolute;
+    border-radius: 50%;
+    top: -48px;
+    left: 18px;
+	}
+}
+
+.item--job {
+	width: 80px;
+	height: 40px;
+	background: black;
+	display: block;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	position: relative;
+	top: 75px;
+	margin: auto;
+	&::after {
+		content: '';
+    border-bottom: 4px solid transparent;
+    border-left: 8px solid #ddddff;
+    position: absolute;
+    border-top-left-radius: 8px;
+    transform: rotate(88deg);
+    top: 14px;
+    right: 17px;
+	}
+	&::before {
+		content: '';
+    width: 40px;
+    height: 40px;
+    background: black;
+    position: absolute;
+    border-radius: 50%;
+    top: -48px;
+    left: 18px;
+	}
+	&-plus {
+		width: 80px;
+		height: 50px;
+		border: 5px solid black;
+		position: relative;
+		display: block;
+		top: 60px;
+		margin: auto;
+		background: #e2f8ff;
+		font-size: 2rem;
+		font-weight: 900;
+		&::after {
+			content: '';
+			width: 90px;
+			height: 60px;
+			background: transparent;
+			position: absolute;
+			border: 5px solid white;
+			top: -10px;
+			left: -11px;
+		}
+		&::before {
+			content: '';
+			border-bottom: 4px solid transparent;
+			border-right: 8px solid #ddddff;
+			position: absolute;
+			border-top-right-radius: 8px;
+			transform: rotate(270deg);
+			top: -16px;
+			right: 56px;
+		}
 	}
 }

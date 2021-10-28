@@ -1,0 +1,40 @@
+.hobbies {
+	height: 90%;
+	background: transparent;
+}
+
+.wrapper {
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	perspective: 1px;
+	scroll-behavior: smooth;
+	-ms-overflow-style: none;
+	overflow: -moz-scrollbars-none;
+}
+
+.static {
+	background: white;
+}
+
+.section {
+	position: relative;
+	height: 100vh;
+	display: flex;
+}
+
+.parallax::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transform: translateZ(-1px) scale(1.5);
+	background-size: 100%;
+	z-index: -1;
+}
+
+.wrapper::-webkit-scrollbar {
+	display: none;
+}

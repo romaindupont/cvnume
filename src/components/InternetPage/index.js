@@ -4,6 +4,7 @@ import PageAPropos from '../PageAPropos';
 import PageConnaissances from '../PageConnaissances';
 import Diplomes from '../../containers/Diplomes';
 import classNames from 'classnames';
+import Hobbies from '../Hobbies';
 
 const InternetPage = ({ listDossier, id, openPageInternet, closePage, smallPage, largePage}) => {
 	const list = listDossier.find((dossier) => dossier.id === id);
@@ -44,7 +45,7 @@ const InternetPage = ({ listDossier, id, openPageInternet, closePage, smallPage,
 			</div>
 			<div className="pageWeb">
 				{/* <iframe src="https://www.romaindupont.me" frameborder="0"></iframe> */}
-				{list.slug === "a_propos" ? <PageAPropos /> : list.slug === "connaissances" ? <PageConnaissances /> : list.slug === "diplomes" ? <Diplomes /> :(
+				{list.slug === "a_propos" ? <PageAPropos /> : list.slug === "connaissances" ? <PageConnaissances /> : list.slug === "diplomes" ? <Diplomes /> : list.slug === "hobbies" ? <Hobbies /> :(
 					<div className="venir"></div>
 				)
 				}

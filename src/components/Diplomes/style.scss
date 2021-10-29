@@ -21,7 +21,7 @@
 	margin: auto;
 }
 
-li:nth-child(1) {
+.diplomes-item:nth-child(1) {
 	background: transparent;
 	border: none;
 }
@@ -84,17 +84,17 @@ li:nth-child(1) {
 .activation li:nth-child(2)::after {
 	content: '';
 } */
- li:nth-child(6) {
+.diplomes-item:nth-child(6) {
 	background: rgb(173, 240, 173);
 	filter: grayscale(0.8);
 }
 
-li:nth-child(3), li:nth-child(7) {
+.diplomes-item:nth-child(3), .diplomes-item:nth-child(7) {
 	background: rgb(255, 255, 136);
 	/* filter: grayscale(0.8); */
 }
 
-li:nth-child(4), li:nth-child(8) {
+.diplomes-item:nth-child(4), .diplomes-item:nth-child(8) {
 	background: rgb(221, 221, 255);
 }
 

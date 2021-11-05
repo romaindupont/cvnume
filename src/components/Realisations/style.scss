@@ -6,17 +6,21 @@
     height: 89%;
 }
 
-.realisations-carrousel,.realisations-carrousel1 {
+.realisations-carrousel,.realisations-carrousel1,.realisations-carrousel2 {
 	/* height: 500px; */
 	overflow-x: scroll;
 	/* width: 100%; */
 	overflow-y: hidden;
+/* 	scroll-behavior: smooth; */
 }
 .realisations-carrousel1 {
 	transform:rotate(180deg);
 	/* direction: rtl; */
 }
-.realisations-list, .realisations-list-1 {
+.realisations-carrousel2 {
+	transform:rotate(0deg);
+}
+.realisations-list, .realisations-list-1, .realisations-list-2 {
 	display: flex;
 	flex-direction: row;
 	/* margin: 4rem; */
@@ -47,38 +51,49 @@
 	border: 5px solid white;
 	/* margin: auto 5rem; */
 }
+.realisations-list-2 >/*  div > */ li {
+	background: rgb(252, 172, 172);
+	min-width: 400px;
+	height: 400px;
+	margin-left: 5rem;
+	border: 5px solid white;
+	/* margin: auto 5rem; */
+}
 .realisations-list::-webkit-scrollbar {
 	display: none;
 	}
 .realisations-carrousel::-webkit-scrollbar {
 	display: none;
 	}
-	.realisations-carrousel1::-webkit-scrollbar {
-		display: none;
-		}
-	.realisations-item {
-		/* margin-left: 5rem; */
-	}
-	.realisations-item:nth-child(6) {
-		/* visibility: hidden; */
-	}
-	.realisations-item:nth-child(1) {
-		opacity: 1 !important;
-	}
+.realisations-carrousel1::-webkit-scrollbar {
+	display: none;
+}
+.realisations-carrousel2::-webkit-scrollbar {
+	display: none;
+}
+.realisations-item {
+	/* margin-left: 5rem; */
+}
+.realisations-item:nth-child(6) {
+	/* visibility: hidden; */
+}
+.realisations-item:nth-child(1) {
+	opacity: 1 !important;
+}
 .realisations-item:nth-child(2),.realisations-item:nth-child(3),.realisations-item:nth-child(4),.realisations-item:nth-child(5) {
 		opacity: 0;
 		/* transition: opacity 1s ease-in; */
-	}
+}
 
-	.appear {
-		opacity: 1 !important;
-		/* transition: opacity 10s ease-in; */
-		
-	}
+.appear,.appear1,.appear2 {
+	opacity: 1 !important;
+	/* transition: opacity 10s ease-in; */
+	
+}
 
-	.up{
-		opacity: 1 !important;
-	}
+.up, .up1, .up2{
+	opacity: 1 !important;
+}
 
 /* 	.down{
 		opacity: 0 !important;
@@ -94,4 +109,41 @@
 .realisations-list-1 {
 	/* direction: rtl; */
 /*     position: absolute; */
+}
+
+
+.wrapper-real {
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	perspective: 1px;
+	scroll-behavior: smooth;
+	-ms-overflow-style: none;
+	overflow: -moz-scrollbars-none;
+}
+
+.static-real {
+	background: white;
+}
+
+.section-real {
+	position: relative;
+	height: 100%;
+	display: flex;
+}
+
+.parallax-real::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transform: translateZ(-1px) scale(1.5);
+	background-size: 100%;
+	z-index: -1;
+}
+
+.wrapper-real::-webkit-scrollbar {
+	display: none;
 }

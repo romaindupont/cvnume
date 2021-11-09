@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './style.scss';
 import classNames from 'classnames';
 
-const Menu = () => {
+const Menu = ({smallPage,clicFile}) => {
 	const [ closeMenu, setClose ] = useState(false);
 	const scrollUl = document.querySelector(".ul-scroll");
 	let itemsScrolled;
@@ -72,12 +72,12 @@ const Menu = () => {
 			<div className="wrap-container" id="wrap-scroll" onScroll={scrollWrap}>
 			<ul className="ul-scroll">
 			<li></li>
-				<li><span className="item">A propos</span></li>
-				<li><span className="item">Connaissances</span></li>
-				<li><span className="item">Hobbies</span></li>
-				<li><span className="item">Diplômes</span></li>
-				<li><span className="item">Réalisations</span></li>
-				<li><span className="item">Contact</span></li>
+				<li onClick={()=>clicFile('A propos', 1)& smallPage()}><span className="item">A propos</span></li>
+				<li onClick={()=>clicFile('Connaissances', 2)& smallPage()}><span className="item">Connaissances</span></li>
+				<li onClick={()=>clicFile('Hobbies', 3)& smallPage()}><span className="item">Hobbies</span></li>
+				<li onClick={()=>clicFile('Diplômes', 4)& smallPage()}><span className="item">Diplômes</span></li>
+				<li onClick={()=>clicFile('Réalisations', 5)& smallPage()}><span className="item">Réalisations</span></li>
+				<li onClick={()=>clicFile('Contact', 6)& smallPage()}><span className="item">Contact</span></li>
 			</ul>
 			</div>
 		</div>

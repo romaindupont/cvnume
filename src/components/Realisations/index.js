@@ -1,13 +1,35 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './style.scss';
 
-
 const Realisations = () => {
-	
+	const [number, setNumber] = useState(0)
 	const wheelCarrousel1 = (e) => {
 		const main2 = document.querySelector( '.realisations-carrousel2' );
 		main2.scrollLeft += e.deltaY;
-		
+	}
+	const wheelCarrousel2 = (e) => {
+		const main2 = document.querySelector( '.realisations-carrousel3' );
+		main2.scrollLeft += e.deltaY;
+		if (e.deltaY > 0) {
+			if(number==6) {
+				setNumber(5)
+				setTimeout(()=>document.getElementById('section5').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' }),2000)
+			}
+			else {
+				setNumber(number+1)
+				scrollCarrouselCardFoward(e, number)
+			}	
+		}
+		if (e.deltaY < 0) {
+			if(number < 1) {
+				setNumber(1)
+				document.getElementById('section3').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })
+			}
+			else {
+				setNumber(number-1)
+				scrollCarrouselCardBack(e, number)
+			}
+		}
 	}
 	const wheelCarrousel = (e) => {
 		const main = document.querySelector( '.realisations-carrousel' );
@@ -31,9 +53,7 @@ const Realisations = () => {
 			appear.style.transition = "opacity 1s ease-in";
 			const enfant12 = document.querySelector('.wrapper-real');
 			enfant12.style.overflowY = "hidden";
-			/* console.log(itemsScrolled) */
-			if (itemsScrolled === 5) {
-				
+			if (itemsScrolled === 5) {		
 				setTimeout(()=>document.getElementById('section2').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' }),2000)
 			}
 		}
@@ -78,6 +98,25 @@ const Realisations = () => {
 		}
 		 
 	}
+	const scrollCarrouselCardFoward = (e, number) => {
+		const menuList = [];
+		const ulElement = document.querySelector(".realisations-list-3");
+		const liElement = ulElement.querySelectorAll(".realisations-item-3");
+		menuList.push(liElement)
+		menuList[0][number].style.opacity=1;
+		menuList[0][number].style.transition= 'bottom 1s ease-in 0s';
+		menuList[0][number].style.bottom='200px';
+		 
+	}
+	const scrollCarrouselCardBack = (e, number) => {
+		const menuList = [];
+		const ulElement = document.querySelector(".realisations-list-3");
+		const liElement = ulElement.querySelectorAll(".realisations-item-3");
+		menuList.push(liElement)
+		menuList[0][number].style.opacity=0;
+		menuList[0][number].style.transition= 'bottom 1s ease-in 0s';
+		menuList[0][number].style.bottom='-150px';
+	}
   return (
 		<div className="realisations">
 				<main className="wrapper-real">
@@ -117,8 +156,19 @@ const Realisations = () => {
 						</ul>
 					</div>
 					</section>
-					<section className="section-real parallax-real" id="section4"></section>
-					<section className="section-real static-real"></section>
+					<section className="section-real parallax-real" id="section4">
+					<div className="realisations-carrousel3" onWheel={wheelCarrousel2}>
+						<ul className="realisations-list-3" >
+								<li className="realisations-item-3">0</li>
+								<li className="realisations-item-3">1</li>
+								<li className="realisations-item-3">2</li>
+								<li className="realisations-item-3">3</li>
+								<li className="realisations-item-3">4</li>
+								<li className="realisations-item-3">0</li>
+						</ul>
+					</div>
+					</section>
+					<section className="section-real static-real" id="section5"></section>
 					<section className="section-real parallax-real"></section>
 					<section className="section-real static-real"></section>
 			</main>

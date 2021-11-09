@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './style.scss';
 import Dossier from '../../containers/Dossier';
 import DossierOuvert from '../../containers/DossierOuvert';
-import Menu from '../Menu';
+import Menu from '../../containers/Menu';
 import CvPdf from '../cvPdf';
 import InternetLogo from '../../containers/InternetLogo';
 import Games from '../Games';

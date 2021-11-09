@@ -222,7 +222,7 @@ ul li .item {
 	padding-bottom: 50px; 
 }
 
-li.active:after {
+.ul-scroll > li.active:after {
 	content: "";
 	border-bottom: 40px solid white;
 	border-left: 45px solid transparent;
@@ -248,7 +248,7 @@ li.active:after {
 	0 20px 20px transparent;
 }
 
-li.active:before {
+.ul-scroll > li.active:before {
 	content: "";
 	border-bottom: 40px solid white;
 	border-left: 45px solid transparent;
@@ -348,4 +348,8 @@ li.active:before {
 		height: 700px;
 		transition: width 100ms ease-in-out;
 	}
+}
+
+.ul-scroll > li {
+	cursor: pointer;
 }

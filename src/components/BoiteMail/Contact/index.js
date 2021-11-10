@@ -18,8 +18,6 @@ const Contact = () => {
 			contactForm[2].classList.toggle('contact-form--open')
 			contactFormContact[2].classList.toggle('contact-form-contact--open')
 		}
-		
-		
 	}
   return (
 		<div className="contact" id="srollbar">
@@ -37,7 +35,6 @@ const Contact = () => {
 				</div>
 			</div>
 			))}
-			
 		</div>
   );
 }

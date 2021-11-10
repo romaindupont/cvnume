@@ -8,8 +8,6 @@ import { TextureLoader } from 'three/src/loaders/TextureLoader';
 import { Physics, usePlane, useBox } from '@react-three/cannon';
 import { logoPhp, logoRedux, logoCss, logoJs, logoReact, logoHtml,logoLaravel, logoLumen, logoMySql, logoPsql, logoPython, logoSass, logoSqlLite, logoThreeJs, logoWebpack } from '../../utils/logo';
 
-
-
 const Sol = (props) => {
 	const [ref] = usePlane(() => ({ rotation: [-Math.PI / 2, 0, 0], ...props }))
   return (

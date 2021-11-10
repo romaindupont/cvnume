@@ -9,9 +9,9 @@ const MyAccount = () => {
   return (
 		<div className="myAccount">
 			<svg id="monSvg" width="26.4582mm" height="26.4582mm" viewBox="1300 0 46 1646">
-			<g id="fond">
-				<polygon className="contour inside" points="2667,8 2447,119 1574,569 754,966 21,8"/>
-			</g>
+				<g id="fond">
+					<polygon className="contour inside" points="2667,8 2447,119 1574,569 754,966 21,8"/>
+				</g>
 			</svg>
 			<div className="myAccount-contenu">
 				<div className="myAccount-image"><div className="myAccount-image1"></div></div>

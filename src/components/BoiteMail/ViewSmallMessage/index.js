@@ -3,7 +3,7 @@ import './style.scss';
 import Search from '../../../assets/img/search-solid.svg';
 import SmallMessage from './smallMessage';
 
-const ViewSmallMessage = ({mail,category,chooseMessage, setOpenMessage, setNewMessage}) => {
+const ViewSmallMessage = ({ mail,category,chooseMessage, setOpenMessage, setNewMessage }) => {
 	const [ searchTerm, setSearchTerm ] = useState('');
 	const [ searchResults, setSearchResults ] = useState([]);
 	const inputWord = (e) => {
@@ -12,17 +12,14 @@ const ViewSmallMessage = ({mail,category,chooseMessage, setOpenMessage, setNewMe
   useEffect(() => {
 		if (searchTerm !=='') {
 			const results = mail.filter(mailing =>
-      mailing.title.toLowerCase().includes(searchTerm)
-			
-    );
+      mailing.title.toLowerCase().includes(searchTerm));
     setSearchResults(results);
-	}
-	else {
-		const results = mail.filter((mailing) => mailing.category === category);
-		setSearchResults(results);
-	}
-
-  }, [searchTerm,category,mail])
+		}
+		else {
+			const results = mail.filter((mailing) => mailing.category === category);
+			setSearchResults(results);
+		}
+	}, [searchTerm,category,mail])
   return (
 		<div className="mailBox-viewSmallMessage">
 			<div className="viewSmallMessage-searchBar">
@@ -31,11 +28,15 @@ const ViewSmallMessage = ({mail,category,chooseMessage, setOpenMessage, setNewMe
 			</div>
 			<div className="smallMessage-group" id="srollbar">
 				{searchResults.map((mailing, i)=> (
-					<SmallMessage key={i} {...mailing} chooseMessage={chooseMessage} setOpenMessage={setOpenMessage} setNewMessage={setNewMessage} />
+					<SmallMessage
+						key={i}
+						{...mailing}
+						chooseMessage={chooseMessage}
+						setOpenMessage={setOpenMessage}
+						setNewMessage={setNewMessage}
+					/>
 				))}
-
 			</div>
-
 		</div>
   );
 }

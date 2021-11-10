@@ -2,15 +2,15 @@ import React, {useState} from 'react';
 import './style.scss';
 
 const PageAPropos = () => {
-	const [ sendConfetti, setSendConfetti ] = useState(false);
+/* 	const [ sendConfetti, setSendConfetti ] = useState(false); */
 	const frame = () => {
 		const confetti = document.getElementById('confetti');
 		confetti.style.display = 'flex';
 	}
-	const confettiLeave = () => {
+	/* const confettiLeave = () => {
 		const confetti = document.getElementById('confetti');
 		confetti.style.display = 'none';
-	}
+	} */
   return (
 		<>
 		<div className="a_propos">

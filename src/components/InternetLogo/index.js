@@ -2,7 +2,6 @@ import React from 'react';
 import './style.scss';
 import InternetPage from '../../containers/InternetPage';
 
-
 const InternetLogo = ({ openPageInternet, smallPage }) => {
 	const OpenInternet = () => {
 		smallPage();
@@ -14,11 +13,9 @@ const InternetLogo = ({ openPageInternet, smallPage }) => {
 		</div>
 		{openPageInternet === 'normal' && (
 			<InternetPage />
-
 		)}
 		{openPageInternet === 'big' && (
 			<InternetPage />
-
 		)}
 		</>
   );

@@ -28,7 +28,6 @@ const DossierOuvert = ({ actionDossier, setActionDossier, listDossier, id }) => 
     pos4 = e.clientY;
     document.onmouseup = closeDragElement;
     document.onmousemove = elementDrag;
-
   }
   const elementDrag = (e) => {
     e.preventDefault();
@@ -52,11 +51,7 @@ const DossierOuvert = ({ actionDossier, setActionDossier, listDossier, id }) => 
 				<MenuAccesRapide list={listDossier} />
 				<Contenu mode={mode} contenu={list.contenu}/>
 			</div>
-			
-			
-
     </div>
-
   );
 }
 

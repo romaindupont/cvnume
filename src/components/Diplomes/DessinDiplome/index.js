@@ -1,8 +1,8 @@
 import React from 'react';
 import './style.scss';
 
-const DessinDiplome = ({titre, diplomes, textC, date}) => {
-	  return (
+const DessinDiplome = ({ titre, diplomes, textC, date }) => {
+	return (
 		<div className="dessinDiplome">
 			<div className="carreMinistere">
 				<div className="carreMinistere-flag">
@@ -21,9 +21,7 @@ const DessinDiplome = ({titre, diplomes, textC, date}) => {
 			<p className="text-date">Etabli à Paris (Paris) le {date}</p>
 			<p className="text-signature">Pour la ministre, par délégation</p>
 			<div className="sceau"></div>
-
 		</div>
-
   );
 }
 

@@ -3,7 +3,7 @@ import './style.scss';
 import { LogoOclock } from '../../../utils/logo';
 
 const EcoleOclock = () => {
-	  return (
+	return (
 		<div className="ecoleOclock">
 			<img src={LogoOclock()} alt="logo oclock" className="ecoleOclock-image"/>
 			<p className="ecoleOclock-infos">
@@ -11,7 +11,6 @@ const EcoleOclock = () => {
 				HTML - CSS - SASS - PHP - JS - LINUX - SQL - GIT - AJAX - LUMEN - POO - MVC - Mobile First - Composer - npm - yarn - webpack - REACT - REDUX - WORDPRESS - AWS - ...
 			</p>
 		</div>
-
   );
 }
 

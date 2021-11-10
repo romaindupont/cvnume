@@ -1,0 +1,39 @@
+.footGame {
+	background: #064606;
+	position: absolute;
+	width: 98vw;
+	height: 98vh;
+	top: 0;
+}
+
+.field {
+	border: 10px solid white;
+	width: 80vw;
+	height: 70vh;
+	margin: 4rem auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.field-1,.field-2, .field-3, .field-4, .field-5, .field-6, .field-7, .field-8, .field-9, .field-10 {
+	border: 1px solid black;
+	width: 100%;
+	height: 100%;
+	display: flex;
+
+}
+
+.T-1,.T-2,.T-3,.T-4,.T-5,.T-6,.T-7,.T-8,.T-9,.T-10,.T-11,.T-12,.T-13,.T-14,.T-15,.T-16,.T-17,.T-18,.T-19,.T-20,.T-21,.T-22,.T-23,.T-24,.T-25,.T-26,.T-27,.T-28,.T-29,.T-30 {
+	border: 1px solid black;
+	width: 3%;
+	height: 100%;
+
+}
+
+.field > div > div:nth-child(even) {
+	background: rgb(14, 141, 14);
+}
+
+.engagement {
+	position: relative;
+}

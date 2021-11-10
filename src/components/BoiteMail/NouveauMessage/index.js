@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './style.scss';
 import classNames from 'classnames';
 
-const NouveauMessage = ({changeValue, sendMessage}) => {
+const NouveauMessage = ({ changeValue, sendMessage }) => {
 	const [ clicSendMessage, setClicSendMessage ] = useState(false);
 	const thumbmailChoose = (e) => {
 		const select = document.getElementById('thumb');
@@ -27,7 +27,6 @@ const NouveauMessage = ({changeValue, sendMessage}) => {
 			const today = new Date(newDate).toLocaleDateString();
 			sendMessage(10, e.nativeEvent.path[2][3].value, e.nativeEvent.path[2][2].value, 'send', e.nativeEvent.path[2][6].value, today, e.nativeEvent.path[2][7].value, e.nativeEvent.path[2][1].value);
 		}
-		
 	}
   return (
 		<form className="Nouveaumessage" >

@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import Hobbies from '../Hobbies';
 import Realisations from '../Realisations';
 
-const InternetPage = ({ listDossier, id, openPageInternet, closePage, smallPage, largePage}) => {
+const InternetPage = ({ listDossier, id, openPageInternet, closePage, smallPage, largePage }) => {
 	const list = listDossier.find((dossier) => dossier.id === id);
 	const sizeScreen = () => {
 		if (openPageInternet === 'normal') {
@@ -17,7 +17,6 @@ const InternetPage = ({ listDossier, id, openPageInternet, closePage, smallPage,
 			smallPage();
 		}
 	}
-
   return (
 		<div className={`internetPage ${openPageInternet}`}>
 			<div className="internetPage-onglet">
@@ -50,8 +49,6 @@ const InternetPage = ({ listDossier, id, openPageInternet, closePage, smallPage,
 					<div className="venir"></div>
 				)
 				}
-
-				
 			</div>
 		</div>
   );

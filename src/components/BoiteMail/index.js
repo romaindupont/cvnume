@@ -32,11 +32,14 @@ const BoiteMail = ({openPageMail}) => {
 			<MailHeader />
 			<div className="mailBox">
 				<LeftMenu setPage={setPage} />
-				{page==='email' && (<>
-				<ActionMessage setOpenMessage={setOpenMessage} setNewMessage={setNewMessage}/>
-				<ViewSmallMessage setOpenMessage={setOpenMessage} setNewMessage={setNewMessage} />
-				{openMessage && (<Message />)}
-				{newMessage && (<NouveauMessage />)}</>)}
+				{page==='email' && (
+				<>
+					<ActionMessage setOpenMessage={setOpenMessage} setNewMessage={setNewMessage}/>
+					<ViewSmallMessage setOpenMessage={setOpenMessage} setNewMessage={setNewMessage} />
+					{openMessage && (<Message />)}
+					{newMessage && (<NouveauMessage />)}
+				</>
+				)}
 				{page === 'calendrier' && (<Calendrier /> 
 				)}
 				{page === 'me' && (<MyAccount />

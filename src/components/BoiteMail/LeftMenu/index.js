@@ -6,8 +6,7 @@ import Contact from '../../../assets/img/address-book-regular.svg';
 import Email from '../../../assets/img/envelope-regular.svg';
 import Settings from '../../../assets/img/cog-solid.svg';
 
-const LeftMenu = ({setPage}) => {
-	
+const LeftMenu = ({setPage}) => {	
   return (
 		<div className="mailBox-leftMenu">
 			<div className="mailBox-leftMenu--calendar" onClick={()=>setPage('calendrier')}><img src={Calendrier} alt="calendrier" /></div>

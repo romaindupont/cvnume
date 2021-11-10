@@ -10,7 +10,6 @@ const PageJeu = ({ setOpenGame }) => {
 				<Track />
 			</div>
 		</div>
-
   );
 }
 

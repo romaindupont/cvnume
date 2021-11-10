@@ -5,7 +5,7 @@ import PaperPlane from '../../../assets/img/paper-plane-regular.svg';
 import Trash from '../../../assets/img/trash-alt-regular.svg';
 import classNames from 'classnames';
 
-const ActionMessage = ({changeCategory, setNewMessage, setOpenMessage}) => {
+const ActionMessage = ({ changeCategory, setNewMessage, setOpenMessage }) => {
 	const [ openBox, setOpenBox ] = useState(false);
 	const clicAction = (e) => {
 		const actualSpan = document.querySelector('.selectionAction');
@@ -32,10 +32,8 @@ const ActionMessage = ({changeCategory, setNewMessage, setOpenMessage}) => {
 			newSpan.classList.add('selectionAction');
 			inbox.appendChild(newSpan);
 			changeCategory('trash');
-	
 		}
-
-		}
+	}
 }
   return (
 		<div className="mailBox-actionMessage">

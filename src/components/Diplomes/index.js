@@ -4,7 +4,7 @@ import DessinDiplome from './DessinDiplome';
 import EcoleOclock from './EcoleOclock';
 import Work from './Work';
 
-const Diplomes = ({listDiplomes}) => {
+const Diplomes = ({ listDiplomes }) => {
 	const scrollCarrousel = (e) => {
 		const menuList = [];
 		const liElement = document.querySelectorAll(".diplomes-item");

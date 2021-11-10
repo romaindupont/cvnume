@@ -9,7 +9,6 @@ const Track = () => {
 			<PageChargement />
 			<MenuGame />
 		</div>
-
   );
 }
 

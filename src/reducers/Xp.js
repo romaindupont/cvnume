@@ -14,11 +14,11 @@ const initialState = {
 					linkPhoto:''
 				}
 			],
-			link: '',
+			link: 'https://dangerous-tank.surge.sh',
 		},
 		{
 			id: 2,
-			nom: "Eb Site",
+			nom: "EB Site",
 			description: "Site responsive de e-commerce, uniquement Front, présentation d'un modèle, réalisé en mobile first. Création de compte, commandes, passage de commande,...",
 			techno: 'React/REDUX/SASS',
 			githubLink:'https://github.com/romaindupont/EBSITE',
@@ -122,7 +122,7 @@ const initialState = {
 					linkPhoto:''
 				}
 			],
-			link: '',
+			link: 'https://mapquizfront.herokuapp.com/',
 		},
 		{
 			id: 8,

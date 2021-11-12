@@ -4,38 +4,37 @@ import FootGame from '../FootGame';
 
 
 const MenuGame = () => {
-	const [ gameChoice, setGameChoice ] = useState(0)
+	const [ gameChoice, setGameChoice ] = useState(0);
 	const keyPresss = (e) => {
 		const menuList = [];
 		const liElement = document.querySelectorAll(".menuGame-li");
-		menuList.push(liElement)
+		menuList.push(liElement);
 		if (e.keyCode === 38) {
-			liElement.forEach((items) => items.classList.remove("selectionJeu"))
+			liElement.forEach((items) => items.classList.remove("selectionJeu"));
 			const pyramid = document.querySelector('.pyramid');
-			pyramid.remove()
+			pyramid.remove();
 			menuList[0][0].classList.add("selectionJeu");
 			const newDiv = document.createElement("div");
 			newDiv.classList.add('pyramid');
-			menuList[0][0].appendChild(newDiv)
+			menuList[0][0].appendChild(newDiv);
 		}
 		if (e.keyCode === 40) {
-			liElement.forEach((items) => items.classList.remove("selectionJeu"))
+			liElement.forEach((items) => items.classList.remove("selectionJeu"));
 			const pyramid = document.querySelector('.pyramid');
-			pyramid.remove()
+			pyramid.remove();
 			menuList[0][1].classList.add("selectionJeu");
 			const newDiv = document.createElement("div");
 			newDiv.classList.add('pyramid');
-			menuList[0][1].appendChild(newDiv)
+			menuList[0][1].appendChild(newDiv);
 		}
 		if (e.keyCode === 13) {
 			const selectGame = document.querySelector('.selectionJeu').id;
 			if (selectGame == 2) {
-				const removeMenu = document.querySelector('.menuGame')
+				const removeMenu = document.querySelector('.menuGame');
 				removeMenu.style.display="none";
-				setGameChoice(2)
+				setGameChoice(2);
 			}
 		}
-
 	}
 
 	useEffect(() => {

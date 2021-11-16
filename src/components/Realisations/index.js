@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './style.scss';
 
-const Realisations = () => {
+const Realisations = ({setOpenNewTab, openWebsitePage}) => {
 	const [number, setNumber] = useState(0)
 	const wheelCarrousel1 = (e) => {
 		const main2 = document.querySelector( '.realisations-carrousel2' );
@@ -127,7 +127,7 @@ const Realisations = () => {
 								<li className="realisations-item">1</li>
 								<li className="realisations-item">2</li>
 								<li className="realisations-item">3</li>
-								<li className="realisations-item">4</li>
+								<li className="realisations-item" onClick={()=>setOpenNewTab(true) & openWebsitePage('https://dangerous-tank.surge.sh')}>website live</li>
 								<li className="realisations-item" onClick={()=>document.getElementById('section2').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })}>0</li>
 						</ul>
 					</div>
@@ -139,7 +139,7 @@ const Realisations = () => {
 								<li className="realisations-item-1">1</li>
 								<li className="realisations-item-1">2</li>
 								<li className="realisations-item-1">3</li>
-								<li className="realisations-item-1">4</li>
+								<li className="realisations-item-1"onClick={()=>setOpenNewTab(true) & openWebsitePage('https://fast-volleyball.surge.sh')}>website live</li>
 								<li className="realisations-item-1">0</li>
 						</ul>
 						</div>

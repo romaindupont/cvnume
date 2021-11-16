@@ -1,7 +1,8 @@
-import { CLOSE_PAGE, SMALL_PAGE, LARGE_PAGE } from "../actions/internet";
+import { CLOSE_PAGE, SMALL_PAGE, LARGE_PAGE, OPEN_WEBSITE_PAGE } from "../actions/internet";
 
 const initialState = {
 	openPageInternet: '',
+	websitePage:'',
 
 };
 
@@ -21,6 +22,11 @@ const reducer = (state = initialState, action = {}) => {
 			return {
 				...state,
 				openPageInternet: 'big'
+			}
+		case OPEN_WEBSITE_PAGE:
+			return {
+				...state,
+				websitePage: action.url
 			}
     default:
       return state;

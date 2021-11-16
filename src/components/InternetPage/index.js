@@ -5,8 +5,8 @@ import PageConnaissances from '../PageConnaissances';
 import Diplomes from '../../containers/Diplomes';
 import classNames from 'classnames';
 import Hobbies from '../Hobbies';
-import Realisations from '../Realisations';
-import NewTab from './NewTab';
+import Realisations from '../../containers/Realisations';
+import NewTab from '../../containers/InternetPage/NewTab';
 
 const InternetPage = ({ listDossier, id, openPageInternet, closePage, smallPage, largePage }) => {
 	const [ openNewTab, setOpenNewTab ] = useState(false);

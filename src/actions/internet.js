@@ -12,3 +12,10 @@ export const CLOSE_PAGE = 'CLOSE_PAGE';
 export const closePage = () => ({
   type: CLOSE_PAGE,
 });
+
+
+export const OPEN_WEBSITE_PAGE = 'OPEN_WEBSITE_PAGE';
+export const openWebsitePage = (url) => ({
+  type: OPEN_WEBSITE_PAGE,
+	url,
+});

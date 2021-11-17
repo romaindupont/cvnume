@@ -1,10 +1,10 @@
 import React from 'react';
 import './style.scss';
 
-const NewTab = ({websitePage}) => {
+const NewTab = ({ websitePage }) => {
 	return (
 	<div className="website">
-		<iframe src={websitePage} frameborder="0"></iframe>
+		<iframe title="this is a real website" src={websitePage} frameborder="0"></iframe>
 	</div>
 	);
 }

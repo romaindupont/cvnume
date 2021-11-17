@@ -19,6 +19,7 @@ const MyAccount = () => {
 					<a className="myAccount-lien--link" target="_blank" rel="noreferrer" href="https://github.com/romaindupont"><img src={GithubLogo} alt="" /></a>
 					<a className="myAccount-lien--link" target="_blank" rel="noreferrer" href="https://www.romaindupont.me"><img src={LinkeDinLogo} alt="" /></a>
 					<a className="myAccount-lien--link" target="_blank" rel="noreferrer" href="https://www.romaindupont.me"><img src={GlobeLogo} alt="" /></a>
+					<a className="myAccount-lien--link" target="_blank" rel="noreferrer" href="https://linkedin.com/in/romain-dupont-developpeurweb"><img src={GlobeLogo} alt="" /></a>
 				</div>
 				<div className="myAccount-email"><a href="mailto:rdt.romaindupont@gmail.com">rdt.romaindupont@gmail.com</a></div>
 				<div className="myAccount-tel"><a href="tel:+33629913634">06 29 91 36 34</a></div>

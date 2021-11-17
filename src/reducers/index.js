@@ -7,6 +7,7 @@ import DossierReducer from './Dossier';
 import InternetReducer from './Internet';
 import MailReducer from './Mail';
 import DiplomeReducer from './Diplomes';
+import XpReducer from './Xp';
 
 const rootReducer = combineReducers({
   /* monde: mondeReducer, */
@@ -14,6 +15,7 @@ const rootReducer = combineReducers({
 	Internet: InternetReducer,
 	Mail: MailReducer,
 	Diplomes: DiplomeReducer,
+	Xp: XpReducer,
 });
 
 export default rootReducer;

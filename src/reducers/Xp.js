@@ -1,7 +1,7 @@
 
 
 const initialState = {
-	Experiences: [
+	experiences: [
 		{
 			id: 1,
 			nom: "Fabrique124",

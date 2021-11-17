@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
 import './style.scss';
+import ImageCar from '../../assets/img/spider.png';
+import Cursor from '../../assets/img/cursor.png';
 
-const Realisations = ({setOpenNewTab, openWebsitePage}) => {
+const Realisations = ({ setOpenNewTab, openWebsitePage, experiences }) => {
+	console.log(experiences[0])
 	const [number, setNumber] = useState(0)
 	const wheelCarrousel1 = (e) => {
 		const main2 = document.querySelector( '.realisations-carrousel2' );
@@ -11,7 +14,7 @@ const Realisations = ({setOpenNewTab, openWebsitePage}) => {
 		const main2 = document.querySelector( '.realisations-carrousel3' );
 		main2.scrollLeft += e.deltaY;
 		if (e.deltaY > 0) {
-			if(number==6) {
+			if(number === 6) {
 				setNumber(5)
 				setTimeout(()=>document.getElementById('section5').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' }),2000)
 			}
@@ -36,7 +39,6 @@ const Realisations = ({setOpenNewTab, openWebsitePage}) => {
 		main.scrollLeft += e.deltaY;
 		const main1 = document.querySelector( '.realisations-carrousel1' );
 		main1.scrollLeft += e.deltaY-90;
-
 	}
 	const scrollCarrousel = (e) => {
 		const menuList = [];
@@ -54,10 +56,9 @@ const Realisations = ({setOpenNewTab, openWebsitePage}) => {
 			const enfant12 = document.querySelector('.wrapper-real');
 			enfant12.style.overflowY = "hidden";
 			if (itemsScrolled === 5) {		
-				setTimeout(()=>document.getElementById('section2').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' }),2000)
+				/* setTimeout(()=>document.getElementById('section2').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' }),2000) */
 			}
 		}
-		 
 	}
 	const scrollCarrouselR = (e) => {
 		const menuList = [];
@@ -76,8 +77,7 @@ const Realisations = ({setOpenNewTab, openWebsitePage}) => {
 			if (itemsScrolled === 5) {
 				setTimeout(()=>document.getElementById('section3').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' }),2000)
 			}
-		}
-		 
+		}		 
 	}
 	const scrollCarrouselL = (e) => {
 		const menuList = [];
@@ -117,62 +117,85 @@ const Realisations = ({setOpenNewTab, openWebsitePage}) => {
 		menuList[0][number].style.transition= 'bottom 1s ease-in 0s';
 		menuList[0][number].style.bottom='-150px';
 	}
+	const imageAppear = () => {
+		const rea = document.querySelector('.realisations-list')
+		rea.style.cursor = `url(${Cursor}),pointer`
+		const image = document.createElement('IMG')
+		image.setAttribute('src', ImageCar);
+		image.className = 'imageCar';
+		image.style.position = 'absolute';
+		image.style.top=`300px`;
+		image.style.left=`0px`;
+		rea.append(image)
+	}
+	const imageDisappear = () => {
+		const image = document.querySelector('.imageCar')
+		image.remove()
+	}
   return (
 		<div className="realisations">
-				<main className="wrapper-real">
+			<main className="wrapper-real">
 				<section className="section-real static-real" id="section1">
 					<div className="realisations-carrousel" onWheel={wheelCarrousel} onScroll={scrollCarrousel}>
 						<ul className="realisations-list" >
-								<li className="realisations-item">0</li>
-								<li className="realisations-item">1</li>
-								<li className="realisations-item">2</li>
-								<li className="realisations-item">3</li>
-								<li className="realisations-item" onClick={()=>setOpenNewTab(true) & openWebsitePage('https://dangerous-tank.surge.sh')}>website live</li>
-								<li className="realisations-item" onClick={()=>document.getElementById('section2').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })}>0</li>
+							<li className="realisations-item">
+								<span className="realisations-item--nom" onMouseEnter={imageAppear} onMouseLeave={imageDisappear}>{experiences[0].nom}</span><br></br>
+								<span className="realisations-item--description">{experiences[0].description}</span><br></br>
+								<span className="realisations-item--techno">{experiences[0].techno}</span><br></br>
+								<a className="realisations-item--githubLink" target="_blank" rel="noreferrer" href={experiences[0].githubLink}>{experiences[0].githubLink}</a><br></br>
+								<span className="realisationFleche"></span>
+							</li>
+							<li className="realisations-item">1</li>
+							<li className="realisations-item">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/9D0aWXNdKWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</li>
+							<li className="realisations-item">3</li>
+							<li className="realisations-item" onClick={()=>setOpenNewTab(true) & openWebsitePage('https://dangerous-tank.surge.sh')}>website live</li>
+							<li className="realisations-item" onClick={()=>document.getElementById('section2').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })}> <span className="clicDown"><span className="clicDown--1"></span><span className="clicDown--2"></span></span> </li>
 						</ul>
 					</div>
 				</section>
-					<section className="section-real parallax-real" id="section2">
+				<section className="section-real parallax-real" id="section2">
 					<div className="realisations-carrousel1" onWheel={wheelCarrousel} onScroll={scrollCarrouselR}>
 						<ul className="realisations-list-1" >
-								<li className="realisations-item-1" onClick={()=>document.getElementById('section1').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })}>0</li>
-								<li className="realisations-item-1">1</li>
-								<li className="realisations-item-1">2</li>
-								<li className="realisations-item-1">3</li>
-								<li className="realisations-item-1"onClick={()=>setOpenNewTab(true) & openWebsitePage('https://fast-volleyball.surge.sh')}>website live</li>
-								<li className="realisations-item-1">0</li>
+							<li className="realisations-item-1" onClick={()=>document.getElementById('section1').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })}>0</li>
+							<li className="realisations-item-1">1</li>
+							<li className="realisations-item-1">2</li>
+							<li className="realisations-item-1">3</li>
+							<li className="realisations-item-1"onClick={()=>setOpenNewTab(true) & openWebsitePage('https://fast-volleyball.surge.sh')}>website live</li>
+							<li className="realisations-item-1">0</li>
 						</ul>
-						</div>
-					</section>
-					<section className="section-real static-real" id="section3">
+					</div>
+				</section>
+				<section className="section-real static-real" id="section3">
 					<div className="realisations-carrousel2" onWheel={wheelCarrousel1} onScroll={scrollCarrouselL}>
 						<ul className="realisations-list-2" >
-								<li className="realisations-item-2">0</li>
-								<li className="realisations-item-2">1</li>
-								<li className="realisations-item-2">2</li>
-								<li className="realisations-item-2">3</li>
-								<li className="realisations-item-2">4</li>
-								<li className="realisations-item-2" onClick={()=>document.getElementById('section4').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })}>0</li>
+							<li className="realisations-item-2">0</li>
+							<li className="realisations-item-2">1</li>
+							<li className="realisations-item-2">2</li>
+							<li className="realisations-item-2">3</li>
+							<li className="realisations-item-2">4</li>
+							<li className="realisations-item-2" onClick={()=>document.getElementById('section4').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })}>0</li>
 						</ul>
 					</div>
-					</section>
-					<section className="section-real parallax-real" id="section4">
+				</section>
+				<section className="section-real parallax-real" id="section4">
 					<div className="realisations-carrousel3" onWheel={wheelCarrousel2}>
 						<ul className="realisations-list-3" >
-								<li className="realisations-item-3">0</li>
-								<li className="realisations-item-3">1</li>
-								<li className="realisations-item-3">2</li>
-								<li className="realisations-item-3">3</li>
-								<li className="realisations-item-3">4</li>
-								<li className="realisations-item-3">0</li>
+							<li className="realisations-item-3">0</li>
+							<li className="realisations-item-3">1</li>
+							<li className="realisations-item-3">2</li>
+							<li className="realisations-item-3">3</li>
+							<li className="realisations-item-3">4</li>
+							<li className="realisations-item-3">0</li>
 						</ul>
 					</div>
-					</section>
-					<section className="section-real static-real" id="section5"></section>
-					<section className="section-real parallax-real"></section>
-					<section className="section-real static-real"></section>
+				</section>
+				<section className="section-real static-real" id="section5"></section>
+				<section className="section-real parallax-real"></section>
+				<section className="section-real static-real"></section>
 			</main>
-			</div>
+		</div>
   );
 }
 

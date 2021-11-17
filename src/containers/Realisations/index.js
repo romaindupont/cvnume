@@ -3,7 +3,10 @@ import { connect } from 'react-redux';
 import Realisations from '../../components/Realisations';
 import { openWebsitePage } from '../../actions/internet';
 
-const mapStateToProps = null;
+const mapStateToProps = (state) => ({
+  experiences: state.Xp.experiences,
+
+});
 
 const mapDispatchToProps = (dispatch)=> ({
   openWebsitePage: (url) => {

@@ -26,13 +26,18 @@
 	height: 100%;
 	justify-content: center;
 	align-items: center;
+	/* cursor: url('../../assets/img/cursor.png'); */
+	
 }
 .realisations-list > li {
-	background: rgb(252, 172, 172);
+	/* background: rgb(252, 172, 172); */
 	min-width: 400px;
 	height: 400px;
 	margin-left: 5rem;
-	border: 5px solid white;
+	font-family: 'Bangers';
+	font-size: 2rem;
+	position: relative;
+	/* border: 5px solid white; */
 }
 
 .realisations-list-1 > li {
@@ -95,10 +100,77 @@
 .realisations-item:nth-child(1) {
 	opacity: 1 !important;
 }
+
 .realisations-item:nth-child(2),.realisations-item:nth-child(3),.realisations-item:nth-child(4),.realisations-item:nth-child(5) {
 		opacity: 0;
 }
+.realisations-item--nom {
+	font-size: 3rem;
+	
+}
+.realisations-item--description {
+	font-size: 1rem;
+	word-break: break-all;
+	margin: 1rem 3rem;
+  display: block;
+}
 
+.realisations-item--techno {
+	margin: 0rem 3rem;
+  display: block;
+}
+
+.realisations-item--githubLink {
+	font-size: 1.5rem;
+	margin: 0rem 3rem;
+	&::after {
+		content:'';
+		z-index: 10;
+		border-bottom: 5px solid #18af85;
+		width: 390px;
+		transform: scaleX(0);
+		transition: transform 250ms ease-in-out;
+		transform-origin: left;
+		display: block;
+    margin: auto;
+		border-radius: 5px;
+	}
+	&:hover::after {
+		transform: scaleX(1.1);
+		color: #18af85;
+	} 
+}
+
+.realisationFleche {
+	position: absolute;
+	width: 70px;
+	height: 10px;
+	background: black;
+	border-radius: 10px;
+	&::after {
+		content: '';
+		position: absolute;
+		width: 20px;
+		height: 10px;
+		background: black;
+		right: 1px;
+		transform: rotate(45deg);
+		top: -6px;
+		border-radius: 10px;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		width: 20px;
+		height: 10px;
+		background: black;
+		right: 1px;
+		transform: rotate(-45deg);
+		top: 6px;
+		border-radius: 10px;
+	}
+
+}
 .appear,.appear1,.appear2 {
 	opacity: 1 !important;
 	
@@ -210,3 +282,57 @@ $photos: 6;
 
 		}
 	}
+
+.clicDown {
+	width: 100px;
+	height: 100px;
+	background: transparent;
+	display: block;
+	margin: 4rem auto;
+	position: relative;
+	cursor: pointer;
+}
+
+.clicDown--1 {
+	width: 50px;
+	height: 10px;
+	background: black;
+	position: absolute;
+	border-radius: 10px;
+	transform: rotate(-45deg);
+	top: 70px;
+	right: 10px;
+	&::after {
+		width: 50px;
+    height: 10px;
+    background: black;
+    position: absolute;
+    border-radius: 10px;
+    transform: rotate(90deg);
+    top: -20px;
+    left: -20px;
+    content: '';	
+	}
+}
+
+.clicDown--2 {
+	width: 50px;
+	height: 10px;
+	background: black;
+	position: absolute;
+	border-radius: 10px;
+	transform: rotate(-45deg);
+	top: 40px;
+	right: 10px;
+	&::after {
+		width: 50px;
+    height: 10px;
+    background: black;
+    position: absolute;
+    border-radius: 10px;
+    transform: rotate(90deg);
+    top: -20px;
+    left: -20px;
+    content: '';
+	}
+}

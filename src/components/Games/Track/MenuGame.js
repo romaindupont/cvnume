@@ -29,7 +29,7 @@ const MenuGame = () => {
 		}
 		if (e.keyCode === 13) {
 			const selectGame = document.querySelector('.selectionJeu').id;
-			if (selectGame == 2) {
+			if (selectGame === 2) {
 				const removeMenu = document.querySelector('.menuGame');
 				removeMenu.style.display="none";
 				setGameChoice(2);

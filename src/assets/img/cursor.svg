@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="8.4666mm" height="8.4666mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 847 847"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#2B2A29;stroke-width:20}
+    .str2 {stroke:#2B2A29;stroke-width:67.73}
+    .str1 {stroke:#2B2A29;stroke-width:20}
+    .fil0 {fill:none}
+    .fil1 {fill:#2B2A29}
+    .fil2 {fill:#FEFBF6}
+   ]]>
+  </style>
+ </defs>
+ <g id="Plan_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_1223171557040">
+   <path class="fil0 str0" d="M674 457c-14,-99 2,-183 -39,-240 -100,-139 -313,-145 -425,-19 -52,58 -54,139 -65,259"/>
+   <g>
+    <line class="fil0 str1" x1="674" y1="457" x2="145" y2= "457" />
+   </g>
+  </g>
+  <g id="_1223171555888">
+   <path class="fil0 str0" d="M146 473c14,99 -3,183 39,241 99,139 311,145 424,20 52,-59 55,-139 66,-259"/>
+   <g>
+    <line class="fil0 str1" x1="146" y1="473" x2="675" y2= "475" />
+   </g>
+  </g>
+  <ellipse class="fil1 str0" cx="418" cy="256" rx="44" ry="96"/>
+  <g id="_1223171556080">
+   <line class="fil0 str2" x1="418" y1="160" x2="418" y2= "160" />
+  </g>
+  <rect class="fil2 str0" x="392" y="223" width="51.384" height="9.8384"/>
+  <rect class="fil2 str0" x="393" y="247" width="51.384" height="9.8384"/>
+  <rect class="fil2 str0" x="393" y="273" width="51.384" height="9.8384"/>
+  <rect class="fil2 str0" x="392" y="296" width="51.384" height="9.8384"/>
+  <rect class="fil2 str0" x="392" y="200" width="51.384" height="9.8384"/>
+ </g>
+</svg>

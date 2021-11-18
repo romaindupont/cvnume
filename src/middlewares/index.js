@@ -1,30 +1,25 @@
 import axios from 'axios';
-
-/* import { } from '../actions'; */
+import { GET_WEATHER, registerWeather } from '../actions/weather';
 
 axios.defaults.baseURL = '';
 
 const ajax = (store) => (next) => (action) => {
   switch (action.type) {
-    /* case LOGIN:
+    case GET_WEATHER:
     {
       const state = store.getState();
-      axios.post('/signin', {
-        email: state.user.email,
-        password: state.user.password,
-        id_user: state.user.id_user,
-        level: state.user.level,
-        avatar_id: state.user.avatar_id,
-      }, {
-        baseURL: '',
+			/* console.log(process.env.REACT_APP_API_KEY) */
+      axios.get(`?lat=${state.Weather.lat}&lon=${state.Weather.lng}&units=metric&appid=32c2c653765448419370d96020a78ff3`,
+			{
+        baseURL: 'https://api.openweathermap.org/data/2.5/weather',
       })
         .then((response) => {
-          // action à créer
-        })
+					store.dispatch(registerWeather(response.data.weather[0].main,Math.round(response.data.wind.speed*3.6),Math.round(response.data.main.temp),response.data.main.humidity,response.data.name))
+				})
         .catch((error) => {
         });
       break;
-    } */
+    }
     default:
       next(action);
   }

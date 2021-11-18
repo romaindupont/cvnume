@@ -147,7 +147,7 @@ const Realisations = ({ setOpenNewTab, openWebsitePage, experiences }) => {
 							</li>
 							<li className="realisations-item">1</li>
 							<li className="realisations-item">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/9D0aWXNdKWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/9D0aWXNdKWk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 							</li>
 							<li className="realisations-item">3</li>
 							<li className="realisations-item" onClick={()=>setOpenNewTab(true) & openWebsitePage('https://dangerous-tank.surge.sh')}>website live</li>

@@ -7,6 +7,7 @@ import CvPdf from '../cvPdf';
 import InternetLogo from '../../containers/InternetLogo';
 import Games from '../Games';
 import BoiteMail from '../../containers/BoiteMail';
+import Weather from '../../containers/Weather';
 
 const App = ({ listDossier }) => {
 	const [ actionDossier, setActionDossier ] = useState('close');
@@ -18,6 +19,7 @@ const App = ({ listDossier }) => {
 				<CvPdf />
 				<InternetLogo />
 				<Games />
+				<Weather />
 			</div>
 			<BoiteMail />
 			<DossierOuvert setActionDossier={setActionDossier} actionDossier={actionDossier} />

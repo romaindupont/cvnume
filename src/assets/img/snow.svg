@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Creator: CorelDRAW X7 -->
 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="52.9166mm" height="52.9166mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 5292 5292"
+viewBox="-300 0 5292 5292"
  xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <style type="text/css">
@@ -41,7 +41,7 @@ viewBox="0 0 5292 5292"
   <g id="_2383034987904">
    <g>
     <g style="clip-path:url(#id0)">
-     <image x="671" y="1570" width="3742" height="2087" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALIAAABkCAIAAAHaiM2bAAAACXBIWXMA
+     <!-- <image x="671" y="1570" width="3742" height="2087" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALIAAABkCAIAAAHaiM2bAAAACXBIWXMA
 ABJ0AAASmwEHgPBbAAAcn0lEQVR4nO2dWa/cxNOH+yxh30NIgtgldiEhuAAJgZC44EPwRQFxwwWI
 K4QEiE1iJxBC2PfknLyP/ODf2/HMeDwznnMmf6gLy56x29VVv66urq5u7164cKFM0Pnz5//6668j
 R45cdtllk/9O0u7kT2fPnn3rrbfOnDmzv79/4403Pvjgg3fdddcCpfD+zz777Jtvvvn444858sv2
@@ -171,7 +171,7 @@ YyoUZhmehWhTYCGlquap7lc79qWzVyWdtmu+SZDRGTukLUYHtRt4pP1cUY+f4drRMrHjW8fP0MzU
 Gtpul9qW2X7GEJtRKnyvR/YX0WbBoqat9mMciv5I+5WdrAF3dBCgTNqMOlqaLrxjMzKEmzswEQqu
 wV/aZoiD+r2hspo3MC5tLixCtfEsF68h2K+oVOss+nuTulfuMcU1D3lp57171R60Pcjo6L7TBRyY
 DRhOlwAsOlQPui5UVCptBQ1zR621VnrU03lp/er9aklcDzK2qmDGVkVrk9NK9H9lfKWf55ZmYwAA
-AABJRU5ErkJggg=="/>
+AABJRU5ErkJggg=="/> -->
     </g>
    </g>
    <path class="fil0" d="M1620 1951c114,-149 294,-244 497,-244 247,0 461,143 561,350 20,-4 40,-6 60,-6 147,0 265,106 265,238 0,21 -3,41 -9,61 252,67 432,247 432,457 0,269 -293,487 -654,487 -61,0 -120,-6 -176,-18 -93,93 -222,150 -366,150 -153,0 -291,-65 -384,-169 -104,104 -252,169 -417,169 -314,0 -569,-237 -569,-529 0,-237 168,-438 400,-505 -19,-40 -30,-84 -30,-131 0,-175 146,-316 326,-316 22,0 43,2 64,6z"/>

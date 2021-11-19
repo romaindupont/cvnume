@@ -7,6 +7,12 @@ import { getLatitudeLongitude, getWeather, registerWeather } from '../../actions
 const mapStateToProps = (state) => ({
   lat: state.Weather.lat,
 	lng: state.Weather.lng,
+	weather: state.Weather.weather,
+	windSpeed: state.Weather.windSpeed,
+	temperature: state.Weather.temperature,
+	humidity: state.Weather.humidity,
+	city: state.Weather.city,
+	deg: state.Weather.deg
 });
 
 const mapDispatchToProps = (dispatch)=> ({
@@ -16,8 +22,8 @@ const mapDispatchToProps = (dispatch)=> ({
 	getWeather: () => {
     dispatch(getWeather());
 	},
-	registerWeather: (weather, windSpeed, temperature, humidity, name) => {
-    dispatch(registerWeather(weather, windSpeed, temperature, humidity, name));
+	registerWeather: (weather, windSpeed, temperature, humidity, name, deg) => {
+    dispatch(registerWeather(weather, windSpeed, temperature, humidity, name, deg));
 	}
 });
 

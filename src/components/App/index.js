@@ -8,6 +8,7 @@ import InternetLogo from '../../containers/InternetLogo';
 import Games from '../Games';
 import BoiteMail from '../../containers/BoiteMail';
 import Weather from '../../containers/Weather';
+import Desktop from '../Desktop';
 
 const App = ({ listDossier }) => {
 	const [ actionDossier, setActionDossier ] = useState('close');
@@ -20,6 +21,7 @@ const App = ({ listDossier }) => {
 				<InternetLogo />
 				<Games />
 				<Weather />
+				<Desktop />
 			</div>
 			<BoiteMail />
 			<DossierOuvert setActionDossier={setActionDossier} actionDossier={actionDossier} />

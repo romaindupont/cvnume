@@ -7,7 +7,8 @@ const initialState = {
 	temperature:null,
 	humidity: null,
 	windSpeed: null,
-	city: ''
+	city: '',
+	deg:null
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -26,6 +27,7 @@ const reducer = (state = initialState, action = {}) => {
 				humidity: action.humidity,
 				windSpeed: action.windSpeed,
 				city: action.name,
+				deg: action.deg
 			}
 		
     default:

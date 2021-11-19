@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="52.9166mm" height="52.9166mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 5292 5292"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str3 {stroke:red;stroke-width:317.49}
+    .str2 {stroke:red;stroke-width:264.58}
+    .str0 {stroke:red;stroke-width:132.28}
+    .str1 {stroke:red;stroke-width:211.66}
+    .fil0 {fill:#333333}
+    .fil1 {fill:#FFF2F2}
+    .fil2 {fill:white}
+   ]]>
+  </style>
+ </defs>
+ <g id="Plan_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2747479786880">
+   <ellipse class="fil0 str0" transform="matrix(-0.999508 0.0313691 -0.0313691 -0.999508 2540.87 1348.79)" rx="172" ry="94"/>
+   <ellipse class="fil1 str1" transform="matrix(-0.999508 0.0313691 -0.0313691 -0.999508 2569.41 1659.63)" rx="397" ry="261"/>
+   <ellipse class="fil2 str1" transform="matrix(-0.999508 0.0313691 -0.0313691 -0.999508 2560.2 2067.07)" rx="529" ry="370"/>
+   <ellipse class="fil2 str2" transform="matrix(-0.999508 0.0313691 -0.0313691 -0.999508 2579.99 2378.77)" rx="634" ry="370"/>
+   <ellipse class="fil2 str2" transform="matrix(-0.999508 0.0313691 -0.0313691 -0.999508 2617.66 2750.76)" rx="742" ry="370"/>
+   <ellipse class="fil2 str3" transform="matrix(-0.999508 0.0313691 -0.0313691 -0.999508 2628.45 3094.57)" rx="847" ry="344"/>
+  </g>
+ </g>
+</svg>

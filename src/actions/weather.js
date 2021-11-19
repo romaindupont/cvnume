@@ -11,11 +11,12 @@ export const getWeather = () => ({
 });
 
 export const REGISTER_WEATHER = 'REGISTER_WEATHER';
-export const registerWeather = (weather, windSpeed, temperature, humidity, name) => ({
+export const registerWeather = (weather, windSpeed, temperature, humidity, name, deg) => ({
   type: REGISTER_WEATHER,
 	weather,
 	windSpeed,
 	temperature,
 	humidity,
-	name
+	name,
+	deg
 });

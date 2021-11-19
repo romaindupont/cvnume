@@ -13,4 +13,58 @@
 		0 5px 10px rgb(0 0 0 / 25%),
 		0 10px 10px rgb(0 0 0 / 20%),
 		0 20px 20px rgb(0 0 0 / 15%);
+
+	&-city {
+		text-transform: uppercase;
+		font-size: 0.8rem;
+		color: white;
+		text-shadow: -1px -3px black;
+		text-align: center;
+	}
+
+	&-image-change {
+    width: 50%;
+    position: absolute;
+    top: 5px;
+    left: -15px;
+	}	
+	&-temp {
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    top: 40px;
+    left: 65px;
+	}
+	&-name {
+    color: white;
+    position: absolute;
+    bottom: -2px;
+    left: 15px;
+		font-size: 0.8rem;
+	}
+	&-image {
+    width: 15%;
+    top: 26px;
+    left: 165px;
+    position: absolute;
+	}
+	&-humidity {
+    color: white;
+    position: absolute;
+    right: 30px;
+		font-size: 0.8rem;
+    top: 35px;
+	}
+	&-wSpeed {
+		color: white;
+		position: absolute;
+		bottom: 0px;
+		right: 10px;
+	}
+	&-image-tube {
+    width: 30%;
+    position: absolute;
+    bottom: 3px;
+    right: 0px;
+	}
 }

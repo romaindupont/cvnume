@@ -14,7 +14,7 @@ const ajax = (store) => (next) => (action) => {
         baseURL: 'https://api.openweathermap.org/data/2.5/weather',
       })
         .then((response) => {
-					store.dispatch(registerWeather(response.data.weather[0].main,Math.round(response.data.wind.speed*3.6),Math.round(response.data.main.temp),response.data.main.humidity,response.data.name))
+					store.dispatch(registerWeather(response.data.weather[0].main,Math.round(response.data.wind.speed*3.6),Math.round(response.data.main.temp),response.data.main.humidity,response.data.name,response.data.wind.deg))
 				})
         .catch((error) => {
         });

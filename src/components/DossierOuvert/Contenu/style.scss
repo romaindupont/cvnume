@@ -3,13 +3,13 @@
 	/* height: 90vh; */
 	/* background: red; */
 	margin-right: 0.3rem;
-	border-top: 1px solid #c3959594;
+	border-top: 1px solid var(--header-modif);
 }
 
 .headerContenu {
 	display: flex;
 	width: 100%;
-	color:#312d2d94;
+	color: var(--header-contenu);
 	font-size: 0.9rem;
 	&--image {
 		display: none;
@@ -17,23 +17,23 @@
 	&-nom {
 		margin-left: 0.4rem;
 		width: 20%;
-		border-right: 1px solid #c3959594;
+		border-right: 1px solid var(--header-modif);
 		padding: 0.3rem 0;
 	}
 	&-modif {
 		margin-left: 0.4rem;
 		width: 15%;
-		border-right: 1px solid #c3959594;
+		border-right: 1px solid var(--header-modif);
 	}
 	&-type {
 		margin-left: 0.4rem;
 		width: 15%;
-		border-right: 1px solid #c3959594;
+		border-right: 1px solid var(--header-modif);
 	}
 	&-taille {
 		margin-left: 0.4rem;
 		width: 5%;
-		border-right: 1px solid #c3959594;
+		border-right: 1px solid var(--header-modif);
 	}
 }
 
@@ -101,7 +101,7 @@
 	}
 	&-titre {
 		font-size: 0.8rem;
-		color:#312d2d94;
+		color:var(--header-contenu);
 	}
 }
 
@@ -159,11 +159,11 @@
 }
 
 .contenuFile-line:hover {
-	background: #e2f8ff;
+	background: var(--dossier-hover);
 }
 
 .contenuFile-line--image:hover {
-	background: #e2f8ff;
+	background: var(--dossier-hover);
 	height: 100%;
 	margin-top: 0;
 }

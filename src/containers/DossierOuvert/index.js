@@ -5,7 +5,8 @@ import DossierOuvert from '../../components/DossierOuvert';
 
 const mapStateToProps = (state) => ({
   listDossier: state.Dossier.listDossier,
-	id: state.Dossier.idName
+	id: state.Dossier.idName,
+	theme: state.Dossier.theme
 
 });
 const mapDispatchToProps = {};

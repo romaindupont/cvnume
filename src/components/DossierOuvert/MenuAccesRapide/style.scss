@@ -13,7 +13,7 @@
 	padding-top: 1rem;
 	cursor: pointer;
 	&:hover {
-		background: #e2f8ff;
+		background: var(--dossier-hover);
 	}
 }
 .lienMenu--1-titre {

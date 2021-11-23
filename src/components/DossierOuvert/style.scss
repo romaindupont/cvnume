@@ -1,13 +1,14 @@
 .dossierOuvert {
 	width: 1000px;
 	height: 500px;
-	background: white;
+	background: var(--theme-page-background);
 	position: absolute;
 	top: 100px;
 	left: 100px;
 	/* box-shadow: rgb(0 0 0 / 50%) 10px 19px 38px, rgb(0 0 0 / 30%) 10px 25px 20px; */
 	z-index: 2;
 	cursor: grab;
+	color: var(--theme-page-text);
 	box-shadow:
 		0 0px 0 #a19e9e,
 		0 0px 0 #a19e9e,
@@ -32,10 +33,12 @@
 .close {
 	display: none;
 }
-
+.normal .searchDossier-searchBar {
+	width: 30vw;
+}
 .searchDossier {
 	display: flex;
-	border: 1px solid #c3959594;
+	border: 1px solid var(--header-modif);
 	margin: 1px;
 	align-items: center;
 	width: 60%;
@@ -60,7 +63,7 @@
 	height: 7px;
 	border-radius: 50%;
 	background: transparent;
-	border: 2px solid black;
+	border: 2px solid var(--theme-page-text);
 	position: absolute;
 	top: 3px;
 	left: 10px;
@@ -69,7 +72,7 @@
 .trait {
 	width: 8px;
 	height: 1px;
-	background: black;
+	background: var(--theme-page-text);
 	position: absolute;
 	transform: rotate(125deg);
 	top: 17px;
@@ -89,31 +92,31 @@
 
 	&-liste {
 		width: 25%;
-    border: 1px solid #c3959594;
+    border: 1px solid var(--header-modif);
     height: 90%;
     display: flex;
     flex-direction: column;
 		cursor: pointer;
 		position: relative;
 		&:hover {
-			background: #e2f8ff;
+			background: var(--dossier-hover);
 		}
 
 		&-trait--1 {
 			width: 80%;
-			border-bottom: 2px solid black;
+			border-bottom: 2px solid var(--theme-page-text);
 			display: block;
 			margin: auto;
 		}
 		&-trait--2 {
 			width: 80%;
-			border-bottom: 2px solid black;
+			border-bottom: 2px solid var(--theme-page-text);
 			display: block;
 			margin: auto;
 		}
 		&-trait--3 {
 			width:80%;
-	    border-bottom: 2px solid black;
+	    border-bottom: 2px solid var(--theme-page-text);
     	display: block;
     	margin: auto;
 		}
@@ -123,7 +126,7 @@
 
 .mode-icone {
 	width: 25%;
-	border: 1px solid #c3959594;
+	border: 1px solid var(--header-modif);
 	height: 90%;
 	display: flex;
 	flex-direction: column;
@@ -131,14 +134,14 @@
 	cursor: pointer;
 	
 		&:hover {
-			background: #e2f8ff;
+			background: var(--dossier-hover);
 		}
 
 	&-carre {
 		&--1 {
 			width: 30%;
     	height: 30%;
-			border: 1px solid black;
+			border: 1px solid var(--theme-page-text);
 			background: transparent;
 			position: absolute;
 			margin: 1px;
@@ -146,7 +149,7 @@
 		&--2 {
 			width: 30%;
     	height: 30%;
-			border: 1px solid black;
+			border: 1px solid var(--theme-page-text);
 			background: transparent;
 			position: absolute;
 			right: 0;
@@ -155,7 +158,7 @@
 		&--3 {
 			width: 30%;
     	height: 30%;
-			border: 1px solid black;
+			border: 1px solid var(--theme-page-text);
 			background: transparent;
 			position: absolute;
 			bottom: 0;
@@ -164,7 +167,7 @@
 		&--4 {
 			width: 30%;
     	height: 30%;
-			border: 1px solid black;
+			border: 1px solid var(--theme-page-text);
 			background: transparent;
 			position: absolute;
 			bottom: 0;
@@ -177,8 +180,8 @@
 .tooltip {
   visibility: hidden;
   width: 120px;
-  background-color: black;
-  color: white;
+  background-color: var(--theme-page-text);
+  color: var(--theme-page-background);
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
@@ -194,7 +197,7 @@
 
 span.tooltip:after {
 	content: "";
-	border-bottom: 20px solid black;
+	border-bottom: 20px solid var(--theme-page-text);
 	border-left: 20px solid transparent;
 	position: absolute;
 	top: -10px;

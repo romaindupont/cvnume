@@ -1,4 +1,4 @@
-import { CLIC_FILE, CHANGE_VALUE } from '../actions';
+import { CLIC_FILE, CHANGE_VALUE, CHANGE_THEME } from '../actions';
 /* id: 1,
 nomcontenu: 'A propos',
 class: 'dossierMenu',
@@ -7,6 +7,7 @@ type: 'Dossier de fichiers',
 taille: '',
 nomSheet: '' */
 const initialState = {
+	theme: 'light',
   listDossier: [
 		{
 			id: 1,
@@ -132,6 +133,11 @@ const reducer = (state = initialState, action = {}) => {
 			return {
 				...state,
 				[action.key]: action.newValue
+			}
+		case CHANGE_THEME:
+			return {
+				...state,
+				theme: action.theme
 			}
     default:
       return state;

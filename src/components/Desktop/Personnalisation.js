@@ -1,15 +1,20 @@
 import React from 'react';
 import './style.scss';
+import Paysage from '../../assets/img/paysage.jpg';
+import { backgroundChoose } from '../../utils/backgroundChoose';
 
 
-const Personnalisation = ({setGetPage}) => {
-	let bgColors = { "Default": "#81b71a",
-                    "Blue": "#00B1E1",
-                    "Cyan": "#37BC9B",
-                    "Green": "#8CC152",
-                    "Red": "#E9573F",
-                    "Yellow": "linear-gradient(to, #2d5c01, #0069a7, #0400ff);",
-};
+const Personnalisation = ({setGetPage, changeTheme}) => {
+	const bgChoose = (e) => {
+		backgroundChoose(e.target.getAttribute("data-image-number"));
+	}
+	const themeChange = (e) => {
+		changeTheme(e.target.value);
+	}
+	const filesColorChange = (e) => {
+		const files = document.querySelector('')
+		console.log(e.target.value)
+	}
   return (
 		<div className="system">
 			<span className="system-menu--goback" onClick={()=>setGetPage(0)}>&larr;</span>
@@ -18,7 +23,8 @@ const Personnalisation = ({setGetPage}) => {
 				<ul className="system-menu-ul">
 					<li className="system-menu-li" onClick={()=>setGetPage(0)}>Accueil</li>
 					<li className="system-menu-li"><a href="#backGround">Arrière-plan</a></li>
-					<li className="system-menu-li"><a href="#sys">Couleurs</a></li>
+					<li className="system-menu-li"><a href="#color">Thème</a></li>
+					<li className="system-menu-li"><a href="#files">Couleurs</a></li>
 				</ul>
 			</div>
 			<div className="system-action" id="srollbarSys">
@@ -27,27 +33,27 @@ const Personnalisation = ({setGetPage}) => {
 					<span className="system-action-actualScreen"></span>
 					<span>Choisir votre fond d'écran</span>
 					<div className="system-action-actualScreenSmall">
-						<span className="system-action-small" style={{backgroundColor: bgColors.Yellow}}></span>
-			{/* 			<span className="system-action-small"></span>
-						<span className="system-action-small"></span>
-						<span className="system-action-small"></span>
-						<span className="system-action-small"></span> */}
+						<span className="system-action-small" style={{backgroundImage: `linear-gradient(225deg, #2d5c01, #0069a7, #0400ff)`}} data-image-number="Image1" onClick={bgChoose}></span>
+						<span className="system-action-small" style={{backgroundImage: `linear-gradient(225deg, #befd84, #62bdf3, #5350f5)`}} data-image-number="Image2" onClick={bgChoose}></span>
+						<span className="system-action-small" style={{backgroundImage: `linear-gradient(225deg, #ff9c62, #a72902, #5a0101)`}} data-image-number="Image3" onClick={bgChoose}></span>
+						<span className="system-action-small" style={{backgroundImage: `linear-gradient(225deg, #fbe90b, #9b7a01, #5d6a07)`}} data-image-number="Image4" onClick={bgChoose}></span>
+						<span className="system-action-small" style={{backgroundImage: `url(${Paysage})`, backgroundSize: 'cover'}} data-image-number="Image5" onClick={bgChoose}></span>
 					</div>
+
 				</section>
-				<section className="system-action-section" id="sys">
-					<h2 className="system-action-section-title">Spécifications</h2>
-					<p className="system-action-section-p">Voici les spécifications de l'appareil</p>
-					<span>Version navigateur : <span>{navigator.appVersion}</span></span><br></br>
-					<span>Editeur : <span>Rdd professionnel edition</span></span><br></br>
-					<span>Version : <span>V0.1-2021</span></span><br></br>
-					<span>MAJ : <span>le 17/11/2021</span></span><br></br>
+				<section className="system-action-section" id="color">
+					<h2 className="system-action-section-title">Thème</h2>
+					<select name="theme" id="theme" onChange={themeChange}>
+						<option value="light">clair</option>
+						<option value="dark">sombre</option>
+					</select>
 				</section>
-				<section className="system-action-section" id="info">
-					<h2 className="system-action-section-title">Informations</h2>
-					<p className="system-action-section-p">Déclarer un bug :</p>
-					<a href="mailto:rdt.romaindupont@gmail.com">rdt.romaindupont@gmail.com</a>
-					<span></span><span></span>
-				</section>
+				<section className="system-action-section" id="files">
+					<h2 className="system-action-section-title">Couleurs</h2>
+					<label>Couleurs dossier
+						<input type="color" name="couleur" id="couleur" onChange={filesColorChange}/>
+					</label>
+				</section>		
 			</div>
 			</div>
 		</div>

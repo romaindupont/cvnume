@@ -183,12 +183,13 @@ ul li .item {
 	display: inline-block;
 	transform: translate3d(50px, 0px, 15px) rotate3d(1, 1, 1, 55deg);
 	font-family: 'Lato', sans-serif;
+	color: var(--theme-page-background);
 	text-shadow:
-	0 0px 0 #ccc,
-	0 1px 0 #c9c9c9,
-	0 2px 0 #bbb,
-	0 3px 0 #b9b9b9,
-	0 4px 0 #aaa,
+	0 0px 0 var(--theme-page-text),
+	0 1px 0  var(--theme-page-text),
+	0 2px 0  var(--theme-page-text),
+	0 3px 0  var(--theme-page-text),
+	0 4px 0  var(--theme-page-text),
 	0 4px 0px rgb(0 0 0 / 10%),
 	0 0 4px rgb(0 0 0 / 10%),
 	0 0px 2px rgb(0 0 0 / 30%),
@@ -196,8 +197,6 @@ ul li .item {
 	0 4px 5px rgb(0 0 0 / 25%),
 	0 5px 5px rgb(0 0 0 / 20%),
 	0 15px 15px rgb(0 0 0 / 15%);
-	/* font-family: 'JetBrains Mono', monospace; */
-	/* font-family: 'Montserrat', sans-serif; */
 }
 
 .wrap-container ul li {
@@ -224,7 +223,7 @@ ul li .item {
 
 .ul-scroll > li.active:after {
 	content: "";
-	border-bottom: 40px solid white;
+	border-bottom: 40px solid var(--theme-page-background);
 	border-left: 45px solid transparent;
 	position: absolute;
 	top: 50px;
@@ -250,7 +249,7 @@ ul li .item {
 
 .ul-scroll > li.active:before {
 	content: "";
-	border-bottom: 40px solid white;
+	border-bottom: 40px solid var(--theme-page-background);
 	border-left: 45px solid transparent;
 	position: absolute;
 	top: 57px;
@@ -318,7 +317,7 @@ ul li .item {
 
 .round {
 	visibility: hidden;
-	background: #dbe1c2;
+	background: var(--menu-bg);
 	border-radius: 50%;
 	position: absolute;
 	top: -266px;

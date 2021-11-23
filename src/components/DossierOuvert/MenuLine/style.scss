@@ -9,7 +9,7 @@
 
 .lienDossier {
 	display: flex;
-	border: 1px solid #c3959594;
+	border: 1px solid var(--header-modif);
 	margin: 1px;
 	align-items: center;
 	width: 35%;
@@ -22,7 +22,7 @@
 		padding: 1px 5px;
 
 		&:hover {
-			background: #e2f8ff;
+			background: var(--dossier-hover);
 		}
 	}
 	&--2 {
@@ -31,7 +31,7 @@
 		cursor: pointer;
 		padding: 1px 5px;
 		&:hover {
-			background: #e2f8ff;
+			background: var(--dossier-hover);
 		}
 	}
 	&--crochet {

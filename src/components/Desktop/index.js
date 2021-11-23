@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './style.scss';
 import Param from './Param';
 
-const Desktop = () => {
+const Desktop = ({ theme }) => {
 	const [ paramOpen, setParamOpen ] = useState(false);
   return (
 		<>

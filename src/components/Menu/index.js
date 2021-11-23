@@ -15,7 +15,7 @@ const Menu = ({smallPage,clicFile}) => {
 	}
 	const scrollWrap = (e) => {
 		const menuList = [];
-		const liElement = document.querySelectorAll("li");
+		const liElement = document.querySelectorAll(".ul-scroll > li");
 		menuList.push(liElement)
 		liElement.forEach((items) => items.classList.remove("active") & items.classList.remove("derriere"))
 		itemsScrolled = Math.ceil((e.target.scrollTop + listOpts.itemHeight / 2) / listOpts.itemHeight)
@@ -50,7 +50,7 @@ const Menu = ({smallPage,clicFile}) => {
 	}
 	const openMenu = () => {
 		setClose(!closeMenu)
-		document.querySelectorAll("li:nth-child(2)").forEach(EL => EL.classList.add("active"));
+		document.querySelectorAll(".ul-scroll > li:nth-child(2)").forEach(EL => EL.classList.add("active"));
 	}
   return (
 		<>

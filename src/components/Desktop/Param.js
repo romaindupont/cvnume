@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './style.scss';
 import System from './System';
-import Personnalisation from './Personnalisation';
+import Personnalisation from '../../containers/Desktop/Personnalisation';
 
 const Param = ({setParamOpen}) => {	
 	const [ getPage, setGetPage ] = useState(0)

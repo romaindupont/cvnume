@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 // == Import : local
-import App from '../../components/App';
+import Desktop from '../../components/Desktop';
 
 
 const mapStateToProps = (state) => ({
-  listDossier: state.Dossier.listDossier,
 	theme: state.Dossier.theme
+
 });
 const mapDispatchToProps = {};
 /* const mapDispatchToProps = (dispatch)=> ({
@@ -19,4 +19,4 @@ const mapDispatchToProps = {};
 
 }); */
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(Desktop);

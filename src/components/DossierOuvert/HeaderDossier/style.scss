@@ -18,7 +18,7 @@
 	&-minus {
 		width: 15px;
 		height: 2px;
-		background: black;
+		background: var(--theme-page-text);
 		margin-right: 0.8rem;
 		cursor: pointer;
 
@@ -27,8 +27,8 @@
 	&-big {
 		width: 10px;
 		height: 10px;
-		background: white;
-		border: 2px solid black;
+		background: var(--theme-page-background);
+		border: 2px solid var(--theme-page-text);
 		margin-right: 0.8rem;
 		cursor: pointer;
 
@@ -43,7 +43,7 @@
 			right: 30px;
 			height: 10px;
 			background: transparent;
-			border: 2px solid black;
+			border: 2px solid var(--theme-page-text);
 			top: 2px;
 			z-index: -1;
 		}
@@ -60,7 +60,7 @@
 			display: block;
 			width: 15px;
 			height: 1px;
-			background: black;
+			background: var(--theme-page-text);
 			transform: rotate3d(0, 0, 3, 45deg);
     	margin-top: 0.2rem;
 		}
@@ -68,7 +68,7 @@
 			display: block;
 			width: 15px;
 			height: 1px;
-			background: black;
+			background: var(--theme-page-text);
 			transform: rotate3d(0, 0, 3, -45deg);
 		}
 	}

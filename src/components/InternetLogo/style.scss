@@ -1,7 +1,7 @@
 .internetLogo {
 	width: 50px;
 	height: 50px;
-	background: #107459;
+	background: linear-gradient(180deg, #0400ff 0%, red 38%, #1f6034 68%, #dadd18 100%);
 	border-radius: 50%;
 	border: 10px solid white;
 	position: absolute;
@@ -24,22 +24,9 @@
 }
 
 .internetLogo:hover {
-	background: #ff0000;
-	&::before {
-		background: #ff0000;
-	}
+	background: linear-gradient(180deg, #dadd18 0%, #1f6034 38%, #ff0000 68%, #0400ff 100%);
 }
-.internetLogo:hover > .w {
-	background: #0400ff;
 
-	&::after {
-		background: #107459;
-	}
-	&::before {
-		background: #dadd18;
-	}
-
-}
 
 .internetLogo::before {
 	width: 10px;
@@ -54,38 +41,4 @@
 	margin: auto;
 	z-index: 2;
 
-}
-
-.w {
-	position: absolute;
-	top: 5px;
-	left: 0px;
-	width: 25px;
-	height: 40px;
-	border-radius: 50% 5% 5% 50%;
-	background: #dadd18;
-}
-
-span.w::before {
-	position: absolute;
-	top: -13px;
-	left: 14px;
-	content: "";
-	width: 25px;
-	height: 40px;
-	border-radius: 50% 5% 5% 50%;
-	background: #0400ff;
-	transform: rotate(90deg);
-}
-
-span.w::after {
-	position: absolute;
-	top: 12px;
-	left: 14px;
-	content: "";
-	width: 25px;
-	height: 40px;
-	border-radius: 50% 5% 5% 50%;
-	background: #ff0000;
-	transform: rotate(-90deg);
 }

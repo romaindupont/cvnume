@@ -5,7 +5,8 @@
 	width: 8vw;
 }
 .dossierDevant {
-	background: #f7f72a;
+	background: var(--filesColor);
+	filter: brightness(1.3);
 	width: 100px;
 	height: 65px;
 	border-radius: 5%;
@@ -13,17 +14,18 @@
 	z-index: 3;
 	cursor: pointer;
 	box-shadow:
-	0 0px 0 #dbdb0c,
-	0 0px 0 #dbdb0c,
-	0 3px 0 #dbdb0c,
-	0 0px 0 #dbdb0c,
-	0 -1px 0 #dbdb0c,
-	0 7px 1px rgb(0 0 0 / 10%), 0 0 5px rgb(0 0 0 / 10%),
-	0 1px 3px rgb(0 0 0 / 30%),
-	0 3px 5px rgb(0 0 0 / 30%),
-	0 5px 10px rgb(0 0 0 / 25%),
-	0 1px 0px rgb(0 0 0 / 20%),
-	0 12px 0px rgb(0 0 0 / 15%);
+		0 0px 0 var(--filesColor),
+		0 0px 0 var(--filesColor),
+		0 3px 0 var(--filesColor),
+		0 0px 0 var(--filesColor),
+		0 -1px 0 var(--filesColor),
+		0 7px 1px rgb(0 0 0 / 10%),
+		0 0 5px rgb(0 0 0 / 10%),
+		0 1px 3px rgb(0 0 0 / 30%),
+		0 3px 5px rgb(0 0 0 / 30%),
+		0 5px 10px rgb(0 0 0 / 25%),
+		0 1px 0px rgb(0 0 0 / 20%),
+		0 12px 0px rgb(0 0 0 / 15%);
 }
 .papier {
 	background: aliceblue;
@@ -46,7 +48,8 @@
 
 .dossierLanguette {
 	position: absolute;
-	background: #f7f72a;
+	background: var(--filesColor);
+	filter: brightness(1);
 	width: 40px;
 	height: 30px;
 	top: -10px;
@@ -59,7 +62,7 @@
 }
 
 .dossierArriere {
-	background: #dbdb0c;
+	background: var(--filesColor);
 	width: 100px;
 	height: 62px;
 	border-radius: 5%;

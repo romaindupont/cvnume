@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './style.scss';
 import System from './System';
 import Personnalisation from '../../containers/Desktop/Personnalisation';
+import Confidential from './Confidential';
+import Ergo from './Ergo';
+import Maj from './Maj';
 
 const Param = ({setParamOpen}) => {	
 	const [ getPage, setGetPage ] = useState(0)
@@ -41,6 +44,9 @@ const Param = ({setParamOpen}) => {
 				</div>)}
 				{getPage === 1 && (<System setGetPage={setGetPage}/>)}
 				{getPage === 2 && (<Personnalisation setGetPage={setGetPage}/>)}
+				{getPage === 3 && (<Confidential setGetPage={setGetPage}/>)}
+				{getPage === 4 && (<Ergo setGetPage={setGetPage}/>)}
+				{getPage === 5 && (<Maj setGetPage={setGetPage}/>)}
 		</div>
   );
 }

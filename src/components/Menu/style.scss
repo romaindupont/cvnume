@@ -17,7 +17,7 @@
 .bordgaucheHaut {
 	width: 36px;
 	height: 36px;
-	background: #e2f8ff;
+	background: var(--menuButtonColor);
 	border-radius: 0% 0% 0% 0%;	
 	top: 0;
 	right: 0;
@@ -40,7 +40,7 @@
 .borddroitHaut {
 	width: 36px;
 	height: 36px;
-	background: #e2f8ff;
+	background: var(--menuButtonColor);
 	border-radius: 0% 75% 0% 0%;
 	position: absolute;
 	top: 0;
@@ -63,7 +63,7 @@
 .bordgaucheBas {
 	width: 36px;
 	height: 36px;
-	background: #e2f8ff;
+	background: var(--menuButtonColor);
 	border-radius: 0% 0% 0% 75%;
 	bottom: 0;
 	position: absolute;
@@ -86,7 +86,7 @@
 .borddroitBas {
 	width: 36px;
 	height: 36px;
-	background: #e2f8ff;
+	background: var(--menuButtonColor);
 	border-radius: 0% 0% 0% 0%;
 	bottom: 0;
 	position: absolute;
@@ -322,7 +322,7 @@ ul li .item {
 	position: absolute;
 	top: -266px;
 	right: -190px;
-	border: 15px solid white;
+	border: 15px solid var(--round-border);
 	width: 0px;
 	height: 0px;
 	display: block;

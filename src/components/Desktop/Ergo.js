@@ -1,20 +1,34 @@
 import React from 'react';
 import './style.scss';
+import Sun from './Sun';
+import { SunColorChange } from '../../utils/sunChange';
 
 const Ergo = ({setGetPage}) => {
 	const changeSize = (e) => {
 		const valueSizeText = document.querySelector('.input-textTaille--value');
-		/* const value = document.querySelector('.input-textTaille--value'); */
-		/* const min = e.target.value ? e.target.value */
 		const val = e.target.value;
 		const min = e.target.min ? e.target.min : 0;	
 		const max = e.target.max ? e.target.max : 100;
 		const newVal = Number(((val - min) * 100) / (max - min));
-		/* console.log(newVal) */
 		valueSizeText.innerHTML = e.target.value;
-		/* console.log(newVal) */
 		valueSizeText.style.left = `${newVal}%`;
 		valueSizeText.style.zoom = `${newVal+50}%`;
+	}
+	const applyChangeSizeText = (e) => {
+		e.preventDefault();
+		const bureau = document.querySelector('.bureauBg');
+		bureau.style.zoom=`${parseInt(e.target.form[0].value) + 50}%`
+	}
+	const changeLight = (e) => {
+		const valueSizeText = document.querySelector('.input-lumi--value');
+		const bureau = document.querySelector('.bureauBg');
+		const val = e.target.value;
+		const min = e.target.min ? e.target.min : 0;	
+		const max = e.target.max ? e.target.max : 100;
+		const newVal = Number(((val-5 - min) * 100) / (max - min));
+		valueSizeText.style.left = `${newVal}%`;
+		bureau.style.filter=`brightness(${newVal + 50}%)`;
+		SunColorChange(newVal)
 	}
   return (
 		<div className="ergonomie">
@@ -31,16 +45,20 @@ const Ergo = ({setGetPage}) => {
 					<div className="system-action" id="srollbarSys">
 						<section className="system-action-section" id="text">
 							<h2 className="system-action-section-title">Taille Texte</h2>
-							<div className="inputValueText">
+							<form className="inputValueText" type="submit">
 								<div className="input-textTaille--value">50</div>
 								<input type="range" min="0" max="100" id="tailleText" step="1" onChange={changeSize} />
-								<button type="submit">Appliquer</button>
-							</div>
+								<button type="submit" onClick={applyChangeSizeText}>Appliquer</button>
+							</form>
 						</section>
 						<section className="system-action-section" id="lumino">
 							<h2 className="system-action-section-title">Luminosité</h2>
-							<input type="range" min="0" max="100" />
-
+							<div className="inputValueLumi" type="submit">
+								<div className="input-lumi--value">
+									<Sun />
+								</div>
+								<input type="range" min="0" max="100" id="lumi" step="1" onChange={changeLight}/>
+							</div>
 						</section>
 						<section className="system-action-section" id="cursor">
 							<h2 className="system-action-section-title">Cursor</h2>

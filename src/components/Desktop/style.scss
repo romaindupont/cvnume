@@ -93,7 +93,14 @@
 	top: 4px;
 	left: 12px;
 	cursor: pointer;
-	box-shadow: 0 7px 1px rgb(0 0 0 / 10%), 0 0 5px rgb(0 0 0 / 10%), 0 1px 3px rgb(0 0 0 / 30%), 0 0px 18px rgb(0 0 0 / 30%), 0 22px 22px rgb(0 0 0 / 25%), 0 1px 0px rgb(0 0 0 / 20%), 0 -4px 0px rgb(0 0 0 / 15%);
+	box-shadow: 
+		0 7px 1px rgb(0 0 0 / 10%), 
+		0 0 5px rgb(0 0 0 / 10%), 
+		0 1px 3px rgb(0 0 0 / 30%), 
+		0 0px 18px rgb(0 0 0 / 30%), 
+		0 22px 22px rgb(0 0 0 / 25%), 
+		0 1px 0px rgb(0 0 0 / 20%), 
+		0 -4px 0px rgb(0 0 0 / 15%);
 	&::before {
 		position: absolute;
 		content: '';
@@ -243,6 +250,7 @@
 	background: linear-gradient(225deg, #2d5c01, #0069a7, #0400ff);
 	border: 5px solid var(--border-param);
 	cursor: pointer;
+	margin-right: 1rem;
 	box-shadow: 
 		0 7px 1px rgb(0 0 0 / 10%),
 		0 0 5px rgb(0 0 0 / 10%),
@@ -251,7 +259,6 @@
 		0 22px 22px rgb(0 0 0 / 25%),
 		0 1px 0px rgb(0 0 0 / 20%),
 		0 -4px 0px rgb(0 0 0 / 15%);
-	margin-right: 1rem;
 }
 .parametre-ecran-screen {
 	width: 40px;
@@ -283,32 +290,32 @@
 	width: 150px;
 }
 .parametre-ecran-cadena {
-    width: 40px;
-    height: 30px;
-    margin-right: 1rem;
-    border: 5px solid var(--border-param);
-		&::after {
-			content: '';
-			width: 5px;
-			height: 5px;
-			border-radius: 50% 20%;
-			background:  var(--border-param);
-			position: absolute;
-			top: 40px;
-			left: 22px;
-		}
-		&::before {
-			content: '';
-			width: 40px;
-			height: 40px;
-			border-top: 5px solid var(--border-param);
-			border-radius: 50% 50% 0 0;
-			position: absolute;
-			top: -4px;
-			left: 0px;
-			border-left: 5px solid var(--border-param);
-			border-right: 5px solid var(--border-param);
-		}
+	width: 40px;
+	height: 30px;
+	margin-right: 1rem;
+	border: 5px solid var(--border-param);
+	&::after {
+		content: '';
+		width: 5px;
+		height: 5px;
+		border-radius: 50% 20%;
+		background:  var(--border-param);
+		position: absolute;
+		top: 40px;
+		left: 22px;
+	}
+	&::before {
+		content: '';
+		width: 40px;
+		height: 40px;
+		border-top: 5px solid var(--border-param);
+		border-radius: 50% 50% 0 0;
+		position: absolute;
+		top: -4px;
+		left: 0px;
+		border-left: 5px solid var(--border-param);
+		border-right: 5px solid var(--border-param);
+	}
 }
 
 .parametre-ecran-ergo {
@@ -404,7 +411,6 @@
 	flex-direction: column;
 	justify-content: space-evenly;
 	height: 65vh;
-
 }
 
 .system-menu-li {
@@ -443,22 +449,19 @@
 	}
 }
 
-#srollbarSys::-webkit-scrollbar-track
-{
+#srollbarSys::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	border-radius: 10px;
 	background-color: #F5F5F5;
 }
 
-#srollbarSys::-webkit-scrollbar
-{
+#srollbarSys::-webkit-scrollbar {
 	width: 12px;
 	background-color: #F5F5F5;
 }
 
-#srollbarSys::-webkit-scrollbar-thumb
-{
+#srollbarSys::-webkit-scrollbar-thumb {
 	border-radius: 10px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
@@ -571,19 +574,80 @@ input[type="color"]::-webkit-color-swatch {
 		cursor: pointer;
 	}
 	&::-webkit-slider-thumb:hover {
-		/* background-color: white;
-    border: 2px solid #e74c3c; */
+		background-color: white;
+    border: 2px solid var(--filesColor);
 	}
 	&::-webkit-slider-thumb:active {}
 }
 
-.input-textTaille--value {
+.input-textTaille--value, .input-lumi--value {
 	position: absolute;
 	top: -15px;
 	left: 50%;
 }
-
+.input-lumi--value {
+	z-index: 0;
+}
 .inputValueText {
 	width: 255px;
 	position: relative;
+
+	& > button {
+		border: 0;
+		background: var(--theme-page-text);
+		color: var(--theme-page-background);
+		cursor: pointer;
+		margin: 3rem 1rem;
+		padding: 0.5rem;
+		border-radius: 5px;
+		&:hover {
+			background: var(--theme-page-background);
+			color: var(--theme-page-text);
+		}
+	}
+}
+.inputValueLumi {
+	position: relative;
+	width: 255px;
+	display: flex;
+}
+#lumi {
+	-webkit-appearance: none;
+	width: 300px;
+  height: 2px;
+	margin: 1rem auto;
+	background: none;
+  outline: 0;
+	z-index: 1;
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		width: 90px;
+		height: 90px;
+		background: transparent;
+		background-size: contain;
+		cursor: pointer;
+		z-index: 3;
+
+	}
+	&::-webkit-slider-thumb:hover {
+		/* background-color: white;
+    border: 2px solid var(--filesColor); */
+	}
+	&::-webkit-slider-thumb:active {}
+}
+
+.lightColor {
+	fill:#d8db0e;
+
+}
+.styleSvg {
+	shape-rendering:geometricPrecision; 
+	text-rendering:geometricPrecision;
+	image-rendering:optimizequality;
+	fill-rule:evenodd;
+	clip-rule:evenodd;
+	margin: 0;
+	animation: none;
+	width: 90px;
+	z-index: 2;
 }

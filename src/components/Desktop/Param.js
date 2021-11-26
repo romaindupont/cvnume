@@ -15,7 +15,7 @@ const Param = ({setParamOpen}) => {
 		<div className="parametre">
 				<span className="parametre--close" onClick={()=>setParamOpen(false) }>&#xD7;</span>
 				<h2 className="parametre--title">Paramètres</h2>
-				{getPage ===0 && (<div className="parametre-choix">
+				{getPage === 0 && (<div className="parametre-choix">
 					<div className="parametre-systeme" data-paramid="1" onClick={ParamClic}>
 							<span className="parametre-systeme-screen" data-paramid="1"></span>
 							<span className="parametre-systeme-name" data-paramid="1">Système</span>

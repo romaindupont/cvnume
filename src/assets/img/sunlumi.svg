@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="52.9166mm" height="52.9166mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 5292 5292"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .lightColor {fill:#d8db0e}
+   ]]>
+  </style>
+ </defs>
+  <g id="_2382989006256">
+   <ellipse class="lightColor" cx="2690" cy="2945" rx="1085" ry="1098"/>
+   <circle class="lightColor" cx="1852" cy="1931" r="93"/>
+   <circle class="lightColor" cx="2500" cy="1680" r="93"/>
+   <circle class="lightColor" cx="3215" cy="1786" r="93"/>
+   <circle class="lightColor" cx="3664" cy="2130" r="93"/>
+   <circle class="lightColor" cx="3929" cy="2633" r="93"/>
+   <circle class="lightColor" cx="3982" cy="3254" r="93"/>
+   <circle class="lightColor" cx="3744" cy="3770" r="93"/>
+   <circle class="lightColor" cx="1998" cy="4035" r="93"/>
+   <circle class="lightColor" cx="1574" cy="3585" r="93"/>
+   <circle class="lightColor" cx="1548" cy="2368" r="93"/>
+   <circle class="lightColor" cx="1442" cy="2844" r="93"/>
+   <circle class="lightColor" cx="2752" cy="4220" r="93"/>
+   <circle class="lightColor" cx="3334" cy="4061" r="93"/>
+  </g>
+</svg>

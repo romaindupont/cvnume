@@ -4,10 +4,10 @@ import './style.scss';
 const FootGame = () => {
   return (
 		<div className="footGame">
-			<div className="engagement"></div>
-			<div className="rondCentral"></div>
-			<div className="but"></div>
-			<div className="surface"><div className="penalty"></div><div className="surfaceRond"></div></div>
+			
+			
+			
+			
 			<div className="field">
 				<div className="field-1">
 					<div className="T-1"></div>
@@ -43,7 +43,7 @@ const FootGame = () => {
 				</div>
 				<div className="field-2">
 					<div className="T-1"></div>
-					<div className="T-2"></div>
+					<div className="T-2"> <span className="player"></span> </div>
 					<div className="T-3"></div>
 					<div className="T-4"></div>
 					<div className="T-5"></div>
@@ -138,7 +138,7 @@ const FootGame = () => {
 					<div className="T-30"></div>
 				</div>
 				<div className="field-5">
-					<div className="T-1"></div>
+					<div className="T-1"><div className="engagement"></div><div className="rondCentral"></div></div>
 					<div className="T-2"></div>
 					<div className="T-3"></div>
 					<div className="T-4"></div>
@@ -167,7 +167,7 @@ const FootGame = () => {
 					<div className="T-27"></div>
 					<div className="T-28"></div>
 					<div className="T-29"></div>
-					<div className="T-30"></div>
+					<div className="T-30"><div className="but"></div><div className="surface"><div className="penalty"></div><div className="surfaceRond"></div></div></div>
 				</div>
 				<div className="field-6">
 					<div className="T-1"></div>

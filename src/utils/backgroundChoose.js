@@ -1,3 +1,4 @@
+/* eslint-disable no-sequences */
 import Paysage from '../assets/img/paysage.jpg';
 import Mer from '../assets/img/mer.jpg';
 import Sand from '../assets/img/sand.jpg';

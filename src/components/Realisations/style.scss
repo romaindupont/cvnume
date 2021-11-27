@@ -269,7 +269,7 @@ $photos: 6;
 	@for $i from 1 through $photos {
 		.realisations-item-3:nth-child(#{$i}) {
 
-				$rotation: (($i - 1)/ ($photos - 1)) - 0.5;
+				$rotation: (($i - 1) / ($photos - 1)) - 0.5;
 				transform: scale(0.6) rotate($rotation * 25deg);
 
 		}

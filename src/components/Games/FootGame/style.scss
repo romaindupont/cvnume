@@ -25,9 +25,9 @@
 
 .T-1,.T-2,.T-3,.T-4,.T-5,.T-6,.T-7,.T-8,.T-9,.T-10,.T-11,.T-12,.T-13,.T-14,.T-15,.T-16,.T-17,.T-18,.T-19,.T-20,.T-21,.T-22,.T-23,.T-24,.T-25,.T-26,.T-27,.T-28,.T-29,.T-30 {
 	border: 1px solid black;
-	width: 3%;
+	width: 4%;
 	height: 100%;
-
+	position: relative
 }
 
 .field > div > div:nth-child(even) {
@@ -36,4 +36,81 @@
 
 .engagement {
 	position: relative;
+	width: 20px;
+	height: 20px;
+	background: white;
+	border-radius: 50%;
+	bottom: -40px;
+	left: -10px;
+}
+
+.rondCentral {
+	width: 75px;
+	height: 100px;
+	border: 3px solid white;
+	background: transparent;
+	border-radius: 0 50% 50% 0;
+	position: absolute;
+	z-index: 2;
+	top: -4px;
+	left: -7px;
+}
+
+.but {
+	width: 77px;
+	position: absolute;
+	height: 100px;
+	background: transparent;
+	border: 5px solid white;
+	top: -7px;
+	left: 42px;
+}
+
+.surface {
+	width: 100px;
+	height: 145px;
+	position: absolute;
+	background: transparent;
+	border: 2px solid white;
+	top: -27px;
+	right: -6px;
+	z-index: 2;
+}
+
+.surface::after {
+	content: '';
+	width: 34px;
+	height: 100px;
+	position: absolute;
+	top: 22px;
+	right: 0;
+	background: transparent;
+	border: 2px solid white;
+}
+
+.penalty {
+	width: 5px;
+	height: 5px;
+	position: absolute;
+	top: 70px;
+	left: 35px;
+	background: white;
+	border-radius: 50%;
+}
+
+.surfaceRond {
+	border: 2px solid white;
+	width: 33px;
+	height: 70px;
+	position: absolute;
+	top: 36px;
+	left: -37px;
+	border-radius: 50% 0 0 50%;
+}
+
+.player {
+	background: red;
+	width: 50%;
+	height: 50%;
+	display: block;
 }

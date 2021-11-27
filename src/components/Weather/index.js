@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useEffect} from 'react';
 import './style.scss';
 import HumidLogo from '../../assets/img/humidity.svg';
 import TubeLogo from '../../assets/img/tubeWind.svg';
@@ -8,14 +8,10 @@ import { getLogoForWeather } from '../../utils/weatherChoose';
 const Weather = ({ weather, windSpeed, temperature, humidity, city, deg, getLatitudeLongitude, getWeather }) => {
 	const hue = getHueFromTemperature(temperature);
 	const imageWeather = getLogoForWeather(weather);
-	const [status, setStatus] = useState(null);
 	useEffect(() => {
 		if (!navigator.geolocation) {
-      setStatus('Geolocation is not supported by your browser');
     } else {
-      setStatus('Locating...');
       navigator.geolocation.getCurrentPosition((position) => {
-        setStatus(null);
 				getLatitudeLongitude(position.coords.latitude,position.coords.longitude)
 				getWeather()
 				

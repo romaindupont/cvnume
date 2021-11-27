@@ -193,6 +193,7 @@
 	position: absolute;
 	top: 200px;
 	left: 500px;
+	/* overflow-y: scroll; */
 	box-shadow:
 		0 1px 0 #ccc,
 		0 2px 0 #acacac,
@@ -229,6 +230,8 @@
 	margin:auto;
 	width: 90%;
 	flex-wrap: wrap;
+	height: 65%;
+	overflow-y: auto;
 }
 .parametre-systeme, .parametre-ecran {
 	display: flex;

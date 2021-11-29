@@ -1,27 +1,18 @@
 import React, { useEffect } from 'react';
 import './style.scss';
+import { ShootBar } from '../../utils/shootBar';
 
 const Maj = ({ setGetPage }) => {
 	const spaceBar = (e) => {
 		if(e.keyCode === 32){
-			setTimeout(()=>document.querySelector('.barre-1').style.background='#ffd267',1000);
-			setTimeout(()=>document.querySelector('.barre-2').style.background='#ffcb4d',1500);
-			setTimeout(()=>document.querySelector('.barre-3').style.background='#ffc334',2000);
-			setTimeout(()=>document.querySelector('.barre-4').style.background='#ffbc1a',2500);
-			setTimeout(()=>document.querySelector('.barre-5').style.background='#ffb401',3000);
-			setTimeout(()=>document.querySelector('.barre-6').style.background='#f39a05',3500);
-			setTimeout(()=>document.querySelector('.barre-7').style.background='#e57505',4000);
-			setTimeout(()=>document.querySelector('.barre-8').style.background='#d34b08',4500);
-			setTimeout(()=>document.querySelector('.barre-9').style.background='#c2240b',5000);
-			setTimeout(()=>document.querySelector('.barre-10').style.background='#b70b0d',5500);
+			setTimeout(()=>ShootBar(),10) 
+			
 		}
-	/* 	if(e.keyCode === ''){
-			console.log('je stoppe')
-		} */
 	}
 	const stopAction = (e) => {
 		if(e.keyCode === 32){
 			console.log('je stoppe')
+			clearTimeout(ShootBar)
 		}
 	}
 	useEffect(() => {

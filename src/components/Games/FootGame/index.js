@@ -4,10 +4,6 @@ import './style.scss';
 const FootGame = () => {
   return (
 		<div className="footGame">
-			
-			
-			
-			
 			<div className="field">
 				<div className="field-1">
 					<div className="T-1"></div>

@@ -2,7 +2,6 @@
 
 export const SunColorChange = (data) => {
 	const choose = document.querySelectorAll('.lightColor');
-	console.log(data)
 	choose.forEach((choix) => {
 		if(data>=-5 && data <=15) {
 			return choix.style.fill = "#2e2e04"

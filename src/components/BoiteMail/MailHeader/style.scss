@@ -43,18 +43,6 @@
 	}
 }
 
-/* .mailHeader-close::before {
-	width: 30px;
-	height: 30px;
-	content: '';
-	background: #e79090;
-	border-radius: 50%;
-	position: absolute;
-	top: 8px;
-	border: 3px solid white;
-	right: 40px;
-} */
-
 .mailHeader-image {
 	width: 30px;
 	height: 30px;
@@ -63,7 +51,6 @@
 	margin: auto 2rem;
 	border-radius: 50%;
 	position: relative;
-
 	&--connect {
 		width: 5px;
 		height: 5px;
@@ -75,9 +62,9 @@
 		top: -1px;
 		right: -4px;
 		animation: connectionColor 10s 100ms forwards;
-
 	}
 }
+
 .mailHeader-logo {
 	color: white;
     margin: auto 0;
@@ -101,6 +88,5 @@
 	100% {
 		background: green;
 	}
-	
 }
 

@@ -25,9 +25,7 @@
     transform: rotate(-50deg);
     display: inline-block;
     margin-left: 0.3rem;
-		
     cursor: pointer;
-
 	}
 }
 
@@ -44,7 +42,6 @@
 
 .actionMessage-moncompte--open {
 	display: block;
-
 	&:hover {
 		background: #a19f9f;
 		color: white;
@@ -81,9 +78,7 @@
 		width: 0px;
 		transition: width 200ms ease-in-out;
 		content: '';
-
 	}
-
 	& > img {
 		margin-right: 1rem;
 	}
@@ -108,7 +103,6 @@
 		width: 0px;
 		transition: width 200ms ease-in-out;
 		content: '';
-
 	}
 	& > img {
 		margin-right: 1rem;
@@ -134,7 +128,6 @@
 		width: 0px;
 		transition: width 200ms ease-in-out;
 		content: '';
-
 	}
 	& > img {
 		margin-right: 1rem;

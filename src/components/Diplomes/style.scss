@@ -20,7 +20,6 @@
 	border: 5px solid white;
 	margin: auto;
 }
-
 .diplomes-item:nth-child(1) {
 	background: transparent;
 	border: none;
@@ -48,7 +47,6 @@
 		0 5px 10px rgb(0 0 0 / 25%),
 		0 1px 0px rgb(0 0 0 / 20%),
 		0 9px 0px rgb(0 0 0 / 15%);
-
 		&::before {
 			content: '';
 			background: blue;
@@ -78,12 +76,7 @@
 .activation > span.item--diplome {
 	display: none;
 }
-/* li:nth-child(2)::after {
-	content: 'Diplôme';
-}
-.activation li:nth-child(2)::after {
-	content: '';
-} */
+
 .diplomes-item:nth-child(6) {
 	background: rgb(173, 240, 173);
 	filter: grayscale(0.8);
@@ -91,7 +84,6 @@
 
 .diplomes-item:nth-child(3), .diplomes-item:nth-child(7) {
 	background: rgb(255, 255, 136);
-	/* filter: grayscale(0.8); */
 }
 
 .diplomes-item:nth-child(4), .diplomes-item:nth-child(8) {
@@ -183,14 +175,14 @@
 
 		&::before {
 			content: '';
-    background: red;
-    width: 20px;
-    height: 2px;
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: -10px;
-    transform: rotate(90deg);
+			background: red;
+			width: 20px;
+			height: 2px;
+			display: block;
+			position: absolute;
+			top: 10px;
+			right: -10px;
+			transform: rotate(90deg);
 		}
 		&::after {
 			content: '';

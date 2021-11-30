@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './style.scss';
-import FootGame from '../FootGame';
+import FootGame from '../../../containers/Games/FootGame';
 
 
 const MenuGame = () => {

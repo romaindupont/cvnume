@@ -13,14 +13,12 @@
 	height: 5%;
 	width: 99%;
 	position: relative;
-	/* box-shadow: 0px 0px 0px 0px var(--theme-inset); */
 	& > img  {
 		width: 5%;
 		position: absolute;
 		top: 5px;
     left: 5px;
 	}
-
 	& > input {
 		font-size: 1rem;
     border: 0;
@@ -31,7 +29,6 @@
 		caret-color:#6eaf6e;
 		color: var(--theme-page-text);
 		box-shadow: none;
-
 		&:focus {
 			box-shadow: 0px 3px 2px 0px #6eaf6e;
 		}
@@ -50,6 +47,7 @@
 	position: relative;
 	cursor: pointer;
 }
+
 .smallMessage-thumbmail {
 	width: 30px;
 	height: 30px;
@@ -94,22 +92,19 @@
 	}
 }
 
-#srollbar::-webkit-scrollbar-track
-{
+#srollbar::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	border-radius: 10px;
 	background-color: #F5F5F5;
 }
 
-#srollbar::-webkit-scrollbar
-{
+#srollbar::-webkit-scrollbar {
 	width: 12px;
 	background-color: #F5F5F5;
 }
 
-#srollbar::-webkit-scrollbar-thumb
-{
+#srollbar::-webkit-scrollbar-thumb {
 	border-radius: 10px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	box-shadow: inset 0 0 6px rgba(0,0,0,.3);

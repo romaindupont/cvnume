@@ -4,7 +4,7 @@ import System from './System';
 import Personnalisation from '../../containers/Desktop/Personnalisation';
 import Confidential from './Confidential';
 import Ergo from './Ergo';
-import Maj from './Maj';
+import Maj from '../../containers/Desktop/Maj';
 
 const Param = ({setParamOpen}) => {	
 	const [ getPage, setGetPage ] = useState(0)

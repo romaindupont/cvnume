@@ -9,6 +9,7 @@ import MailReducer from './Mail';
 import DiplomeReducer from './Diplomes';
 import XpReducer from './Xp';
 import WeatherReducer from './Weather';
+import GamesReducer from './Games';
 
 const rootReducer = combineReducers({
   /* monde: mondeReducer, */
@@ -18,31 +19,8 @@ const rootReducer = combineReducers({
 	Diplomes: DiplomeReducer,
 	Xp: XpReducer,
 	Weather: WeatherReducer,
+	Games: GamesReducer,
 });
 
 export default rootReducer;
 
-//reducer
-/* import {
-  IS_CONNECTED,
-  TOGGLE_OPEN,
-  LOGOUT,
-} from '../actions/theme';
-
-const initialState = {
-  open: false,
-};
-
-const reducer = (state = initialState, action = {}) => {
-  switch (action.type) {
-    case IS_CONNECTED:
-      return {
-        ...state,
-        isConnected: !state.isConnected,
-      };
-    default:
-      return state;
-  }
-};
-
-export default reducer; */

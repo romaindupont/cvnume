@@ -6,7 +6,6 @@
 	display: flex;
 	justify-content: space-between;
 	border-image: linear-gradient(225deg, #2d5c01, #0400ff) 10;
-
 	&-titre {
 		font-size: 0.8rem;
 		font-weight: 600;
@@ -21,7 +20,6 @@
 		background: var(--theme-page-text);
 		margin-right: 0.8rem;
 		cursor: pointer;
-
 	}
 
 	&-big {
@@ -31,11 +29,9 @@
 		border: 2px solid var(--theme-page-text);
 		margin-right: 0.8rem;
 		cursor: pointer;
-
 	}
 	&-bigSmall {
 		display: none;
-
 		&--big {
 			display: block;
 			position: absolute;
@@ -55,7 +51,6 @@
     display: block;
     text-align: center;
 		cursor: pointer;
-
 		&--1 {
 			display: block;
 			width: 15px;
@@ -88,8 +83,6 @@
     height: 20px;
     margin: 2px auto;
     border-radius: 5% 15% 5% 5%;
-    /* border: 1px solid #7e7e6d; */
-
 		&::before {
 			content: '';
 			height: 20px;

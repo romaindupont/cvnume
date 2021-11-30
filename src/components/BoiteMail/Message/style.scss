@@ -10,7 +10,6 @@
 	font-family: 'Ubuntu', sans-serif;
 	position: relative;
 	color: var(--theme-page-text);
-
 	&-thumbmail {
 		width: 50px;
     height: 50px;
@@ -19,14 +18,12 @@
     border: 4px solid #d5cece;
     margin: 1.4rem;
 	}
-
 	&-name {
 		width: 70%;
     position: absolute;
     top: 40px;
     left: 115px;
     font-weight: 900;
-
 		& > span {
 			margin-left: 1rem;
 		}
@@ -56,7 +53,6 @@
     position: absolute;
     left: 50px;
     top: 90px;
-
 		& > span {
 			margin-left: 2rem;
 		}
@@ -67,22 +63,19 @@
 	}
 }
 
-#srollbar1::-webkit-scrollbar-track
-{
+#srollbar1::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	border-radius: 10px;
 	background-color: #F5F5F5;
 }
 
-#srollbar1::-webkit-scrollbar
-{
+#srollbar1::-webkit-scrollbar {
 	width: 12px;
 	background-color: #F5F5F5;
 }
 
-#srollbar1::-webkit-scrollbar-thumb
-{
+#srollbar1::-webkit-scrollbar-thumb {
 	border-radius: 10px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	box-shadow: inset 0 0 6px rgba(0,0,0,.3);

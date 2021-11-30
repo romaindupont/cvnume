@@ -7,8 +7,6 @@
 	flex-direction: column;
 	justify-content: space-evenly;
 	box-shadow: inset 1px 1px 1px -1px var(--theme-inset);
-	
-
 }
 .mailBox-leftMenu--calendar::after {
 	width: 0px;
@@ -27,8 +25,8 @@
 
 .mailBox-leftMenu > div > img {
 	width: 50%;
-
 }
+
 .mailBox-leftMenu > div {
 	text-align: center;
 	position: relative;
@@ -40,6 +38,7 @@
 	transition: width 200ms ease-in-out;
 	content: '';
 }
+
 .mailBox-leftMenu--me:hover::after {
 	content: '';
 	border-bottom: 5px solid #2d5c01;
@@ -55,6 +54,7 @@
 	transition: width 200ms ease-in-out;
 	content: '';
 }
+
 .mailBox-leftMenu--contact:hover::after {
 	content: '';
 	border-bottom: 5px solid #2d5c01;
@@ -64,11 +64,13 @@
 	width: 55px;
 	border-radius: 15%;
 }
+
 .mailBox-leftMenu--email::after {
 	width: 0px;
 	transition: width 200ms ease-in-out;
 	content: '';
 }
+
 .mailBox-leftMenu--email:hover::after {
 	content: '';
 	border-bottom: 5px solid #2d5c01;
@@ -78,11 +80,13 @@
 	width: 55px;
 	border-radius: 15%;
 }
+
 .mailBox-leftMenu--settings::after {
 	width: 0px;
 	transition: width 200ms ease-in-out;
 	content: '';
 }
+
 .mailBox-leftMenu--settings:hover::after {
 	content: '';
 	border-bottom: 5px solid #2d5c01;

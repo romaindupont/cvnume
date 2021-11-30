@@ -28,7 +28,6 @@
 }
 input {
 	margin-left: 1.5rem;
-/* 	width: 250px; */
 	border: 1px solid #cfcece;
 	box-shadow: 0px 2px 7px -2px var(--theme-inset);
 	width: 75%;
@@ -65,10 +64,8 @@ input {
 	left: 62px;
 	width: 50%;
 	& > input {
-/* 		width: 100px; */
 		width: 40%;
 	}
-
 }
 .Nouveaumessage-input-prenom {
 	position: absolute;
@@ -76,7 +73,6 @@ input {
 	left: 255px;
 	width: 50%;
 	& > input {
-		/* width: 100px; */
 		width: 40%;
 	}
 }
@@ -102,7 +98,6 @@ input {
 
 .Nouveaumessage-message {
 	height: 40vh;
-
 }
 
 textarea {
@@ -183,7 +178,6 @@ select#thumb option[value="4"] {
 	}
 }
 
-
 .ok {
 	visibility: hidden;
 	background: #6eaf6e;
@@ -221,6 +215,7 @@ select#thumb option[value="4"] {
     border-radius: 30%;
 	}
 }
+
 @keyframes opaque {
 	0% {
 		opacity:0;

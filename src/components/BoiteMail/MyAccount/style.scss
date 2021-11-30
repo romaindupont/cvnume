@@ -6,7 +6,6 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	/* overflow-y: auto; */
 	font-family: 'Lobster', cursive;
 	position: relative;
 }
@@ -28,7 +27,6 @@
 .myAccount-contenu {
 	position: absolute;
 	width: 100%;
-	/* height: 100vh; */
 }
 
 .myAccount-image {
@@ -45,7 +43,6 @@
 	width: 100px;
 	height: 150px;
 	display: flex;
-	/* position: fixed; */
 	position: absolute;
 	border: 7px solid white;
 	justify-content: center;
@@ -55,10 +52,8 @@
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	/* position: fixed; */
 	position: absolute;
 	top: 350px;
-
 	&--link {
 		width: 30px;
     height: 30px;

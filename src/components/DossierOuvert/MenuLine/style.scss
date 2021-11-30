@@ -14,13 +14,11 @@
 	align-items: center;
 	width: 35%;
 	justify-content: flex-start;
-
 	&--1 {
 		margin: 1rem;
     display: block;
 		cursor: pointer;
 		padding: 1px 5px;
-
 		&:hover {
 			background: var(--dossier-hover);
 		}

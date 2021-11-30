@@ -2,12 +2,12 @@
 	width: 15%;
 	display: flex;
 	margin: 1rem;
-
 	&-label {
 		margin-right: 1rem;
 		color: var(--theme-page-text);
 	}
 }
+
 .checkboxWrapper { 
   height: 20px;
   position: relative; 
@@ -16,8 +16,8 @@
   -moz-border-radius: 20px; 
   border-radius: 20px; 
   border: 5px solid var(--theme-page-text);
-
 }
+
 .checkboxWrapper label { 
   position: absolute; 
   left: 20px; 
@@ -33,14 +33,15 @@
   -o-transition: .2s; 
   transition: .2s; cursor: pointer; 
 	background: var(--theme-page-text);
-
 }
+
 .checkboxWrapper div { 
   position: absolute; 
   top: 2px; 
 	left: 0; 
   pointer-events: none; 
 }
+
 .checkboxWrapper div  { 
   stroke: #fff; 
   stroke-linecap: round; 
@@ -53,13 +54,14 @@
   stroke-dashoffset 0.2s; 
   transition: stroke-dashoffset 0.2s; 
 }
+
 .checkboxWrapper .checkmark  { 
   opacity: 0; 
 }
-.checkboxWrapper .checkmark path:first-child{ 
+.checkboxWrapper .checkmark path:first-child { 
   stroke-dashoffset: 27px; 
 }
-.checkboxWrapper .checkmark path:last-child{ 
+.checkboxWrapper .checkmark path:last-child { 
   stroke-dashoffset: 11px; 
 }
 .checkboxWrapper .cross  { 

@@ -1,9 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import './style.scss';
 
 const FootGame = ({ shootValue }) => {
 	const [ timer, setTimer ] = useState(0);
-	const spaceBar = (e) => {
+	const stopAction = useCallback(async () => {	
+		document.querySelector('.barre-1').style.background='#c5c3c3';
+		document.querySelector('.barre-2').style.background='#c5c3c3';
+		document.querySelector('.barre-3').style.background='#c5c3c3';
+		document.querySelector('.barre-4').style.background='#c5c3c3';
+		document.querySelector('.barre-5').style.background='#c5c3c3';
+		document.querySelector('.barre-6').style.background='#c5c3c3';
+		document.querySelector('.barre-7').style.background='#c5c3c3';
+		document.querySelector('.barre-8').style.background='#c5c3c3';
+		document.querySelector('.barre-9').style.background='#c5c3c3';
+		document.querySelector('.barre-10').style.background='#c5c3c3';
+		await shootValue(timer);
+		setTimer(0);
+	},[timer,shootValue])
+	const spaceBar = useCallback((e) => {
 		if(e.keyCode === 32) {
 			setTimer(1);
 			if (timer === 1) {
@@ -50,21 +64,8 @@ const FootGame = ({ shootValue }) => {
 				stopAction();
 			}	
 	 	}
-	}
-	const stopAction = async () => {	
-		document.querySelector('.barre-1').style.background='#c5c3c3';
-		document.querySelector('.barre-2').style.background='#c5c3c3';
-		document.querySelector('.barre-3').style.background='#c5c3c3';
-		document.querySelector('.barre-4').style.background='#c5c3c3';
-		document.querySelector('.barre-5').style.background='#c5c3c3';
-		document.querySelector('.barre-6').style.background='#c5c3c3';
-		document.querySelector('.barre-7').style.background='#c5c3c3';
-		document.querySelector('.barre-8').style.background='#c5c3c3';
-		document.querySelector('.barre-9').style.background='#c5c3c3';
-		document.querySelector('.barre-10').style.background='#c5c3c3';
-		await shootValue(timer);
-		setTimer(0);
-	}
+	},[timer, stopAction]);
+
 	useEffect(() => {
     document.addEventListener("keydown", spaceBar);
 		document.addEventListener("keyup", stopAction);

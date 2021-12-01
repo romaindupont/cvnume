@@ -8,7 +8,7 @@ import DefaultCursor from '../../assets/img/defaultCursor.png';
 import SnowCursor from '../../assets/img/snowCursor.png';
 import { CursorChange } from '../../utils/cursorChange';
 
-const Ergo = ({setGetPage}) => {
+const Ergo = ({ setGetPage }) => {
 	const changeSize = (e) => {
 		const valueSizeText = document.querySelector('.input-textTaille--value');
 		const val = e.target.value;
@@ -22,7 +22,7 @@ const Ergo = ({setGetPage}) => {
 	const applyChangeSizeText = (e) => {
 		e.preventDefault();
 		const bureau = document.querySelector('.bureauBg');
-		bureau.style.zoom=`${parseInt(e.target.form[0].value) + 50}%`
+		bureau.style.zoom=`${parseInt(e.target.form[0].value) + 50}%`;
 	}
 	const changeLight = (e) => {
 		const valueSizeText = document.querySelector('.input-lumi--value');
@@ -33,10 +33,10 @@ const Ergo = ({setGetPage}) => {
 		const newVal = Number(((val-5 - min) * 100) / (max - min));
 		valueSizeText.style.left = `${newVal}%`;
 		bureau.style.filter=`brightness(${newVal + 50}%)`;
-		SunColorChange(newVal)
+		SunColorChange(newVal);
 	}
 	const cursorChangeClic = (e) => {
-		CursorChange(e.target.alt)
+		CursorChange(e.target.alt);
 	}
   return (
 		<div className="ergonomie">

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './style.scss';
 import classNames from 'classnames';
 
-const Menu = ({smallPage,clicFile}) => {
+const Menu = ({ smallPage, clicFile }) => {
 	const [ closeMenu, setClose ] = useState(false);
 	const scrollUl = document.querySelector(".ul-scroll");
 	let itemsScrolled;
@@ -11,14 +11,14 @@ const Menu = ({smallPage,clicFile}) => {
 	const listOpts = {
 		itemCount: null,
 		itemHeight: null,
-		items: [],
+		items: []
 	}
 	const scrollWrap = (e) => {
 		const menuList = [];
 		const liElement = document.querySelectorAll(".ul-scroll > li");
-		menuList.push(liElement)
-		liElement.forEach((items) => items.classList.remove("active") & items.classList.remove("derriere"))
-		itemsScrolled = Math.ceil((e.target.scrollTop + listOpts.itemHeight / 2) / listOpts.itemHeight)
+		menuList.push(liElement);
+		liElement.forEach((items) => items.classList.remove("active") & items.classList.remove("derriere"));
+		itemsScrolled = Math.ceil((e.target.scrollTop + listOpts.itemHeight / 2) / listOpts.itemHeight);
 		if (itemsScrolled < listOpts.items.length) {
 			listOpts.items[itemsScrolled].classList.add("active");
 			const yourListItem = document.querySelector("li.active + li");
@@ -49,7 +49,7 @@ const Menu = ({smallPage,clicFile}) => {
 		}      
 	}
 	const openMenu = () => {
-		setClose(!closeMenu)
+		setClose(!closeMenu);
 		document.querySelectorAll(".ul-scroll > li:nth-child(2)").forEach(EL => EL.classList.add("active"));
 	}
   return (

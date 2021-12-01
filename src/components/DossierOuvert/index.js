@@ -6,7 +6,7 @@ import MenuAccesRapide from '../../containers/DossierOuvert/MenuAccesRapide';
 import Contenu from '../../containers/DossierOuvert/Contenu';
 
 const DossierOuvert = ({ actionDossier, setActionDossier, listDossier, id }) => {
-	const list = listDossier.find((dossier)=> dossier.id === id)
+	const list = listDossier.find((dossier) => dossier.id === id)
 	const [ mode, setMode ] = useState(false);
 	let pos1 = 0;
   let pos2 = 0;

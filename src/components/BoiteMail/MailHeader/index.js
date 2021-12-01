@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
 
-const MailHeader = ({closeMailPage}) => {
+const MailHeader = ({ closeMailPage }) => {
   return (
 		<div className="mailHeader">
 			<div className="mailHeader-logo">@</div>

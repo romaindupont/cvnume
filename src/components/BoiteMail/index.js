@@ -20,36 +20,36 @@ const BoiteMail = ({openPageMail}) => {
 	const [ page, setPage ] = useState('email');
 	  return (
 		<>
-		<div className={`mail_intro ${openPageMail} ${theme}`}>
-			<div className="cube">			
-				<div className="cube__face cube__face--front"><span>@</span></div>
-				<div className="cube__face cube__face--right"></div>
-				<div className="cube__face cube__face--back"></div>
-				<div className="cube__face cube__face--left"></div>
-				<div className="cube__face cube__face--top"></div>
-				<div className="cube__face cube__face--bottom"></div>
+			<div className={`mail_intro ${openPageMail} ${theme}`}>
+				<div className="cube">			
+					<div className="cube__face cube__face--front"><span>@</span></div>
+					<div className="cube__face cube__face--right"></div>
+					<div className="cube__face cube__face--back"></div>
+					<div className="cube__face cube__face--left"></div>
+					<div className="cube__face cube__face--top"></div>
+					<div className="cube__face cube__face--bottom"></div>
+				</div>
+				<MailHeader />
+				<div className="mailBox">
+					<LeftMenu setPage={setPage} />
+					{page==='email' && (
+						<>
+							<ActionMessage setOpenMessage={setOpenMessage} setNewMessage={setNewMessage} />
+							<ViewSmallMessage setOpenMessage={setOpenMessage} setNewMessage={setNewMessage} />
+							{openMessage && (<Message />)}
+							{newMessage && (<NouveauMessage />)}
+						</>
+					)}
+					{page === 'calendrier' && (<Calendrier /> 
+					)}
+					{page === 'me' && (<MyAccount />
+					)}
+					{page === 'contact' && (<Contact />
+					)}
+					{page === 'settings' && (<Settings setTheme={setTheme}/>
+					)}
+				</div>
 			</div>
-			<MailHeader />
-			<div className="mailBox">
-				<LeftMenu setPage={setPage} />
-				{page==='email' && (
-				<>
-					<ActionMessage setOpenMessage={setOpenMessage} setNewMessage={setNewMessage}/>
-					<ViewSmallMessage setOpenMessage={setOpenMessage} setNewMessage={setNewMessage} />
-					{openMessage && (<Message />)}
-					{newMessage && (<NouveauMessage />)}
-				</>
-				)}
-				{page === 'calendrier' && (<Calendrier /> 
-				)}
-				{page === 'me' && (<MyAccount />
-				)}
-				{page === 'contact' && (<Contact />
-				)}
-				{page === 'settings' && (<Settings setTheme={setTheme}/>
-				)}
-			</div>
-		</div>
 		</>
   );
 }

@@ -87,12 +87,9 @@
 .realisations-carrousel3::-webkit-scrollbar {
 	display: none;
 }
-.realisations-item {
+.realisations-item {}
+.realisations-item:nth-child(6) {}
 
-}
-.realisations-item:nth-child(6) {
-	/* visibility: hidden; */
-}
 .realisations-item:nth-child(1) {
 	opacity: 1 !important;
 }
@@ -184,9 +181,7 @@
 	height: 500px;
 }
 
-.realisations-list-1 {
-
-}
+.realisations-list-1 {}
 
 
 .wrapper-real {
@@ -268,10 +263,8 @@ $photos: 6;
 
 	@for $i from 1 through $photos {
 		.realisations-item-3:nth-child(#{$i}) {
-
 				$rotation: (($i - 1) / ($photos - 1)) - 0.5;
 				transform: scale(0.6) rotate($rotation * 25deg);
-
 		}
 	}
 

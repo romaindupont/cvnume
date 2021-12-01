@@ -6,23 +6,23 @@ const NouveauMessage = ({ changeValue, sendMessage }) => {
 	const [ clicSendMessage, setClicSendMessage ] = useState(false);
 	const thumbmailChoose = (e) => {
 		const select = document.getElementById('thumb');
-		if(e.target.value === 1){
-			select.style.background = 'red'
+		if (e.target.value === 1){
+			select.style.background = 'red';
 		}
-		if(e.target.value === 2){
-			select.style.background = 'blue'
+		if (e.target.value === 2){
+			select.style.background = 'blue';
 		}
-		if(e.target.value === 3){
-			select.style.background = 'green'
+		if (e.target.value === 3){
+			select.style.background = 'green';
 		}
-		if(e.target.value === 4){
-			select.style.background = 'yellow'
+		if (e.target.value === 4){
+			select.style.background = 'yellow';
 		}
 	}
 	const submitMessage = (e) => {
 		e.preventDefault();
 		if (e.nativeEvent.path[2][3].value !=='' && e.nativeEvent.path[2][2].value !=='' && e.nativeEvent.path[2][6].value !=='' && e.nativeEvent.path[2][7].value !=='' && e.nativeEvent.path[2][1].value !=='') {
-			setClicSendMessage(true)
+			setClicSendMessage(true);
 			const newDate = Date.now();
 			const today = new Date(newDate).toLocaleDateString();
 			sendMessage(10, e.nativeEvent.path[2][3].value, e.nativeEvent.path[2][2].value, 'send', e.nativeEvent.path[2][6].value, today, e.nativeEvent.path[2][7].value, e.nativeEvent.path[2][1].value);

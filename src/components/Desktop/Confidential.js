@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
 
-const Confidential = ({setGetPage}) => {
+const Confidential = ({ setGetPage }) => {
   return (
 		<div className="confidential">
 			<span className="system-menu--goback" onClick={()=>setGetPage(0)}>&larr;</span>

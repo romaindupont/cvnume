@@ -8,18 +8,18 @@ const Diplomes = ({ listDiplomes }) => {
 	const scrollCarrousel = (e) => {
 		const menuList = [];
 		const liElement = document.querySelectorAll(".diplomes-item");
-		menuList.push(liElement)
-		liElement.forEach((items) => items.classList.remove("activation"))
-		let itemsScrolled = Math.ceil((e.target.scrollTop + 200 / 2) / 200)
+		menuList.push(liElement);
+		liElement.forEach((items) => items.classList.remove("activation"));
+		let itemsScrolled = Math.ceil((e.target.scrollTop + 200 / 2) / 200);
 		if (itemsScrolled < menuList[0].length) {
 			menuList[0][itemsScrolled].classList.add("activation");
-			const choixDiplome = listDiplomes.find((diplome) => diplome.id === itemsScrolled)
+			const choixDiplome = listDiplomes.find((diplome) => diplome.id === itemsScrolled);
 			const InfosTitre = document.querySelector('.diplomes-titre');
-			InfosTitre.textContent= choixDiplome.Titre
+			InfosTitre.textContent= choixDiplome.Titre;
 			const InfosDate = document.querySelector('.diplomes-date');
-			InfosDate.textContent= choixDiplome.date
+			InfosDate.textContent= choixDiplome.date;
 			const InfosContenu = document.querySelector('.diplomes-contenu');
-			InfosContenu.textContent= choixDiplome.contenu
+			InfosContenu.textContent= choixDiplome.contenu;
 		}
 	}
   return (

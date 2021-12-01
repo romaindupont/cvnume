@@ -2,12 +2,12 @@ export const GET_LATITUDE_LONGITUDE = 'GET_LATITUDE_LONGITUDE';
 export const getLatitudeLongitude = (lat, lng) => ({
   type: GET_LATITUDE_LONGITUDE,
 	lat,
-	lng,
+	lng
 });
 
 export const GET_WEATHER = 'GET_WEATHER';
 export const getWeather = () => ({
-  type: GET_WEATHER,
+  type: GET_WEATHER
 });
 
 export const REGISTER_WEATHER = 'REGISTER_WEATHER';

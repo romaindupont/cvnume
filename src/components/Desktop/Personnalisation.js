@@ -14,16 +14,16 @@ const Personnalisation = ({setGetPage, changeTheme}) => {
 	const themeChange = (e) => {
 		changeTheme(e.target.value);
 		if(e.target.value==='jungle') {
-			backgroundChoose('Image8')
+			backgroundChoose('Image8');
 		}
 		if(e.target.value==='hot') {
-			backgroundChoose('Image7')
+			backgroundChoose('Image7');
 		}
 		if(e.target.value==='sea') {
-			backgroundChoose('Image6')
+			backgroundChoose('Image6');
 		}
 		if(e.target.value==='freeze') {
-			backgroundChoose('Image5')
+			backgroundChoose('Image5');
 		}
 	}
 	const filesColorChange = (e) => {
@@ -62,7 +62,6 @@ const Personnalisation = ({setGetPage, changeTheme}) => {
 						<span className="system-action-small" style={{backgroundImage: `url(${Sand})`, backgroundSize: 'cover'}} data-image-number="Image7" onClick={bgChoose}></span>
 						<span className="system-action-small" style={{backgroundImage: `url(${Jungle})`, backgroundSize: 'cover'}} data-image-number="Image8" onClick={bgChoose}></span>
 					</div>
-
 				</section>
 				<section className="system-action-section" id="color">
 					<h2 className="system-action-section-title">Thème</h2>
@@ -89,7 +88,6 @@ const Personnalisation = ({setGetPage, changeTheme}) => {
 			</div>
 			</div>
 		</div>
-
   );
 }
 

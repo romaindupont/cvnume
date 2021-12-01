@@ -3,8 +3,8 @@ import './style.scss';
 
 const Dossier = ({ setActionDossier, name, clicFile, id }) => {
 	const openFile = () => {
-		clicFile(name,id)
-		setActionDossier('normal')
+		clicFile(name,id);
+		setActionDossier('normal');
 	}
   return (
     <div className="dossier" onClick={openFile}>

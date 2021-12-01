@@ -4,7 +4,7 @@ import ImageCar from '../../assets/img/spider.png';
 import Cursor from '../../assets/img/cursor.png';
 
 const Realisations = ({ setOpenNewTab, openWebsitePage, experiences }) => {
-	const [number, setNumber] = useState(0);
+	const [ number, setNumber ] = useState(0);
 	const wheelCarrousel1 = (e) => {
 		const main2 = document.querySelector('.realisations-carrousel2');
 		main2.scrollLeft += e.deltaY;
@@ -13,7 +13,7 @@ const Realisations = ({ setOpenNewTab, openWebsitePage, experiences }) => {
 		const main2 = document.querySelector('.realisations-carrousel3');
 		main2.scrollLeft += e.deltaY;
 		if (e.deltaY > 0) {
-			if(number === 6) {
+			if (number === 6) {
 				setNumber(5);
 				setTimeout(()=>document.getElementById('section5').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' }),2000);
 			}

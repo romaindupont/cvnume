@@ -2,7 +2,7 @@ import React from 'react';
 import './style.scss';
 
 
-const System = ({setGetPage}) => {
+const System = ({ setGetPage }) => {
   return (
 		<div className="system">
 			<span className="system-menu--goback" onClick={()=>setGetPage(0)}>&larr;</span>

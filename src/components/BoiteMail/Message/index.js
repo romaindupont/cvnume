@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
 
-const Message = ({mail, id}) => {
+const Message = ({ mail, id }) => {
 	const messageSelect = mail.filter((msg) => msg.id === id)
   return (
 		<div className="mailBox-message" id="srollbar1">

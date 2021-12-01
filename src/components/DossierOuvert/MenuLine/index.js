@@ -32,9 +32,6 @@ const MenuLine = ({ setMode, slug }) => {
 					</form>
 				</div>
 		</div>
-
-
-
   );
 }
 

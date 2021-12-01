@@ -36,22 +36,19 @@ const MenuGame = () => {
 			}
 		}
 	}
-
 	useEffect(() => {
 		document.addEventListener("keydown", (e) => keyPresss(e));
   });
   return (
 		<>
-		<div className="menuGame">
-			<ul className="menuGame-ul" id="list">
-				<li className="menuGame-li selectionJeu" id="1">
-					Roll & Field <div className="pyramid"></div>
-				</li>
-				<li className="menuGame-li" id="2">Jumping</li>
-			</ul>
-		</div>
-		{gameChoice === 2 ? <FootGame /> : <div>A venir</div>}
-	</>
+			<div className="menuGame">
+				<ul className="menuGame-ul" id="list">
+					<li className="menuGame-li selectionJeu" id="1">Roll & Field <div className="pyramid"></div></li>
+					<li className="menuGame-li" id="2">Jumping</li>
+				</ul>
+			</div>
+			{gameChoice === 2 ? <FootGame /> : <div>A venir</div>}
+		</>
   );
 }
 

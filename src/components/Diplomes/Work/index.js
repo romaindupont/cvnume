@@ -2,7 +2,7 @@ import React from 'react';
 import './style.scss';
 
 const Work = ({ informations }) => {
-	  return (
+	return (
 		<div className="work">
 			<p className="work-infos">
 				{informations}

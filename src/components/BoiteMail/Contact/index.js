@@ -6,17 +6,17 @@ const Contact = () => {
 	const clicContact = (e) => {
 		const contactForm = document.querySelectorAll('.contact-form');
 		const contactFormContact = document.querySelectorAll('.contact-form-contact');
-		if(e.target.id === 'user1') {
-			contactForm[0].classList.toggle('contact-form--open')		
-			contactFormContact[0].classList.toggle('contact-form-contact--open')
+		if (e.target.id === 'user1') {
+			contactForm[0].classList.toggle('contact-form--open');
+			contactFormContact[0].classList.toggle('contact-form-contact--open');
 		}
-		if(e.target.id === 'user2') {
-			contactForm[1].classList.toggle('contact-form--open')
-			contactFormContact[1].classList.toggle('contact-form-contact--open')
+		if (e.target.id === 'user2') {
+			contactForm[1].classList.toggle('contact-form--open');
+			contactFormContact[1].classList.toggle('contact-form-contact--open');
 		}
-		if(e.target.id === 'user3') {
-			contactForm[2].classList.toggle('contact-form--open')
-			contactFormContact[2].classList.toggle('contact-form-contact--open')
+		if (e.target.id === 'user3') {
+			contactForm[2].classList.toggle('contact-form--open');
+			contactFormContact[2].classList.toggle('contact-form-contact--open');
 		}
 	}
   return (

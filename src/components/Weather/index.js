@@ -12,11 +12,10 @@ const Weather = ({ weather, windSpeed, temperature, humidity, city, deg, getLati
 		if (!navigator.geolocation) {
     } else {
       navigator.geolocation.getCurrentPosition((position) => {
-				getLatitudeLongitude(position.coords.latitude,position.coords.longitude)
-				getWeather()
-				
+				getLatitudeLongitude(position.coords.latitude,position.coords.longitude);
+				getWeather();
       })}	
-	}, [getLatitudeLongitude,getWeather])
+	}, [ getLatitudeLongitude, getWeather ])
   return (
 		<div className="weather">
 			<h3 className="weather-city">{city}</h3>

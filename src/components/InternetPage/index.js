@@ -30,19 +30,17 @@ const InternetPage = ({ listDossier, id, openPageInternet, closePage, smallPage,
 				<span className="internetPage-onglet--nom">Page {list.name}</span>
 				<span className="closeOnglet">&#xD7;</span>
 			</div>
-			{
-				openNewTab && (
+			{openNewTab && (
 					<div className="internetPage-onglet newOnglet">
-				<div className="internetPage-onglet--logo">
-					<div className="internetLogo--logo">
-						<span className="w--logo"></span>
+						<div className="internetPage-onglet--logo">
+							<div className="internetLogo--logo">
+								<span className="w--logo"></span>
+							</div>
+						</div>
+						<span className="internetPage-onglet--nom">Site Web</span>
+						<span className="closeOnglet" onClick={()=>setOpenNewTab(false) }>&#xD7;</span>
 					</div>
-				</div>
-				<span className="internetPage-onglet--nom">Site Web</span>
-				<span className="closeOnglet" onClick={()=>setOpenNewTab(false) }>&#xD7;</span>
-			</div>
-				)
-			}
+			)}
 			<div className="dossierOuvertHeader-groupAction internetPage-onglet-group">
 				<span className="dossierOuvertHeader-minus internetPage-onglet-group-minus" onClick={()=>closePage('close')}></span>
 				<span className="dossierOuvertHeader-big internetPage-onglet-group-big" onClick={sizeScreen} ></span>
@@ -62,8 +60,7 @@ const InternetPage = ({ listDossier, id, openPageInternet, closePage, smallPage,
 			<div className="pageWeb">
 				{list.slug === "a_propos" ? <PageAPropos /> : list.slug === "connaissances" ? <PageConnaissances /> : list.slug === "diplomes" ? <Diplomes /> : list.slug === "hobbies" ? <Hobbies /> : list.slug === "realisations" ? <Realisations setOpenNewTab={setOpenNewTab}/> :(
 					<div className="venir"></div>
-				)
-				}
+				)}
 			</div>
 			{openNewTab && (<div className="newPageWeb">
 				<NewTab />

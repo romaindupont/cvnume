@@ -10,7 +10,8 @@ const initialState = {
 			category: 'inbox',
 			title: 'Ma lettre de motivation',
 			date: '20-10-2021',
-			text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus sunt, quas provident dicta nisi vel recusandae animi eveniet? Reiciendis, placeat deserunt fugit natus voluptatibus odio molestiae explicabo animi repellendus culpa, impedit iure itaque labore, maiores delectus recusandae. Nulla nisi voluptate esse magnam expedita soluta dolorem consequatur amet, quasi illo porro tenetur? Dolor odit rerum commodi beatae quod hic eos repudiandae fugiat perspiciatis distinctio harum molestias, at voluptates aliquam molestiae deserunt autem sequi, debitis rem necessitatibus. Excepturi repudiandae nemo, soluta delectus in corrupti deserunt laudantium cupiditate ad. Nostrum sunt qui obcaecati libero dicta mollitia ratione id deleniti odit dolorum fugiat a commodi sint tempore, eveniet rerum ipsam fuga totam veritatis corporis quam iusto officiis! Enim, asperiores! Repellat laborum veritatis nisi assumenda similique natus numquam labore exercitationem. Voluptate error, esse maxime hic nesciunt laboriosam ut odio nam inventore facere quasi eius consequatur quisquam doloremque quidem, molestiae asperiores rem reprehenderit eligendi non dolores aliquam est similique? Quia dicta impedit unde ex quisquam. Reprehenderit distinctio dolores voluptatibus non! Ullam, quos perspiciatis! Facilis totam maxime molestias deserunt! Architecto, dolore enim debitis soluta pariatur neque quo incidunt maxime atque dolor aperiam. Dolores laborum odit repellendus exercitationem ipsam deserunt similique officiis excepturi, hic porro totam facilis? Rerum, quis! Error necessitatibus, aliquid assumenda doloremque, officiis consequuntur corporis perferendis cumque maiores debitis quasi. Numquam magnam reiciendis repellat explicabo voluptatum tempore, laudantium ea, sequi ipsam eum dignissimos! Voluptatem temporibus ab fugiat rem placeat necessitatibus, autem odit nobis labore voluptatum corrupti, praesentium vitae voluptate corporis impedit earum aliquid. Iure ullam vero facilis deserunt totam laborum esse quisquam assumenda, modi non, veniam iusto. Quod deserunt culpa iure id autem dignissimos molestiae, dolorum iste eveniet. Earum deserunt dolore reprehenderit repellendus fugit magnam aut id quod quaerat impedit quo aperiam asperiores in dolorem atque rerum non corporis nihil placeat reiciendis modi, recusandae ipsum. Recusandae fugit dolor blanditiis voluptates illum, odio enim aperiam aspernatur doloremque assumenda sunt soluta numquam est necessitatibus laudantium consectetur consequuntur, earum, ipsa amet! Amet repellat deserunt natus a inventore cumque soluta tempore dicta deleniti. Sapiente tempora soluta, omnis dignissimos facilis perspiciatis quia quasi commodi harum voluptate consequuntur perferendis obcaecati id provident officiis eum. Expedita aperiam nemo fuga possimus debitis ullam, maxime magnam a architecto veritatis libero ea dolores soluta deleniti optio tempore? Sint laborum, veritatis culpa nesciunt dolorem saepe illum natus modi, consequuntur voluptatum ab eius debitis? Autem incidunt vitae corporis culpa, quidem tempore rem accusamus nesciunt laboriosam, ipsum ipsa iusto corrupti. Incidunt consectetur provident alias explicabo? Veniam rerum culpa ea aliquid voluptate, deleniti totam. Consequuntur et labore sequi soluta aliquam ullam iste molestiae eum quaerat dignissimos laboriosam, voluptatem incidunt deleniti adipisci est modi reiciendis quos ab quod debitis? Reprehenderit, placeat libero. Repellendus tenetur illo voluptate impedit laboriosam. Repellat distinctio velit, labore totam obcaecati deleniti fuga a recusandae quod dicta vel natus at ad quas, illo nemo officiis esse quo. Nulla ducimus sit numquam, adipisci at molestiae explicabo, assumenda possimus repudiandae minima laborum. Ratione cum possimus animi, ut repellendus amet ipsum, odio fugit ducimus beatae necessitatibus consectetur! Velit ratione dolore laborum?',
+			text: `Bonjour, \n 
+			Actuellement à la recherche d'un emploi dans le domaine du développement web, j'ai été	attiré par votre société jeune et dynamique. Après plus de 15 ans dans les achats et après avoir commencé en autodidacte, j'ai entamé la reconversion en 2020-21 en intégrant l'école o'clock, et j'ai pu acquérir des compétences dans ce domaine. J'ai d'ailleurs obtenu mon titre pro en juin dernier. \n  \n Je suis rigoureux, très motivé et j'ai l'envie d'en apprendre encore plus. Je suis certain que ma motivation et mon expérience professionnelle passée compenseront mon manque d'expérience dans le domaine. \n Intégrer votre société, représente pour moi la possibilité de réussir ma reconversion. \n  \n Vous trouverez sur mon profil github certain projet que j'ai pu réaliser dernièrement dont un mini logiciel de gestion d'ordonnancement de production, réalisé avec Electron, sans framework. \n Vous pouvez télécharger le .exe à l'adresse suivante	: https://github.com/romaindupont/planningdeProd \n  \n J'ai également développé pour une jeune entreprise leur site web, ou plus précisément leur	page de présentation en HTML/CSS et JS. Le projet contient également de la 3d avec threejs, un effet parrallax et d'autres petits effets CSS/JS. \n Vous trouverez ce projet son le nom fabrique124 sur mon github, le site est pour le moment déployé sur un hébergeur gratuit à l'adresse suivante :	https://dangerous-tank.surge.sh/ \n  \n De même, j'ai pu réaliser un site e-commerce pour m'entraîner (exclusivement front pour le	moment), que vous trouverez sous le nom de EBSite sur github ou à l'adresse en bas de ce	mail. L'application est mobile first et il reste pas mal de travail encore mais vous pouvez	avoir un aperçu de mon travail. \n  \n Restant à votre disposition pour toutes informations complémentaires et/ou pour se	rencontrer,	Veuillez agréer, Madame, Monsieur, mes sincères salutations. \n  \n Cordialement, \n  \n Romain Dupont \n  \n Mon profil github : https://github.com/romaindupont \n LinkedIn : https://www.linkedin.com/in/romain-dupont-developpeurweb/ \n Projet : https://mapquizfront.herokuapp.com/ \n Mon site : https://www.romaindupont.me/ \n Site e-commerce en cours de création : https://fast-volleyball.surge.sh/ \n Site lafabrique124 :	https://dangerous-tank.surge.sh/'`,
 			mail: 'rdt.romaindupont@gmail.com'
 		},
 		{
@@ -20,7 +21,7 @@ const initialState = {
 			category: 'inbox',
 			title: 'Mes informations personnelles',
 			date: '18-10-2021',
-			text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, accusantium, harum eaque culpa officia sit distinctio, delectus nihil deleniti hic consequuntur itaque eligendi nemo exercitationem sapiente repellendus veritatis aliquid facilis repudiandae id. Quod odit exercitationem illum? Deserunt dignissimos, voluptate quas, qui labore quisquam consequatur ut iusto, alias molestias error deleniti consectetur assumenda cumque delectus incidunt sunt totam. Illum magnam facilis temporibus, impedit aperiam harum dignissimos voluptas tempore voluptates. Culpa, distinctio repellat architecto totam, atque provident voluptate dolorum commodi reprehenderit ipsa corrupti? Voluptatum dolorum ipsum inventore rerum voluptatem et libero asperiores nesciunt nam quisquam quo adipisci, dolorem, quasi iure, sunt animi.',
+			text: `Titulaire du titre pro développeur web & web mobile, je peux vous accompagner dans la réalisation de votre site web professionnel. Site e-commerce, page de présentation, ... \n Tous mes sites sont développés pour passer sur tous les types de support. \n Demandez mon cahier des charges pour définir votre besoin ou télécharger le depuis la page d'accueil.`,
 			mail: 'rdt.romaindupont@gmail.com'
 		},
 		{
@@ -30,7 +31,7 @@ const initialState = {
 			category: 'inbox',
 			title: 'Mon adresse',
 			date: '18-10-2021',
-			text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, sequi?',
+			text: 'Disponible sur la région caennaise, je suis également disponible en remote full ou partiel, je dispose d\'un moyen de locomotion',
 			mail: 'rdt.romaindupont@gmail.com'
 		},
 		{
@@ -40,7 +41,7 @@ const initialState = {
 			category: 'inbox',
 			title: 'Me contacter',
 			date: '18-10-2021',
-			text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, sequi?',
+			text: 'Téléphone, mail, message depuis le site, tous les moyens sont bons pour me contacter, je vous répondrai le plus rapidement possible.',
 			mail: 'rdt.romaindupont@gmail.com'
 		},
 		{
@@ -50,7 +51,7 @@ const initialState = {
 			category: 'send',
 			title: 'Message envoyé',
 			date: '18-10-2021',
-			text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, sequi?',
+			text: 'Vous ne m\'avez toujours pas envoyé de mail, alors ce mail n\'est qu\'un mail pour remplir la boite des messages envoyés, j\'attends votre message pour enfin remplir cette boite',
 			mail: 'rdt.romaindupont@gmail.com'
 		},
 		{
@@ -60,7 +61,7 @@ const initialState = {
 			category: 'trash',
 			title: 'Message supprimé',
 			date: '18-10-2021',
-			text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, sequi?',
+			text: 'Jamais je ne supprimerai votre message, j\'y répondrai le plus rapidement possible soyez-en sur',
 			mail: 'rdt.romaindupont@gmail.com'
 		}
 	],

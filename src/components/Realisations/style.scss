@@ -37,11 +37,12 @@
 }
 
 .realisations-list-1 > li {
-	background: rgb(252, 172, 172);
+	/* background: rgb(252, 172, 172); */
 	min-width: 400px;
 	height: 400px;
 	margin-left: 5rem;
 	border: 5px solid white;
+	transform: rotate(180deg);
 }
 .realisations-list-2 > li {
 	background: rgb(252, 172, 172);

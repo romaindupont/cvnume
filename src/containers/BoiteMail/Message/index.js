@@ -4,8 +4,7 @@ import Message from '../../../components/BoiteMail/Message';
 
 const mapStateToProps = (state) => ({
 	mail: state.Mail.mail,
-	id: state.Mail.id,
-
+	id: state.Mail.id
 });
 
 const mapDispatchToProps = {};

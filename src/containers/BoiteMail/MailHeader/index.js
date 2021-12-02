@@ -4,8 +4,7 @@ import MailHeader from '../../../components/BoiteMail/MailHeader';
 import { closeMailPage, largeMailPage, smallMailPage } from '../../../actions/mail';
 
 const mapStateToProps = (state) => ({
-	openPageMail: state.Mail.openPageMail,
-
+	openPageMail: state.Mail.openPageMail
 });
 
 const mapDispatchToProps = (dispatch)=> ({
@@ -18,8 +17,6 @@ const mapDispatchToProps = (dispatch)=> ({
 	smallMailPage: () => {
     dispatch(smallMailPage());
   }
-  
-
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(MailHeader);

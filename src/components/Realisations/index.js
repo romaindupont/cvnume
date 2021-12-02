@@ -73,7 +73,7 @@ const Realisations = ({ setOpenNewTab, openWebsitePage, experiences }) => {
 			appear.style.transition = "opacity 1s ease-in";
 			yourListItemUp.classList.add("up1");
 			if (itemsScrolled === 5) {
-				setTimeout(()=>document.getElementById('section3').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' }),2000);
+				/* setTimeout(()=>document.getElementById('section3').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' }),2000); */
 			}
 		}		 
 	}
@@ -91,7 +91,7 @@ const Realisations = ({ setOpenNewTab, openWebsitePage, experiences }) => {
 			const appear = document.querySelector('.appear2');
 			appear.style.transition = "opacity 1s ease-in";
 			if (itemsScrolled === 5) {
-				setTimeout(()=>document.getElementById('section4').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' }),2000);
+				/* setTimeout(()=>document.getElementById('section4').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' }),2000); */
 			}
 		}
 		 
@@ -149,7 +149,7 @@ const Realisations = ({ setOpenNewTab, openWebsitePage, experiences }) => {
 							</li>
 							<li className="realisations-item">3</li>
 							<li className="realisations-item" onClick={()=>setOpenNewTab(true) & openWebsitePage('https://dangerous-tank.surge.sh')}>website live</li>
-							<li className="realisations-item" onClick={()=>document.getElementById('section2').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })}> <span className="clicDown"><span className="clicDown--1"></span><span className="clicDown--2"></span></span> </li>
+							<li className="realisations-item" onClick={()=>document.getElementById('section2').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })}><span className="clicDown"><span className="clicDown--1"></span><span className="clicDown--2"></span></span></li>
 						</ul>
 					</div>
 				</section>
@@ -161,7 +161,7 @@ const Realisations = ({ setOpenNewTab, openWebsitePage, experiences }) => {
 							<li className="realisations-item-1">2</li>
 							<li className="realisations-item-1">3</li>
 							<li className="realisations-item-1"onClick={()=>setOpenNewTab(true) & openWebsitePage('https://fast-volleyball.surge.sh')}>website live</li>
-							<li className="realisations-item-1">0</li>
+							<li className="realisations-item-1" onClick={()=>document.getElementById('section3').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })}><span className="clicDown"><span className="clicDown--1"></span><span className="clicDown--2"></span></span></li>
 						</ul>
 					</div>
 				</section>
@@ -173,7 +173,7 @@ const Realisations = ({ setOpenNewTab, openWebsitePage, experiences }) => {
 							<li className="realisations-item-2">2</li>
 							<li className="realisations-item-2">3</li>
 							<li className="realisations-item-2">4</li>
-							<li className="realisations-item-2" onClick={()=>document.getElementById('section4').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })}>0</li>
+							<li className="realisations-item-2" onClick={()=>document.getElementById('section4').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })}><span className="clicDown"><span className="clicDown--1"></span><span className="clicDown--2"></span></span></li>
 						</ul>
 					</div>
 				</section>

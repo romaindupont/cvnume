@@ -3,6 +3,11 @@ import './style.scss';
 
 const FootGame = ({ shootValue }) => {
 	const [ timer, setTimer ] = useState(0);
+	const [ playerPosition, setPlayerPosition ] = useState({
+		x: 0,
+		y: 1,
+		child: 1
+	})
 	const stopAction = useCallback(async () => {	
 		document.querySelector('.barre-1').style.background='#c5c3c3';
 		document.querySelector('.barre-2').style.background='#c5c3c3';
@@ -16,10 +21,67 @@ const FootGame = ({ shootValue }) => {
 		document.querySelector('.barre-10').style.background='#c5c3c3';
 		await shootValue(timer);
 		setTimer(0);
-	},[timer,shootValue])
+	},[timer, shootValue])
 	const spaceBar = useCallback((e) => {
+		console.log(e.keyCode)
+		const fieldList = [];
+		const fields = document.querySelectorAll('.fields');
+		fieldList.push(fields)
+		const player = document.querySelector('.player');
+		if(e.keyCode === 40) {
+			player.remove();
+			setPlayerPosition({	x: playerPosition.x+0,
+				y: playerPosition.y+1,
+				child: playerPosition.child+0})
+			const newPlayerPosition = document.createElement("span");
+			newPlayerPosition.classList.add('player');
+			fieldList[playerPosition.x][playerPosition.y].childNodes[playerPosition.child].appendChild(newPlayerPosition);
+			//bas
+					}
+		if(e.keyCode === 39) {
+			player.remove();
+			setPlayerPosition({	x: playerPosition.x+0,
+				y: playerPosition.y+0,
+				child: playerPosition.child+1})
+
+			const newPlayerPosition = document.createElement("span");
+			newPlayerPosition.classList.add('player');
+			fieldList[playerPosition.x][playerPosition.y].childNodes[playerPosition.child].appendChild(newPlayerPosition);
+			//droite
+		}
+		if(e.keyCode === 38) {
+			player.remove();
+			setPlayerPosition({	x: playerPosition.x+0,
+				y: playerPosition.y-1,
+				child: playerPosition.child+0})
+			const newPlayerPosition = document.createElement("span");
+			newPlayerPosition.classList.add('player');
+			fieldList[playerPosition.x][playerPosition.y].childNodes[playerPosition.child].appendChild(newPlayerPosition);
+			if(playerPosition.y < 0 || playerPosition.y > 30) {
+			/* 	setPlayerPosition({	x: 0,
+					y: 1,
+					child: 1}) */
+					console.log('impossible touche')
+			}
+			else {
+				fieldList[playerPosition.x][playerPosition.y].childNodes[playerPosition.child].appendChild(newPlayerPosition);
+
+			}
+		//haut	
+		}
+		if(e.keyCode === 37) {
+			player.remove();
+			setPlayerPosition({	x: playerPosition.x+0,
+				y: playerPosition.y+0,
+				child: playerPosition.child-1})
+			const newPlayerPosition = document.createElement("span");
+			newPlayerPosition.classList.add('player');
+			fieldList[playerPosition.x][playerPosition.y].childNodes[playerPosition.child].appendChild(newPlayerPosition);
+		//gauche	
+		}
 		if(e.keyCode === 32) {
 			setTimer(1);
+
 			if (timer === 1) {
 				document.querySelector('.barre-1').style.background='#ffd267';
 				setTimer(2);
@@ -64,7 +126,7 @@ const FootGame = ({ shootValue }) => {
 				stopAction();
 			}	
 	 	}
-	},[timer, stopAction]);
+	},[timer, stopAction, playerPosition]);
 
 	useEffect(() => {
     document.addEventListener("keydown", spaceBar);
@@ -77,7 +139,7 @@ const FootGame = ({ shootValue }) => {
   return (
 		<div className="footGame">
 			<div className="field">
-				<div className="field-1">
+				<div className="fields field-1">
 					<div className="T-1"></div>
 					<div className="T-2"></div>
 					<div className="T-3"></div>
@@ -109,7 +171,7 @@ const FootGame = ({ shootValue }) => {
 					<div className="T-29"></div>
 					<div className="T-30"></div>
 				</div>
-				<div className="field-2">
+				<div className="fields field-2">
 					<div className="T-1"></div>
 					<div className="T-2"> <span className="player"></span> </div>
 					<div className="T-3"></div>
@@ -141,7 +203,7 @@ const FootGame = ({ shootValue }) => {
 					<div className="T-29"></div>
 					<div className="T-30"></div>
 				</div>
-				<div className="field-3">
+				<div className="fields field-3">
 					<div className="T-1"></div>
 					<div className="T-2"></div>
 					<div className="T-3"></div>
@@ -173,7 +235,7 @@ const FootGame = ({ shootValue }) => {
 					<div className="T-29"></div>
 					<div className="T-30"></div>
 				</div>
-				<div className="field-4">
+				<div className="fields field-4">
 					<div className="T-1"></div>
 					<div className="T-2"></div>
 					<div className="T-3"></div>
@@ -205,7 +267,7 @@ const FootGame = ({ shootValue }) => {
 					<div className="T-29"></div>
 					<div className="T-30"></div>
 				</div>
-				<div className="field-5">
+				<div className="fields field-5">
 					<div className="T-1"><div className="engagement"></div><div className="rondCentral"></div></div>
 					<div className="T-2"></div>
 					<div className="T-3"></div>
@@ -237,7 +299,7 @@ const FootGame = ({ shootValue }) => {
 					<div className="T-29"></div>
 					<div className="T-30"><div className="but"></div><div className="surface"><div className="penalty"></div><div className="surfaceRond"></div></div></div>
 				</div>
-				<div className="field-6">
+				<div className="fields field-6">
 					<div className="T-1"></div>
 					<div className="T-2"></div>
 					<div className="T-3"></div>
@@ -269,7 +331,7 @@ const FootGame = ({ shootValue }) => {
 					<div className="T-29"></div>
 					<div className="T-30"></div>
 				</div>
-				<div className="field-7">
+				<div className="fields field-7">
 					<div className="T-1"></div>
 					<div className="T-2"></div>
 					<div className="T-3"></div>
@@ -301,7 +363,7 @@ const FootGame = ({ shootValue }) => {
 					<div className="T-29"></div>
 					<div className="T-30"></div>
 				</div>
-				<div className="field-8">
+				<div className="fields field-8">
 					<div className="T-1"></div>
 					<div className="T-2"></div>
 					<div className="T-3"></div>
@@ -333,7 +395,7 @@ const FootGame = ({ shootValue }) => {
 					<div className="T-29"></div>
 					<div className="T-30"></div>
 				</div>
-				<div className="field-9">
+				<div className="fields field-9">
 					<div className="T-1"></div>
 					<div className="T-2"></div>
 					<div className="T-3"></div>
@@ -365,7 +427,7 @@ const FootGame = ({ shootValue }) => {
 					<div className="T-29"></div>
 					<div className="T-30"></div>
 				</div>
-				<div className="field-10">
+				<div className="fields field-10">
 					<div className="T-1"></div>
 					<div className="T-2"></div>
 					<div className="T-3"></div>
